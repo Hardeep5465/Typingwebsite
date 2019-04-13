@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<!-- <link rel="shortcut icon" href="img/fav.png"> -->
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/icondevices/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../img/icondevices/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../img/icondevices/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../img/icondevices/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../img/icondevices/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../img/icondevices/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../img/icondevices/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../img/icondevices/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../img/icondevices/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../img/icondevices/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../../img/icondevices/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/icondevices/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../img/icondevices/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../img/icondevices/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Idioms and Phrases</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,500,600|Roboto:400,700" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" href="../../css/flaticon.css">
+	<link rel="stylesheet" href="../../css/themify-icons.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<link rel="stylesheet" href="../../css/nice-select.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>
+         $(document).ready(function() {
+         
+           
+         $('[data-toggle="collapse"]').click(function() {
+           $(this).toggleClass( "active" );
+           if ($(this).hasClass("active")) {
+             $(this).text("Hide Answer");
+         
+         
+           } else {
+             $(this).text("View Answer");
+           }
+         });
+           
+           
+         // document ready  
+         });
+        
+		 
+
+      </script>
+	
+</head>
+
+<body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+        <div class="loader-box">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!--Login div-->
+    <!--Modal: Login / Register Form-->
+    <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab">
+                                <i class="fas fa-user mr-1"></i>
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab">
+                                <i class="fas fa-user-plus mr-1"></i>
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Tab panels -->
+                    <div class="tab-content">
+                        <!--Panel 7-->
+                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+                            <!--Body-->
+                            <div class="modal-body mb-1">
+                                <div class="card">
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="signup_email">Email </label>
+                                                    <div class="input-group">
+
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                        <input type="email" id="signup_email" name="signup_email" class="form-control" placeholder="Enter email" required />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="signup_password">Password</label>
+                                                    <div class="input-group">
+
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                        <input type="password" id="signup_password" name="signup_password" class="form-control" placeholder="Password" required />
+                                                    </div>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+                                                </div>
+
+                                            </form>
+                                            <div class="options text-center text-md-left mt-10">
+                                           
+                                                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                            </div>
+                                            <!--<button type="submit" class="btn btn-success pull-right">Login</button>-->
+                                            <button type="button" class="btn btn-outline-info waves-effect ml-auto pull-right" data-dismiss="modal">Close</button>
+                                        </li>
+                                      
+                                    </ul>
+                                </div>
+
+                               
+                            </div>
+                            <!--Footer-->
+                            <!--<div class="modal-footer">
+                                <div class="options text-center text-md-right mt-1">
+                                    <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                </div>
+                                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                            </div>-->
+                        </div>
+                        <!--/.Panel 7-->
+                        <!--Panel 8-->
+                        <div class="tab-pane fade" id="panel8" role="tabpanel">
+                            <!--Body-->
+                            <div class="modal-body">
+
+                                <div class="card">
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item">
+                                           
+                                            <form id="signupform">
+                                            <div class="form-group">
+                                                <label for="signup_username">User Name</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <input type="text" id="signup_firstname" name="signup_firstname" class="form-control" placeholder="User Name" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup_email">Email </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                    <input type="email" id="signup_email" name="signup_email" class="form-control" placeholder="Enter email" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup_password">Password</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input type="password" id="signup_password" name="signup_password" class="form-control" placeholder="Password" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signup_confirm_password">Confirm Password</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input type="password" id="signup_confirm_password" name="signup_confirm_password" class="form-control" placeholder="Confirm Password" required />
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-success btn-lg btn-block">SIGN-UP</button>
+                                        </div>
+
+                                        </form>
+                                        <li class="list-group-item">
+                                            <!--<button type="submit" class="btn btn-primary">SIGN-UP</button>-->
+                                            <button type="button" class="btn btn-outline-info waves-effect ml-auto pull-right" data-dismiss="modal">Close</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                
+                                
+                            </div>
+                            <!--Footer-->
+                            <!--<div class="modal-footer">
+                                <div class="options text-right">
+                                    <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                                </div>
+                                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                            </div>-->
+                        </div>
+                        <!--/.Panel 8-->
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: Login / Register Form-->
+    <!-- End Login Div-->
+    <!-- Start Header Area -->
+    <header id="header">
+
+        <div class="container main-menu">
+            <div class="row align-items-center d-flex">
+                <div id="logo">
+                    <a href="./index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class=""><a href="../../index.html">Home</a></li>
+
+                        <li class="menu-has-children">
+                            <a href="#">Punjabi Typing</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Set Up Ravi Font</a>
+                                    <ul>
+                                        <li><a href="#">Windows7</a></li>
+                                        <li><a href="#">Windows10</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#">Start Typing </a>
+                                    <ul>
+                                        <a href="blog-home.html">Novice</a>
+                                </li>
+                                <a href="blog-home.html">Intermediate</a>
+                        </li>
+                        <a href="blog-home.html">Expert</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </li>
+
+                    <li><a href="#">Aptitude</a></li>
+                    <li><a href="#">Reasoning</a></li>
+
+                    <li class="menu-has-children">
+                        <a href="#">GK Questions</a>
+                        <ul>
+
+                            <li class="menu-has-children">
+                                <a href="#">History</a>
+                                <ul>
+                                    <li><a href="#">Indian History</a></li>
+                                    <li><a href="#">World History</a></li>
+                                    <li><a href="#">Indian Art and Culture</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-has-children">
+                                <a href="#">Geography</a>
+                                <ul>
+                                    <a href="blog-home.html">Physical Geography</a>
+                            </li>
+                            <a href="blog-home.html">Geography of India</a>
+                    </li>
+                    <a href="blog-home.html">World Geography</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="menu-has-children">
+                        <a href="#">Economics</a>
+                        <ul>
+                            <a href="blog-home.html">Indian Economy</a>
+                    </li>
+                    <a href="blog-home.html">Miscellaneous</a></li>
+                    </ul>
+                    </li>
+
+                    <li><a href="#">Indian Polity and Constitution</a></li>
+                    <li><a href="#">Physics</a>
+                    <li><a href="#">Chemistry</a>
+                    <li><a href="#">Biology</a>
+                    <li><a href="#">Computer and IT</a>
+                    <li>
+                        <a href="#">Books and Authors</a>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="menu-has-children">
+                        <a class="active" href="#">English</a>
+                        <ul>
+                            <li><a href="English/One Word Substitution/Page1.html">One Word substitution</a></li>
+                            <li><a href="blog-single.html">Windows10</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-has-children">
+                        <a href="">Computer and IT</a>
+                        <ul>
+                            <li><a href="blog-home.html">Windows7</a></li>
+                            <li><a href="blog-single.html">Windows10</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li><a href="" data-toggle="modal" data-target="#modalLRForm"> LogIn</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    </header>
+    <!-- End Header Area -->
+    <!-- start banner Area -->
+
+    <section class="home-banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--add area here -->
+                </div>
+                <div class="col-sm-6">
+                    <h3 style="text-align:center;"><span class="glyphicon glyphicon-education"></span>&nbsp;&nbsp;English&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;Idioms/Phrases</h3>
+                    <div class="panel-group">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                51.The watchdogs were asleep
+                                when the bulls ran riot .
+                            </div>
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;behaved cleverly</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;acted without restraint</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;wandered aimlessly</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;had the best of time</li>
+                            <li class="list-group-item">
+                                <a href="#q1" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q1" class="collapse">
+                                    <span class="badge pull-right-side">B</span> acted without restraint
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            52.In spite of the immense pressure
+                            exerted by the militants, the
+                            Government, has decided not to
+                            give in.
+                        </div>
+
+
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;accede</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;yield</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;oblige</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;conform</li>
+                            <li class="list-group-item">
+                                <a href="#q2" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q2" class="collapse">
+                                    <span class="badge pull-right-side">B</span> yield
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            53.The young and the old sat cheek
+                            by jowl in the large audience.
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;very near</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;very far</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;tongue tied</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;irritated</li>
+                            <li class="list-group-item">
+                                <a href="#q3" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q3" class="collapse">
+                                    <span class="badge pull-right-side">A</span> very near
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            54. We wanted to keep the gift as a
+                            su rprise for mother but my
+                            sister gavet he game away.
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;lost the game</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;gave out the secret</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;played badly</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;withdrew from the game</li>
+                            <li class="list-group-item">
+                                <a href="#q4" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q4" class="collapse">
+                                    <span class="badge pull-right-side">B</span> gave out the secret
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            55. I don’t think the law will
+                            interfere with us as we are just
+                            trying to turn an honest penny.
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;make a legitimate living</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;make a good living</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;have dealings in white money</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;become more honest</li>
+                            <li class="list-group-item">
+                                <a href="#q5" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q5" class="collapse">
+                                    <span class="badge pull-right-side">A</span> make a legitimate living
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            56. a dark horse
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;an unforeseen competitor</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;a black horse</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;a nightmare </li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;an unknown person</li>
+                            <li class="list-group-item">
+                                <a href="#q6" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q6" class="collapse">
+                                    <span class="badge pull-right-side">A</span> an unforeseen competitor
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            57. to run across
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;to have an appointed meeting</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;to meet by chance</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;to run in the playground</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;to run very fast</li>
+                            <li class="list-group-item">
+                                <a href="#q7" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q7" class="collapse">
+                                    <span class="badge pull-right-side">B</span> to meet by chance
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            58. to get one’s own back
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;to get one’s revenge</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;to get cont rol over someone</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;to get one’s position back</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;to get hold of someone</li>
+                            <li class="list-group-item">
+                                <a href="#q8" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q8" class="collapse">
+                                    <span class="badge pull-right-side">A</span> to get one’s revenge
+                                </div>
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            59. to steer clear of
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;drive carefully</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;avoid</li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;explain clearly</li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;escape</li>
+                            <li class="list-group-item">
+                                <a href="#q9" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q9" class="collapse">
+                                    <span class="badge pull-right-side">B</span> avoid
+                            </li>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            60. to beat a retreat
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;to withdraw in defeat or humiliation</li>
+                            <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;to withdraw after scoring a victory </li>
+                            <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;to march back after a ceremonious parade </li>
+                            <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;to run away in fear</li>
+                            <li class="list-group-item">
+                                <a href="#q10" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                                <div id="q10" class="collapse">
+                                    <span class="badge pull-right-side">D</span> to run away in fear
+                                </div>
+                            </li>
+                    </div>
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="Page5.html">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="Page1.html">6</a></li>
+                            <li class="page-item"><a class="page-link" href="Page2.html">7</a></li>
+                            <li class="page-item"><a class="page-link" href="Page3.html">8</a></li>
+                            <li class="page-item"><a class="page-link" href="Page4.html">9</a></li>
+                            <li class="page-item"><a class="page-link" href="Page5.html">10</a></li>
+                            <!-- <li class="page-item"><a class="page-link" href="Page6.html">6</a></li> -->
+                            <!-- <li class="page-item"><a class="page-link" href="Page7.html">7</a></li> -->
+                            <!-- <li class="page-item"><a class="page-link" href="Page8.html">8</a></li> -->
+                            <!-- <li class="page-item"><a class="page-link" href="Page9.html">9</a></li> -->
+                            <!-- <li class="page-item"><a class="page-link" href="Page10.html">10</a></li> -->
+                            <li class="page-item"><a class="page-link" href="Page2.html">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!--add area here -->
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- End banner Area -->
+    <!-- start footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>About Us</h6>
+                        <p>
+                            If you own an Iphone, you’ve probably already worked out how much fun it is to use it to watch movies-it has
+                            that.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!--
+
+
+
+                <div class="col-lg-5  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Newsletter</h6>
+                        <p>Stay update with our latest</p>
+                        <div class="" id="mc_embed_signup">
+                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                             method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+                                 required="" type="email">
+                                <button class="click-btn btn btn-default"><i class="ti-arrow-right" aria-hidden="true"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                -->
+
+                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                    <div class="single-footer-widget">
+                        <h6>Follow Us</h6>
+                        <p>Let us be social</p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter"></i></a>
+                            <a href="#"><i class="ti-dribbble"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="footer-text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> | All rights reserved.
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+    <!-- ####################### Start Scroll to Top Area ####################### -->
+    <div id="back-top">
+        <a title="Go to Top" href="#">
+            <i class="ti-angle-double-up"></i>
+        </a>
+    </div>
+    <!-- ####################### End Scroll to Top Area ####################### -->
+    <script src="../../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../../js/easing.min.js"></script>
+    <script src="../../js/hoverIntent.js"></script>
+    <script src="../../js/superfish.min.js"></script>
+    <script src="../../js/mn-accordion.js"></script>
+    <script src="../../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.nice-select.min.js"></script>
+    <script src="../../js/isotope.pkgd.min.js"></script>
+    <script src="../../js/mail-script.js"></script>
+    <script src="../../js/wow.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
