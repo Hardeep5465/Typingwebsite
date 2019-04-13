@@ -54,9 +54,9 @@ namespace LatestHardeep
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "661190120977013",
+               appSecret: "95e574f0df1a8da076b9fe6ae34e6220");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
