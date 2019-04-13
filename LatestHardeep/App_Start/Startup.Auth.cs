@@ -58,11 +58,11 @@ namespace LatestHardeep
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "935148199062-tahbr0ajj2fjoaqtdsqv6aeo23sphuao.apps.googleusercontent.com",
+                ClientSecret = "7cT62U7XoTcyoFi5u3W2kjqu"
+            });
         }
     }
 }
