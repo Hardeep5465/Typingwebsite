@@ -343,7 +343,8 @@ namespace LatestHardeep.Controllers
                     // If the user does not have an account, then prompt the user to create an account
                     ViewBag.ReturnUrl = returnUrl;
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
-                    return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
+                    //added new property username
+                    return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Username=loginInfo.DefaultUserName,Email = loginInfo.Email });
             }
         }
 
@@ -367,7 +368,8 @@ namespace LatestHardeep.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                //change UserName = model.Email to  UserName = model.Username
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
