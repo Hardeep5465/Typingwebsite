@@ -79,6 +79,14 @@ namespace LatestHardeep.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    var userid = UserManager.FindByEmail(model.Email).Id;
+                  //  var userid = UserManager.FindByName(model.Email).Id;
+                    if (!UserManager.IsEmailConfirmed(userid))
+                    {
+                        ViewBag.message = "This is your first login. Please verify your mail before proceeding!";
+                        return View(model);
+                        //return View("EmailNotConfirmed");
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -86,7 +94,7 @@ namespace LatestHardeep.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Invalid Email/Password!");
                     return View(model);
             }
         }
@@ -152,19 +160,22 @@ namespace LatestHardeep.Controllers
             if (ModelState.IsValid)
             {
                 //changed username = model.email to model.username
-                var user = new ApplicationUser { UserName = model.Username, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    //  Comment the following line to prevent log in until the user is confirmed.
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    ViewBag.Message = "Registration Successful!";
+                    return View(model);
+                    // return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
