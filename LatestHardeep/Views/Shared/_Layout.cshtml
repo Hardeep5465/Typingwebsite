@@ -6,7 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @{ 
+        string id;
+    }
 
     <link href="~/Content/Footer-with-button-logo.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -321,7 +323,8 @@ dropdown-submenu {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">English<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="menu-item">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idioms and Phrases</a>
+                               @* <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idioms and Phrases</a>*@
+                                @Html.ActionLink("Idioms and Phrases", "Index", "EnglishIdioms", new { id = "Page1" }, null)
                                 @*<ul class="dropdown-menu">
                                     <li class="menu-item ">
                                         <a href="#">Windows 7</a>
