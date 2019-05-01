@@ -1,8 +1,33 @@
 ﻿
 @{
-    ViewBag.Title = "English - Idioms and Phrases";
-    string id;
+                /**/
+
+                ViewBag.Title = "English - Idioms and Phrases";
+                string id;
 }
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="collapse"]').click(function (e) {
+
+            if ($(e.target).is('a')) {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(this).text("Hide Answer");
+
+                } else {
+                    $(this).text("View Answer");
+                }
+
+            }
+        });
+
+    });
+</script>
+}
+
 
 <div class="container">
     <div class="row">
@@ -25,6 +50,7 @@
                                 <span class="badge pull-right-side">A</span> looking for meanings that are not actually expressed
                             </div>
                         </li>
+                    </ul>
                 </div>
             </div>
             <div class="panel panel-primary">
@@ -42,6 +68,7 @@
                             <span class="badge pull-right-side">B</span> to give encouragement even to the enemy
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -58,6 +85,7 @@
                             <span class="badge pull-right-side">D</span> to apologise
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -74,6 +102,7 @@
                             <span class="badge pull-right-side">B</span> no real choice at all
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -90,6 +119,7 @@
                             <span class="badge pull-right-side">A</span> to listen to something with considerable doubt
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -106,6 +136,7 @@
                             <span class="badge pull-right-side">B</span> under standing the sense rather than the actual words
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -122,6 +153,7 @@
                             <span class="badge pull-right-side">B</span> irregularly
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -138,6 +170,7 @@
                             <span class="badge pull-right-side">D</span> tolerate
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -154,6 +187,7 @@
                             <span class="badge pull-right-side">A</span> talking nonsense
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -170,6 +204,7 @@
                             <span class="badge pull-right-side">D</span> undergo any risk
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="text-center">
                 <ul class="pagination">
@@ -194,5 +229,5 @@
     </div>
 </div>
 
-      
+
 

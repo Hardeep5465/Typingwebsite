@@ -1,8 +1,33 @@
 ﻿
 @{
-    ViewBag.Title = "English - Idioms and Phrases";
-    string id;
+                /**/
+
+                ViewBag.Title = "English - Idioms and Phrases";
+                string id;
 }
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="collapse"]').click(function (e) {
+
+            if ($(e.target).is('a')) {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(this).text("Hide Answer");
+
+                } else {
+                    $(this).text("View Answer");
+                }
+
+            }
+        });
+
+    });
+</script>
+}
+
 
 <div class="container">
     <div class="row">
@@ -27,6 +52,7 @@
                                 <span class="badge pull-right-side">D</span> resembles
                             </div>
                         </li>
+                    </ul>
                 </div>
             </div>
             <div class="panel panel-primary">
@@ -44,6 +70,7 @@
                             <span class="badge pull-right-side">A</span> did not have any hesitation in
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -60,6 +87,7 @@
                             <span class="badge pull-right-side">D</span> dismissals will occur
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -76,6 +104,7 @@
                             <span class="badge pull-right-side">C</span> confessed without reserve
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -92,6 +121,7 @@
                             <span class="badge pull-right-side">B</span> to keep in touch
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -108,6 +138,7 @@
                             <span class="badge pull-right-side">C</span> irresponsible pleasure seeking in young age
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -124,6 +155,7 @@
                             <span class="badge pull-right-side">C</span> indifferent
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -140,6 +172,7 @@
                             <span class="badge pull-right-side">C</span> praising your own abilities and achievements
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -156,6 +189,7 @@
                             <span class="badge pull-right-side">C</span> a private interest to serve
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -172,6 +206,7 @@
                             <span class="badge pull-right-side">B</span> one that held no secrets
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="text-center">
                 <ul class="pagination">

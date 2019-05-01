@@ -1,7 +1,31 @@
 ﻿
 @{
-    ViewBag.Title = "English - Idioms and Phrases";
-    string id;
+                /**/
+
+                ViewBag.Title = "English - Idioms and Phrases";
+                string id;
+}
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="collapse"]').click(function (e) {
+
+            if ($(e.target).is('a')) {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(this).text("Hide Answer");
+
+                } else {
+                    $(this).text("View Answer");
+                }
+
+            }
+        });
+
+    });
+</script>
 }
 
 <div class="container">
@@ -17,16 +41,18 @@
                         51.The watchdogs were asleep
                         when the bulls ran riot .
                     </div>
-                    <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;behaved cleverly</li>
-                    <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;acted without restraint</li>
-                    <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;wandered aimlessly</li>
-                    <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;had the best of time</li>
-                    <li class="list-group-item">
-                        <a href="#q1" class="btn btn-success" data-toggle="collapse">View Answer</a>
-                        <div id="q1" class="collapse">
-                            <span class="badge pull-right-side">B</span> acted without restraint
-                        </div>
-                    </li>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="badge pull-left">A</span>&nbsp&nbsp;behaved cleverly</li>
+                        <li class="list-group-item"><span class="badge pull-left">B</span>&nbsp&nbsp;acted without restraint</li>
+                        <li class="list-group-item"><span class="badge pull-left">C</span>&nbsp&nbsp;wandered aimlessly</li>
+                        <li class="list-group-item"><span class="badge pull-left">D</span>&nbsp&nbsp;had the best of time</li>
+                        <li class="list-group-item">
+                            <a href="#q1" class="btn btn-success" data-toggle="collapse">View Answer</a>
+                            <div id="q1" class="collapse">
+                                <span class="badge pull-right-side">B</span> acted without restraint
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="panel panel-primary">
@@ -49,6 +75,7 @@
                             <span class="badge pull-right-side">B</span> yield
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -67,6 +94,7 @@
                             <span class="badge pull-right-side">A</span> very near
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -86,6 +114,7 @@
                             <span class="badge pull-right-side">B</span> gave out the secret
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -104,6 +133,7 @@
                             <span class="badge pull-right-side">A</span> make a legitimate living
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -120,6 +150,7 @@
                             <span class="badge pull-right-side">A</span> an unforeseen competitor
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -136,6 +167,7 @@
                             <span class="badge pull-right-side">B</span> to meet by chance
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -152,6 +184,7 @@
                             <span class="badge pull-right-side">A</span> to get one’s revenge
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -167,6 +200,7 @@
                         <div id="q9" class="collapse">
                             <span class="badge pull-right-side">B</span> avoid
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -183,6 +217,7 @@
                             <span class="badge pull-right-side">D</span> to run away in fear
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="text-center">
                 <ul class="pagination">
@@ -192,7 +227,7 @@
                     <li class="page-item">@Html.ActionLink("8", "Index", "EnglishIdioms", new { id = "Page8" }, null)</li>
                     <li class="page-item">@Html.ActionLink("9", "Index", "EnglishIdioms", new { id = "Page9" }, null)</li>
                     <li class="page-item">@Html.ActionLink("10", "Index", "EnglishIdioms", new { id = "Page10" }, null)</li>
-                
+
                     <li class="page-item">@Html.ActionLink("Next", "Index", "EnglishIdioms", new { id = "Page7" }, null)</li>
                 </ul>
             </div>
@@ -203,5 +238,5 @@
     </div>
 </div>
 
-      
+
 

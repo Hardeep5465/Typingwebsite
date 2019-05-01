@@ -188,6 +188,7 @@
     <Compile Include="Controllers\EnglishIdiomsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SetUpRaviFontController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +204,19 @@
     <Content Include="Content\bootstrap-oldest.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Footer-with-button-logo.css" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Image1.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image10.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image10_old.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image11.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Image2.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image3.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image4.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image5.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image6.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image7.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image8.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\image9.JPG" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.mp4" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flaticon.css" />
@@ -494,6 +508,8 @@
     <Content Include="img\blog\.DS_Store" />
     <Content Include="img\icondevices\manifest.json" />
     <Content Include="img\work\.DS_Store" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.ogg" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -547,6 +563,9 @@
     <Content Include="Views\EnglishIdioms\Page5.cshtml" />
     <Content Include="Views\EnglishIdioms\Page6.cshtml" />
     <Content Include="Views\EnglishIdioms\Page7.cshtml" />
+    <Content Include="Views\SetUpRaviFont\Windows7.cshtml" />
+    <Content Include="Views\SetUpRaviFont\Windows10.cshtml" />
+    <Content Include="Views\SetUpRaviFont\Win7video.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,6 +3,29 @@
     ViewBag.Title = "English - Idioms and Phrases";
     string id;
 }
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="collapse"]').click(function (e) {
+
+            if ($(e.target).is('a')) {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(this).text("Hide Answer");
+
+                } else {
+                    $(this).text("View Answer");
+                }
+
+            }
+        });
+
+    });
+</script>
+}
+
 
 <div class="container">
     <div class="row">
@@ -28,6 +51,7 @@
                                 <span class="badge pull-right-side">A</span> to lead the way as a pioneer
                             </div>
                         </li>
+                    </ul>
                 </div>
             </div>
             <div class="panel panel-primary">
@@ -46,6 +70,7 @@
                             <span class="badge pull-right-side">C</span> happy and significant day
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -70,6 +95,7 @@
                             an argument
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -87,6 +113,7 @@
                             <span class="badge pull-right-side">A</span> disregard
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -103,6 +130,7 @@
                             <span class="badge pull-right-side">D</span> to suspect a trick
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -121,6 +149,7 @@
                             <span class="badge pull-right-side">A</span> confessed
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -137,6 +166,7 @@
                             <span class="badge pull-right-side">A</span> ruined
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -155,6 +185,7 @@
                             <span class="badge pull-right-side">C</span> honest and sincere
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -173,6 +204,7 @@
                             <span class="badge pull-right-side">A</span> squandered
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -190,6 +222,7 @@
                             <span class="badge pull-right-side">A</span> dissipated
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="text-center">
                 <ul class="pagination">
@@ -199,7 +232,7 @@
                     <li class="page-item">@Html.ActionLink("8", "Index", "EnglishIdioms", new { id = "Page8" }, null)</li>
                     <li class="page-item">@Html.ActionLink("9", "Index", "EnglishIdioms", new { id = "Page9" }, null)</li>
                     <li class="page-item">@Html.ActionLink("1o", "Index", "EnglishIdioms", new { id = "Page10" }, null)</li>
-            
+
                     <li class="page-item">@Html.ActionLink("Next", "Index", "EnglishIdioms", new { id = "Page8" }, null)</li>
                 </ul>
             </div>

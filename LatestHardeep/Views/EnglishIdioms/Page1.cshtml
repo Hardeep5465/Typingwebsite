@@ -3,6 +3,29 @@
     ViewBag.Title = "English - Idioms and Phrases";
     string id;
 }
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="collapse"]').click(function (e) {
+
+            if ($(e.target).is('a')) {
+                     $(this).toggleClass("active");
+            if ($(this).hasClass("active")) {
+                $(this).text("Hide Answer");
+                
+            } else {
+                $(this).text("View Answer");
+            }
+               
+            }
+        });
+
+      });
+</script>
+}
+
 
 <div class="container">
     <div class="row">
@@ -25,6 +48,7 @@
                                 <span class="badge pull-right-side">C</span> under suspicion
                             </div>
                         </li>
+                    </ul>
                 </div>
             </div>
             <div class="panel panel-primary">
@@ -43,6 +67,7 @@
                             <span class="badge pull-right-side">D</span> wasting time in useless effort
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -60,6 +85,7 @@
                             <span class="badge pull-right-side">D</span> regard with contempt
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -77,6 +103,7 @@
                             <span class="badge pull-right-side">B</span> get reprimanded
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -93,6 +120,7 @@
                             <span class="badge pull-right-side">C</span> short strike held as a warning
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -109,6 +137,7 @@
                             <span class="badge pull-right-side">D</span> got into trouble with
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -125,6 +154,7 @@
                             <span class="badge pull-right-side">C</span> irregularly
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -141,6 +171,7 @@
                             <span class="badge pull-right-side">D</span> enough freedom for action
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -157,6 +188,7 @@
                             <span class="badge pull-right-side">C</span> puzzled
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -173,6 +205,7 @@
                             <span class="badge pull-right-side">D</span> generalised statement
                         </div>
                     </li>
+                </ul>
             </div>
             <div class="text-center">
                 <ul class="pagination">
@@ -198,5 +231,5 @@
     </div>
 </div>
 
-        
+
 
