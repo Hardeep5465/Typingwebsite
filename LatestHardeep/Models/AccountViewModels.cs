@@ -68,11 +68,16 @@ namespace LatestHardeep.Models
 
     public class RegisterViewModel
     {
-        //added Usename property 
+        //added First Name and Last Name property 
         [Required]
-        [StringLength(100)]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+        [DataType(DataType.Text)]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
         [Required]
         [EmailAddress]
