@@ -188,6 +188,7 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\EnglishIdiomsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeRowController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
     <Compile Include="Controllers\StartTypingController.cs" />
@@ -586,6 +587,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="English\IdiomsAndPhrases\new pages by Renu and Mohit\" />
     <Folder Include="promaster-files\" />
+    <Folder Include="Views\HomeRow\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
