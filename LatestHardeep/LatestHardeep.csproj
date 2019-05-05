@@ -190,6 +190,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
+    <Compile Include="Controllers\StartTypingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -385,7 +386,6 @@
     <Content Include="English\IdiomsAndPhrases\signup-form-with-ajax-jquery-validations\signup-form-with-ajax-jquery-validations\assets\js\popper.min.js" />
     <Content Include="English\IdiomsAndPhrases\signup-form-with-ajax-jquery-validations\signup-form-with-ajax-jquery-validations\index.html" />
     <Content Include="English\IdiomsAndPhrases\testlogin.HTML" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -495,6 +495,7 @@
     <Content Include="img\work\w2.jpg" />
     <Content Include="img\work\w3.jpg" />
     <Content Include="img\work\w4.jpg" />
+    <Content Include="RaviFontKeyBoard.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="css\.DS_Store" />
@@ -520,6 +521,7 @@
     <Content Include="img\work\.DS_Store" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.ogg" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
+    <Content Include="WebImage.ico" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -542,7 +544,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layoutold.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -576,6 +578,9 @@
     <Content Include="Views\SetUpRaviFont\Windows7.cshtml" />
     <Content Include="Views\SetUpRaviFont\Windows10.cshtml" />
     <Content Include="Views\SetUpRaviFont\Win7video.cshtml" />
+    <Content Include="Views\StartTyping\LearnTyping.cshtml" />
+    <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

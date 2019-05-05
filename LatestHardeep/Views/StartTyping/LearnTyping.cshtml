@@ -1,0 +1,340 @@
+﻿
+@{
+    ViewBag.Title = "Learn";
+}
+@section Scripts
+{
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <style type="text/css">
+        .accordion {
+            /*background-color: #eee;#7FDBFF;#39CCCC*/
+            background-color: #BDB76B;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+         
+
+</style>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6">
+            <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Ravi Font Typing&nbsp;&nbsp;</h3>
+
+
+            <button class="accordion">Learn Home Row&nbsp;&nbsp;(ਕੇਂਦਰੀ ਲਾਈਨ)</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <button class="accordion">Learn Third Row&nbsp;&nbsp;(ਤੀਜੀ ਲਾਈਨ)</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">Learn First Row&nbsp;&nbsp;(ਪਹਿਲੀ ਲਾਈਨ)</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">Home Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੇਂਦਰੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">Third line with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਤੀਜੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">First line with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪਹਿਲੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">Number line with Shift Keys&nbsp;&nbsp;(ਨੰਬਰ ਵਾਲੀ ਓਪਰਲੀ ਲਾਈਨ ਸ਼ਿਫਟ- ਕੀ )</button>
+            <div class="panel">
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 1", "LearnTyping", "StartTyping")</td>
+
+                 </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 2", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 3", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Lesson 4", "LearnTyping", "StartTyping")</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="accordion">Unicode of Special Characters</button>
+            <div class="panel">
+                <table>
+
+
+
+                    <tr>
+                        <th>Unicode</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 033</td>
+                        <td>!</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 0145</td>
+                        <td>'</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 0146</td>
+                        <td>'</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 0147</td>
+                        <td>"</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 0148</td>
+                        <td>"</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 035</td>
+                        <td>#</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 036</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 037</td>
+                        <td>%</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 042</td>
+                        <td>*</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 043</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 045</td>
+                        <td>(-)Center</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 047</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 058</td>
+                        <td>:</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 059</td>
+                        <td>;</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 060</td>
+                        <td><</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 061</td>
+                        <td>=</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 062</td>
+                        <td>></td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 063</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 091</td>
+                        <td>[</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 092</td>
+                        <td>\</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 093</td>
+                        <td>]</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 094</td>
+                        <td>^</td>
+                    </tr>
+                    <tr>
+                        <td>LEFT ALT + 095</td>
+                        <td>(_)Bottom</td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+    </div>
+</div>
+    
+
+
