@@ -496,6 +496,7 @@
     <Content Include="img\work\w2.jpg" />
     <Content Include="img\work\w3.jpg" />
     <Content Include="img\work\w4.jpg" />
+    <Content Include="LearnTypingPhotos\HomeRow\HomeRowLesson1.jpg" />
     <Content Include="RaviFontKeyBoard.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -582,12 +583,13 @@
     <Content Include="Views\StartTyping\LearnTyping.cshtml" />
     <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\HomeRow\Lesson1.cshtml" />
+    <Content Include="Views\HomeRow\Lesson2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="English\IdiomsAndPhrases\new pages by Renu and Mohit\" />
     <Folder Include="promaster-files\" />
-    <Folder Include="Views\HomeRow\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

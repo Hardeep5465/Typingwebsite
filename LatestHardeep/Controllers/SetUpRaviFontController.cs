@@ -8,7 +8,7 @@ namespace LatestHardeep.Controllers
 {
     public class SetUpRaviFontController : Controller
     {
-        // GET: SetUpRaviFont
+        // GET: SetUpRaaviFont
         public ActionResult Windows7()
         {
             return View();
