@@ -192,6 +192,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
     <Compile Include="Controllers\StartTypingController.cs" />
+    <Compile Include="Controllers\ThirdRowController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -523,6 +524,8 @@
     <Content Include="img\work\.DS_Store" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.ogg" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="WebImage.ico" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -583,8 +586,11 @@
     <Content Include="Views\StartTyping\LearnTyping.cshtml" />
     <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\HomeRow\Lesson1.cshtml" />
     <Content Include="Views\HomeRow\Lesson2.cshtml" />
+    <Content Include="Views\HomeRow\Lesson1.cshtml" />
+    <Content Include="Views\HomeRow\Lesson3.cshtml" />
+    <Content Include="Views\HomeRow\Lesson4.cshtml" />
+    <Content Include="Views\ThirdRow\Lesson1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

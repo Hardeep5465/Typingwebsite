@@ -22,6 +22,14 @@ namespace LatestHardeep.Controllers
         {
             return View("Lesson2");
         }
+        public ActionResult Lesson3()
+        {
+            return View("Lesson3");
+        }
+        public ActionResult Lesson4()
+        {
+            return View("Lesson4");
+        }
 
     }
 }
