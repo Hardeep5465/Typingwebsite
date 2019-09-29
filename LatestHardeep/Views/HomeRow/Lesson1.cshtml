@@ -8,7 +8,13 @@
 @section Scripts
 {
 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+   
+
 
     <style type="text/css">
 
@@ -133,14 +139,14 @@
             background-color: #e50000;
         }
 
-       /*graph div property*/
+        /*graph div property*/
         #graphrowone {
             visibility: hidden;
         }
+
         #graphrowtwo {
             visibility: hidden;
         }
-
     </style>
 
 
@@ -148,6 +154,8 @@
     <script type="text/javascript">
 
        
+
+
 
 
         // jQuery like selection of elements.
@@ -227,8 +235,8 @@
             typed: 0
         };
 
-       
-        
+
+
         //////////////////////////////////////////
         // Initial implementation notes:
         // next word on <space>, if empty, then set value=""
@@ -332,6 +340,7 @@
 
 
 
+
         function typingTest(e) {
             // Char:        Key Code:
             // <space>      32
@@ -382,7 +391,7 @@
 
         }
 
-      
+
 
 
         /*Timer code*/
@@ -391,7 +400,7 @@
         var clock = null;//Define a global variable for the clock
         var isRunning = false;
         var initTime = null;
-
+        var Typeminutes; //declared to get the no of minutes spent by the user while typing
 
         function Clock() {
 
@@ -403,21 +412,30 @@
 
             //console.log("Called clock");
             if (clock != null) {
-                //Clock is running
-                //console.log("Stopping clock");
-                clearInterval(clock);
-                clock = null;
-                document.getElementById("clock").innerText = "Start";
-                document.getElementById("test").innerText = "";
-                isRunning = false;
-                addWords(); //to reset word color to black once the user stops the clock 
-                //write here function of generating graphs after user clicks the stops
-                console.log(wordData.correct);
-                console.log(wordData.incorrect);
-                console.log(wordData.total);
-               
-                showDiv();//show graphs after user stops typing
-                
+
+
+
+                if (Typeminutes <= 0 || wordData.total == 0) {
+                    alert("Please Check! Either time is less than one minute or you haven't typed anything");
+                }
+                else {
+                    //Clock is running
+                    //console.log("Stopping clock");
+                    clearInterval(clock);
+                    clock = null;
+                    document.getElementById("clock").innerText = "Start";
+                    document.getElementById("test").innerText = "";
+                    isRunning = false;
+                    addWords(); //to reset word color to black once the user stops the clock
+                    //write here function of generating graphs after user clicks the stops
+
+
+                    console.log(wordData.correct);
+                    console.log(wordData.incorrect);
+                    console.log(wordData.total);
+
+                    showDiv();//show graphs after user stops typing
+                }
             } else {
                 //Clock is not running
                 //console.log("Starting clock");
@@ -439,8 +457,20 @@
                 diff = currTime - initTime;
             //console.log("Actual time is " + currTime);
             //console.log("Time inited was " + initTime);
-            //console.log(format(diff / 1000));
+
+
             document.getElementById("test").innerText = format(diff / 1000);
+
+            //getting minute from the momement when clock is stopped
+            var hms = format(diff / 1000);   // your input string
+            var a = hms.split(':'); // split it at the colons
+
+            // Hours are worth 60 minutes.
+            Typeminutes = (+a[0]) * 60 + (+a[1]);
+
+            console.log(Typeminutes);
+
+
         }
 
         function format(seconds) {
@@ -452,9 +482,9 @@
 
         //generate chart code
 
-       
 
-      
+
+
 
         function showDiv() {
             //document.getElementById('graphrowone').style.display = "block";
@@ -463,9 +493,20 @@
             rendergrossspeed();
             rendernetspeed();
             renderaccuracy();
+          
+
             document.getElementById('graphrowone').style.visibility = 'visible';
             document.getElementById('graphrowtwo').style.visibility = 'visible';
         }
+
+
+
+
+
+
+        //Graph results variables
+        var grossspeed;
+        // var netspeed;
 
         function rendertypingresults() {
             Chart.defaults.global.defaultFontColor = 'blue';
@@ -490,7 +531,7 @@
                 // Configuration options go here
                 options: {
 
-                   
+
 
                     scales: {
                         yAxes: [{
@@ -507,9 +548,17 @@
             });
         }
 
+        //To calculate this mathematically, take the number of correct characters typed divided by the total number, multiplied by 100%
+
+
+
         function renderaccuracy() {
 
             //to create chart for accuracy
+
+            var accuracyresult = (wordData.correct / wordData.total) * 100;
+
+            accuracyresult = accuracyresult.toFixed(2);
 
             Chart.defaults.global.defaultFontColor = 'blue';
             var ctx = document.getElementById('accuracyChart').getContext('2d');
@@ -519,13 +568,13 @@
 
                 // The data for our dataset
                 data: {
-                    labels: ['Accuracy'],
+                    labels: ['Accuracy(%)'],
                     datasets: [{
-                        label: 'Accuracy',
+                        label: 'Accuracy(%)',
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
-                        data: [20],
-                       // backgroundColor: ["DarkGoldenRod"]
+                        data: [accuracyresult],
+                        // backgroundColor: ["DarkGoldenRod"]
                     }]
                 },
 
@@ -570,47 +619,18 @@
 
         }
 
-        function rendernetspeed() {
-            //to create chart for Net speed 
 
-            Chart.defaults.global.defaultFontColor = 'blue';
-            var ctx1 = document.getElementById('netspeedChart').getContext('2d');
-            var chart = new Chart(ctx1, {
-                // The type of chart we want to create
-                type: 'bar',
 
-                // The data for our dataset
-                data: {
-                    labels: ['Net Speed'],
-                    datasets: [{
-                        label: 'Net Speed',
-                        backgroundColor: 'rgb(178,34,34)',
-                        borderColor: 'rgb(178,34,34)',
-                        data: [30],
-                      //  backgroundColor: ["DarkRed"]
-                    }]
-                },
 
-                // Configuration options go here
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        xAxes: [{
-                            // Change here
-                            barPercentage: 0.2
-                        }]
-                    }
-                }
-            });
-        }
-
+        /*Formula to count gross speed:----> gross speed = (All typed entries/5)/Time(min) */
 
         function rendergrossspeed() {
             //to create chart for Gross Speed
+
+            console.log(Typeminutes);
+
+            grossspeed = ((wordData.total / 5) / Typeminutes);
+            console.log('Grossspeed=' + grossspeed);
 
             Chart.defaults.global.defaultFontColor = 'blue';
             var ctx2 = document.getElementById('grossspeedchart').getContext('2d');
@@ -620,13 +640,13 @@
 
                 // The data for our dataset
                 data: {
-                    labels: ['Gross Speed '],
+                    labels: ['Gross Speed(WPM)'],
                     datasets: [{
-                        label: 'Gross Speed',
+                        label: 'Gross Speed(WPM)',
                         backgroundColor: 'rgb(139,69,19)',
                         borderColor: 'rgb(139,69,19)',
-                        data: [20],
-                       // backgroundColor: ["MidnightBlue "]
+                        data: [grossspeed],
+                        // backgroundColor: ["MidnightBlue "]
                     }]
                 },
 
@@ -648,8 +668,54 @@
             });
         }
 
-       
+        /*Formula to count Net speed:----> Gross speed - (Incorrect characters)/Time(min) */
 
+
+        function rendernetspeed() {
+            //to create chart for Net speed
+
+            //  console.log('Grossspeed in net spteed' + grossspeed);
+
+            var incorrecttypespeed = wordData.incorrect / Typeminutes;
+
+            var netspeed = grossspeed - incorrecttypespeed;
+
+            console.log('Net Speed=' + netspeed);
+
+            Chart.defaults.global.defaultFontColor = 'blue';
+            var ctx1 = document.getElementById('netspeedChart').getContext('2d');
+            var chart = new Chart(ctx1, {
+                // The type of chart we want to create
+                type: 'bar',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Net Speed(WPM)'],
+                    datasets: [{
+                        label: 'Net Speed(WPM)',
+                        backgroundColor: 'rgb(178,34,34)',
+                        borderColor: 'rgb(178,34,34)',
+                        data: [netspeed],
+                        //  backgroundColor: ["DarkRed"]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            // Change here
+                            barPercentage: 0.2
+                        }]
+                    }
+                }
+            });
+        }
 
 
 
@@ -833,7 +899,7 @@
             </div>
         </div>
         @*<div class="test" style="width:400px;"> <canvas id="myChart"></canvas></div>
-        <div class="test" style="width:400px;"> <canvas id="accuracyChart"></canvas></div>*@
+            <div class="test" style="width:400px;"> <canvas id="accuracyChart"></canvas></div>*@
         <div id="graphrowone">
             <div class="col-md-6">
                 <canvas id="myChart"></canvas>
