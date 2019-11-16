@@ -18,6 +18,7 @@
 
     <style type="text/css">
 
+
         #word-section {
             border: 1px solid #999;
             background-color: #fff;
@@ -147,13 +148,58 @@
         #graphrowtwo {
             visibility: hidden;
         }
+        
+/*css to move to top of the page on click of button*/
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                color: black;
+                background-color: white;
+            }
+
+
     </style>
 
 
 
     <script type="text/javascript">
 
-       
+       //code to move top of the page, when user scrolls down
+
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+           // document.body.scrollTop = 0;
+          //  document.documentElement.scrollTop = 0;
+            window.scrollTo({ top:0, behavior: 'smooth' });
+        }
 
 
 
@@ -363,7 +409,13 @@
             if (isRunning == false) {
                 word.value = "";
                 //alert("Clock not running!")
-                document.getElementById("errorMessage").innerText = "Please Click on Start!";
+                if (document.getElementById("clock").hasAttributes('disabled')) {
+                    document.getElementById("errorMessage").innerText = "Please Click on Re-Start!";
+                }
+                else {
+                    document.getElementById("errorMessage").innerText = "Please Click on Start!";
+                }
+              
             }
 
 
@@ -496,14 +548,21 @@
             return ((numhours < 10) ? "0" + numhours : numhours) + ":" + ((numminutes < 10) ? "0" + numminutes : numminutes) + ":" + ((numseconds < 10) ? "0" + numseconds : numseconds);
         }
 
-        //generate chart code
+        
 
+        function clearvariables() {
+            wordData.total = 0;
+            wordData.correct = 0;
+            wordData.incorrect = 0;
+            wordData.typed = 0;
+        }
 
 
 
 
         function showDiv() {
 
+            window.scrollTo({ top: 800, behavior: 'smooth'});
             document.getElementById('chartrow').style.display = 'block';
             
                 rendertypingresults();
@@ -514,8 +573,10 @@
             rendergrossspeed();
             rendernetspeed();
            
-
+        
             document.getElementById('chartrow').style.visibility = 'visible';
+            clearvariables();
+            console.log("Before" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
            // document.getElementById('graphrowtwo').style.visibility = 'visible';
           // document.getElementById('clock').add('disabled');
             // $("#restarttype").removeAttr('disabled');
@@ -526,10 +587,18 @@
            
         }
 
+       
+
         function disableButton(btn) {
+           // console.log("Before"+ wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
             document.getElementById('chartrow').style.display = 'none';
             document.getElementById(btn.id).disabled = true;
             document.getElementById('clock').removeAttribute('disabled');
+            document.getElementById("errorMessage").innerText = "";
+            document.getElementById("typebox").focus();
+            Clock(this);
+          //  clearvariables();
+            console.log("After"+ wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
             //console.log("Worddata=" + wordData.total);
             //console.log("Correct=" + wordData.correct);
             //console.log("Incorrect" + wordData.incorrect);
@@ -827,7 +896,7 @@
 
 
    
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 
@@ -949,10 +1018,10 @@
 
 
             <br />
-            <div id="banner" style="text-align:center;">
+            @*<div id="banner" style="text-align:center;">
                 <p>Click on Start Button to Start Typing</p>
-                @*<marquee style="font-weight:bold;color:cadetblue">If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</marquee>*@
-            </div>
+                <marquee style="font-weight:bold;color:cadetblue">If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</marquee>
+            </div>*@
             <div id="banner" style="text-align:center;">
                 <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
                 @*<marquee style="font-weight:bold;color:cadetblue">If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</marquee>*@
