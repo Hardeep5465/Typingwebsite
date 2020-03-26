@@ -6,16 +6,17 @@ using System.Web.Mvc;
 
 namespace LatestHardeep.Controllers
 {
-    public class ThirdRowController : Controller
+    public class EnglishController : Controller
     {
-        // GET: ThirdRow
-        public ActionResult Index()
+        // GET: English
+        public ActionResult EnglishHome()
         {
             return View();
         }
-        public ActionResult Lesson1()
+
+        public ActionResult Index()
         {
-            return View("Lesson1");
+            return View();
         }
     }
 }

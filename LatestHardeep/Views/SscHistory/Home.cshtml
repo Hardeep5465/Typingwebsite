@@ -1,0 +1,249 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Previous Year SSC |";
+    string id;
+}
+
+@section Scripts
+{
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('label').click(function () {
+                $('label').removeClass('worngans');
+                $(this).addClass('worngans');
+            });
+        });
+</script>
+ }
+<style type="text/css">
+
+    .scp-quizzes-main {
+        width: 100%;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .scp-quizzes-data {
+        box-shadow: 0px 1px 3px -1px #DCDCDC;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    input[type=radio] + label {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+        input[type=radio] + label:hover {
+            border: 1px solid #000000;
+        }
+
+    input[type=radio]:checked + label {
+        background-image: none;
+        background-color: #0C0;
+        color: #fff;
+        border: 1px solid #0C0 !important;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .worngans {
+        background-color: #F36;
+        color: #fff;
+        border: 1px solid #F36 !important;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6">
+            <h3 style="text-align:center;"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;History&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;SSC Previous Years Questions</h3>
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">1. Which among the following chronology is correct regarding four ‘samvatas’ ? check answer from net</div>
+
+
+                    <input type="radio" id="answer" name="question1">
+                    <label for="answer"><span class="badge pull-left">A</span>&nbsp;&nbsp;Gupta–Gregorian–Hizri–Saka</label>
+                    <br />
+                    <input type="radio" name="question1">
+                    <label><span class="badge pull-left">B</span>&nbsp;&nbsp; Gregorian–Saka–Hizri–Gupta</label>
+                    <br />
+                    <input type="radio" name="question1">
+                    <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Saka–Gregorian–Hizri–Gupta</label>
+                    <br />
+                    <input type="radio" name="question1">
+                    <label><span class="badge pull-left">D</span>&nbsp;&nbsp;  Hizri–Gupta–Gregorian–Saka</label>
+
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    2. The home of Gargi, Maitrey, and Kapila was at :
+                </div>
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">A</span>&nbsp;&nbsp;Vidishaa</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp; Ujjain</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Pataliputra</label> <br />
+                <input type="radio" id="Mithila" name="question1">
+                <label for="Mithila"><span class="badge pull-left">D</span>&nbsp;&nbsp; Mithila</label>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    3. Which area of India was known as Avantika in ancient times ?
+                </div>
+                <input type="radio" id="answer" name="question1">
+                <label for="answer"><span class="badge pull-left">A</span>&nbsp;&nbsp; Avadh</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Ruhelkhand</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Bundelkhand</label> <br />
+                <input type="radio" id="Malwa" name="question1">
+                <label for="Malwa"><span class="badge pull-left">D</span>&nbsp;&nbsp; Malwa</label>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    4. The Social System of the Harappans was :
+                </div>
+                <input type="radio" id="Fairlyegalitarian" name="question1">
+                <label for="Fairlyegalitarian"><span class="badge pull-left">A</span>&nbsp;&nbsp; Fairly egalitarian</label><br />
+                <input type="radio" name="question1 ">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Slave-Labour based</label><br />
+                <input type="radio" name="question1 ">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Colour (Varna) based</label> <br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">D</span>&nbsp;&nbsp; Caste based</label>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    5. Which of the following Vedas provides information about the civilisation of the Early Vedic Age?
+                </div>
+                <input type="radio" id="Rig-veda" name="question1">
+                <label for="Rig-veda"><span class="badge pull-left">A</span>&nbsp;&nbsp; Rig-veda</label><br />
+                <input type="radio" name="question1 ">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Yajur-veda</label><br />
+                <input type="radio" name="question1 ">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp; Atharva-veda</label> <br />
+                <input type="radio" name="question1 ">
+                <label><span class="badge pull-left">D</span>&nbsp;&nbsp; Sama-veda</label>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    6. The university which became famous in the post-Gupta Era was :
+                </div>
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">A</span>&nbsp;&nbsp; Kanchi</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span> &nbsp;&nbsp; Taxilaa</label><br />
+                <input type="radio" id="Nalanda" name="question1">
+                <label for="Nalanda"><span class="badge pull-left">C</span>&nbsp;&nbsp;  Nalanda</label> <br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">D</span>&nbsp;&nbsp; Vallabhi</label>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    7. Banabhatta was the court poet of which emperor ?
+                </div>
+                <input type="radio" id="answer" name="question1">
+                <label for="answer"><span class="badge pull-left">A</span>&nbsp;&nbsp; Vikramaditya</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Kumaragupta</label><br />
+                <input type="radio" id="Harshavardhana" name="question1">
+                <label for="Harshavardhana"><span class="badge pull-left">C</span>&nbsp;&nbsp;  Harshavardhana</label> <br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">D</span>&nbsp;&nbsp; Kanishka</label>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    8. The first Indian ruler, who established the supremacy of Indian Navy in the Arabian Sea was :
+                </div>
+                <input type="radio" id="RajarajaI" name="question1">
+                <label for="RajarajaI"><span class="badge pull-left">A</span>&nbsp;&nbsp; Rajaraja I</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Rajendra I</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Rajadhiraja I</label> <br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">D</span>&nbsp;&nbsp; Kulottunga I</label>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    9. Which statement on the Harappan Civilisation is incorrect?
+                </div>
+                <input type="radio" id="answer" name="question1">
+                <label for="answer"><span class="badge pull-left">A</span>&nbsp;&nbsp; Horse sacrifice was known to them.</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span> &nbsp;&nbsp; Cow was sacred to them.</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  ‘Pashupati’ was venerated by them.</label> <br />
+                <input type="radio" id="Theculturewasnotgenerallystatic" name="question1">
+                <label for="Theculturewasnotgenerallystatic"><span class="badge pull-left">D</span>&nbsp;&nbsp; The culture was not generally static.</label>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    10. The First Tirthankara of the Jains was :
+                </div>
+                <input type="radio" id="answer" name="question1">
+                <label for="answer"><span class="badge pull-left">A</span>&nbsp;&nbsp; Arishtanemi</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">B</span>&nbsp;&nbsp;  Parshvanath</label><br />
+                <input type="radio" name="question1">
+                <label><span class="badge pull-left">C</span>&nbsp;&nbsp;  Ajitanath</label> <br />
+                <input type="radio" id="Rishabha" name="question1">
+                <label for="Rishabha"><span class="badge pull-left">D</span>&nbsp;&nbsp; Rishabha</label>
+
+            </div>
+            <div class="text-center">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item">@Html.ActionLink("2", "Home", "SscHistory", new { id = "Page2" }, null)</li>
+                    <li class="page-item">@Html.ActionLink("3", "Index", "EnglishIdioms", new { id = "Page3" }, null)</li>
+                    <li class="page-item">@Html.ActionLink("4", "Index", "EnglishIdioms", new { id = "Page4" }, null)</li>
+                    <li class="page-item">@Html.ActionLink("5", "Index", "EnglishIdioms", new { id = "Page5" }, null)</li>
+                    <!-- <li class="page-item"><a class="page-link" href="Page6.html">6</a></li> -->
+                    <!-- <li class="page-item"><a class="page-link" href="Page7.html">7</a></li> -->
+                    <!-- <li class="page-item"><a class="page-link" href="Page8.html">8</a></li> -->
+                    <!-- <li class="page-item"><a class="page-link" href="Page9.html">9</a></li> -->
+                    <!-- <li class="page-item"><a class="page-link" href="Page10.html">10</a></li> -->
+                    <li class="page-item">@Html.ActionLink("Next", "Index", "EnglishIdioms", new { id = "Page2" }, null)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+    </div>
+</div>
+

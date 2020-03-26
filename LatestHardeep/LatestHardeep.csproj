@@ -186,13 +186,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\EnglishController.cs" />
     <Compile Include="Controllers\EnglishIdiomsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeRowController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
+    <Compile Include="Controllers\SscHistoryController.cs" />
     <Compile Include="Controllers\StartTypingController.cs" />
-    <Compile Include="Controllers\ThirdRowController.cs" />
+    <Compile Include="Controllers\BottomRowController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +241,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\owl.carousel.css" />
+    <Content Include="css\StyleSheet.css" />
     <Content Include="css\themify-icons.css" />
     <Content Include="English\IdiomsAndPhrases\Page1.html" />
     <Content Include="English\IdiomsAndPhrases\Page2.html" />
@@ -493,6 +496,7 @@
     <Content Include="img\showcase-original.jpg" />
     <Content Include="img\showcase.png" />
     <Content Include="img\video-bg.jpg" />
+    <Content Include="img\work\rocket_contact.png" />
     <Content Include="img\work\w1.jpg" />
     <Content Include="img\work\w2.jpg" />
     <Content Include="img\work\w3.jpg" />
@@ -526,6 +530,8 @@
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\JavaScript.js" />
+    <Content Include="Views\Home\Thankyou.html" />
     <Content Include="WebImage.ico" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -584,13 +590,18 @@
     <Content Include="Views\SetUpRaviFont\Windows10.cshtml" />
     <Content Include="Views\SetUpRaviFont\Win7video.cshtml" />
     <Content Include="Views\StartTyping\LearnTyping.cshtml" />
-    <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\HomeRow\Lesson2.cshtml" />
     <Content Include="Views\HomeRow\Lesson1.cshtml" />
     <Content Include="Views\HomeRow\Lesson3.cshtml" />
     <Content Include="Views\HomeRow\Lesson4.cshtml" />
-    <Content Include="Views\ThirdRow\Lesson1.cshtml" />
+    <Content Include="Views\BottomRow\Lesson1.cshtml" />
+    <Content Include="Views\SscHistory\Home.cshtml" />
+    <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
+    <Content Include="Views\English\EnglishHome.cshtml" />
+    <Content Include="Views\BottomRow\Index.cshtml" />
+    <Content Include="Views\BottomRow\Lesson2.cshtml" />
+    <Content Include="Views\BottomRow\Lesson3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
