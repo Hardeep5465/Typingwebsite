@@ -1,4 +1,18 @@
-﻿  
+﻿$.fn.shuffleChildren = function() {
+  $.each(this.get(), function(index, el) {
+    var $el = $(el);
+    var $find = $el.children();
+
+    $find.sort(function() {
+      return 0.5 - Math.random();
+    });
+
+    $el.empty();
+    $find.appendTo($el);
+  });
+};
+//usage of abaove function--use this to shuffle the word section
+$(".shuffle").shuffleChildren();
 
         const jq = document.createElement('script');
         jq.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js";

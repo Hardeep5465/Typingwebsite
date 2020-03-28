@@ -1,0 +1,187 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Lesson 1";
+}
+
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <div id="fb-root">
+
+    </div>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+}
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6">
+            <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
+            <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;Shift Upper Row : Lesson 1&nbsp;&nbsp;</h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Lesson 2", "Lesson2", "ShiftUpperRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <br />
+            <img src="~/LearnTypingPhotos/HomeRow/HomeRowLesson1.jpg" style="width:550px;" />
+            <br />
+            <br />
+            <table class="cont-table">
+                <tbody>
+                    <tr>
+                        <th>
+                            Key Combinations
+                        </th>
+                        <td>
+                            Shift + q
+                        </td>
+                        <td>
+                            Shift + w
+                        </td>
+                        <td>
+                            Shift + e
+                        </td>
+                        <td>
+                            Shift + r
+                        </td>
+                        <td>
+                            Shift + t
+                        </td>
+                        <td>
+                            Shift + y
+                        </td>
+                        <td>
+                            Shift + u
+                        </td>
+                        <td>
+                            Shift + i
+                        </td>
+                        <td>
+                            Shift + o
+                        </td>
+                        <td>
+                            Shift + p
+                        </td>
+                        <td>
+                            Shift + {
+                        </td>
+                        <td>
+                            Shift + }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Raavi
+                        </th>
+                        <td>
+                            ਔ
+                        </td>
+                        <td>
+                            ਐ
+                        </td>
+                        <td>
+                            ਆ
+                        </td>
+                        <td>
+                            ਈ
+                        </td>
+                        <td>
+                            ਊ
+                        </td>
+                        <td>
+                            ਭ
+                        </td>
+                        <td>
+                            ਙ
+                        </td>
+                        <td>
+                            ਘ
+                        </td>
+                        <td>
+                            ਧ
+                        </td>
+                        <td>
+                            ਝ
+                        </td>
+                        <td>
+                            ਢ
+                        </td>
+                        <td>
+                            ਞ
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+
+            <section id="word-section"><span class="current-word">ਆ</span><span>ਧ</span><span>ਊ</span><span>ਙ</span><span>ਝ</span><span>ਞ</span><span>ਐ</span><span>ਞ</span><span>ਢ</span><span>ਘ</span><span>ਔ</span><span>ਭ</span><span>ਢ</span><span>ਢ</span><span>ਙ</span><span>ਘ</span><span>ਙ</span><span>ਐ</span><span>ਆ</span><span>ਧ</span><span>ਊ</span><span>ਊ</span><span>ਈ</span><span>ਐ</span><span>ਝ</span><span>ਈ</span><span>ਘ</span><span>ਧ</span><span>ਧ</span><span>ਆ</span><span>ਝ</span><span>ਭ</span><span>ਙ</span><span>ਝ</span><span>ਘ</span><span>ਈ</span><span>ਞ</span><span>ਆ</span><span>ਧ</span><span>ਭ</span><span>ਐ</span><span>ਙ</span><span>ਔ</span><span>ਆ</span><span>ਭ</span><span>ਊ</span><span>ਙ</span><span>ਔ</span><span>ਢ</span><span>ਐ</span><span>ਊ</span><span>ਆ</span><span>ਙ</span><span>ਧ</span><span>ਐ</span><span>ਈ</span><span>ਈ</span><span>ਐ</span><span>ਝ</span><span>ਙ</span><span>ਆ</span><span>ਆ</span><span>ਞ</span><span>ਆ</span><span>ਢ</span><span>ਔ</span><span>ਐ</span><span>ਧ</span><span>ਢ</span><span>ਆ</span><span>ਘ</span><span>ਆ</span><span>ਘ</span><span>ਆ</span><span>ਘ</span><span>ਭ</span><span>ਔ</span><span>ਊ</span><span>ਧ</span><span>ਐ</span><span>ਊ</span><span>ਢ</span><span>ਔ</span><span>ਧ</span><span>ਐ</span><span>ਔ</span><span>ਭ</span><span>ਔ</span><span>ਔ</span><span>ਭ</span><span>ਔ</span><span>ਭ</span><span>ਞ</span><span>ਐ</span><span>ਧ</span><span>ਭ</span><span>ਘ</span><span>ਐ</span><span>ਧ</span><span>ਙ</span><span>ਊ</span><span>ਐ</span><span>ਊ</span><span>ਈ</span><span>ਈ</span><span>ਙ</span><span>ਝ</span><span>ਭ</span><span>ਝ</span><span>ਭ</span><span>ਝ</span><span>ਘ</span><span>ਔ</span><span>ਧ</span><span>ਭ</span><span>ਞ</span><span>ਞ</span><span>ਔ</span><span>ਐ</span><span>ਐ</span><span>ਝ</span><span>ਙ</span><span>ਧ</span><span>ਞ</span><span>ਘ</span><span>ਭ</span><span>ਔ</span><span>ਔ</span><span>ਈ</span><span>ਧ</span><span>ਈ</span><span>ਙ</span><span>ਘ</span><span>ਧ</span><span>ਆ</span><span>ਢ</span><span>ਢ</span><span>ਧ</span><span>ਈ</span><span>ਝ</span><span>ਙ</span><span>ਭ</span><span>ਐ</span><span>ਔ</span><span>ਭ</span><span>ਆ</span><span>ਭ</span><span>ਝ</span><span>ਝ</span><span>ਞ</span><span>ਧ</span><span>ਙ</span><span>ਧ</span><span>ਭ</span><span>ਧ</span><span>ਆ</span><span>ਭ</span><span>ਭ</span><span>ਊ</span><span>ਔ</span><span>ਭ</span><span>ਧ</span><span>ਊ</span><span>ਘ</span><span>ਊ</span><span>ਐ</span><span>ਐ</span><span>ਝ</span><span>ਆ</span><span>ਭ</span><span>ਔ</span><span>ਆ</span><span>ਙ</span><span>ਊ</span><span>ਞ</span><span>ਞ</span><span>ਭ</span><span>ਭ</span><span>ਘ</span><span>ਝ</span><span>ਊ</span><span>ਭ</span><span>ਭ</span><span>ਘ</span><span>ਞ</span><span>ਔ</span><span>ਭ</span><span>ਭ</span><span>ਞ</span><span>ਧ</span><span>ਭ</span><span>ਊ</span><span>ਝ</span><span>ਧ</span><span>ਝ</span><span>ਊ</span><span>ਐ</span><span>ਙ</span><span>ਆ</span><span>ਊ</span><span>ਆ</span><span>ਆ</span><span>ਊ</span><span>ਢ</span><span>ਐ</span><span>ਔ</span><span>ਭ</span><span>ਆ</span><span>ਈ</span><span>ਞ</span><span>ਝ</span><span>ਙ</span><span>ਢ</span><span>ਐ</span><span>ਝ</span><span>ਐ</span><span>ਝ</span><span>ਆ</span><span>ਐ</span><span>ਊ</span><span>ਝ</span><span>ਝ</span><span>ਆ</span><span>ਝ</span><span>ਢ</span><span>ਔ</span><span>ਝ</span><span>ਭ</span><span>ਙ</span><span>ਞ</span><span>ਝ</span><span>ਞ</span><span>ਊ</span><span>ਢ</span><span>ਝ</span><span>ਈ</span><span>ਞ</span><span>ਭ</span><span>ਙ</span><span>ਘ</span><span>ਘ</span><span>ਭ</span><span>ਊ</span><span>ਆ</span><span>ਊ</span><span>ਢ</span><span>ਞ</span><span>ਆ</span><span>ਝ</span><span>ਘ</span><span>ਈ</span><span>ਆ</span><span>ਔ</span><span>ਞ</span><span>ਆ</span><span>ਧ</span><span>ਊ</span><span>ਝ</span><span>ਐ</span><span>ਞ</span><span>ਈ</span><span>ਞ</span><span>ਞ</span><span>ਞ</span><span>ਔ</span><span>ਝ</span><span>ਭ</span><span>ਧ</span><span>ਢ</span><span>ਞ</span><span>ਧ</span><span>ਞ</span><span>ਭ</span><span>ਝ</span><span>ਘ</span><span>ਝ</span><span>ਝ</span><span>ਆ</span><span>ਈ</span><span>ਊ</span><span>ਝ</span><span>ਊ</span><span>ਭ</span><span>ਆ</span><span>ਊ</span><span>ਔ</span><span>ਭ</span><span>ਊ</span><span>ਧ</span><span>ਐ</span><span>ਞ</span><span>ਐ</span><span>ਔ</span><span>ਙ</span><span>ਢ</span><span>ਝ</span><span>ਐ</span><span>ਭ</span><span>ਭ</span><span>ਔ</span><span>ਐ</span><span>ਊ</span><span>ਔ</span><span>ਆ</span><span>ਭ</span><span>ਊ</span><span>ਧ</span><span>ਭ</span><span>ਐ</span><span>ਈ</span><span>ਭ</span><span>ਞ</span><span>ਞ</span><span>ਭ</span><span>ਔ</span><span>ਐ</span><span>ਘ</span><span>ਊ</span><span>ਐ</span><span>ਔ</span><span>ਔ</span><span>ਝ</span><span>ਈ</span><span>ਝ</span><span>ਈ</span><span>ਭ</span><span>ਙ</span><span>ਝ</span><span>ਘ</span><span>ਙ</span><span>ਘ</span><span>ਧ</span><span>ਈ</span><span>ਝ</span><span>ਈ</span><span>ਞ</span><span>ਈ</span><span>ਈ</span><span>ਭ</span><span>ਞ</span><span>ਞ</span><span>ਙ</span><span>ਐ</span><span>ਈ</span><span>ਙ</span><span>ਢ</span><span>ਈ</span><span>ਭ</span><span>ਈ</span><span>ਙ</span></section>
+
+            <br />
+            <div id="errorDiv" style="text-align:center;"> <span id="errorMessage" style="text-align:center;color:red;font-weight:bold"></span></div>
+            <section id="type-section">
+                <input id="typebox" name="typebox" type="text" autofocus="" tabindex="1" onkeyup="typingTest(event)">
+            </section>
+            <div id="divtimer" style="text-align:center">
+                <p id="test"></p>
+                <button type="button" class="btn btn-success" id="clock" onclick="Clock(this);">Start</button>
+                <button type="button" class="btn btn-success" style="margin-left:6px" id="restarttype" title="Every Restart will shuffle the words to practice more" onclick="disableButton(this);" disabled>Re-Start</button>
+            </div>
+            <br />
+            <div id="banner" style="text-align:center;">
+                <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
+
+            </div>
+            <div class="col-sm-3">
+                <!--add area here -->
+            </div>
+        </div>
+    </div>
+    <div class="row" id="criteriarow">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6" id="typingcriteria">
+            <div id="banner" style="border-color:brown;border-style:groove">
+                <p style="text-align:center"><br /><b>Criteria of Typing Results</b></p>
+                <ol style="text-align:left">
+                    <li>Speed is calculated based on characters per minute.</li>
+                    <li>Space Character is not used in calculation.</li>
+                    <li>Gross(CPM) is speed = Correct Characters Typed / Time Taken in Minutes</li>
+                    <li>Net(NCM) is speed =  Gross(CPM) - (Incorrect Characters Typed / Time Taken in Minutes)</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+    </div>
+    <div class="row" id="chartrow" style="display:none">
+        <div class="col-md-6" id="mcyhartdiv">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-md-6" id="accuracydiv">
+            <canvas id="accuracyChart"></canvas>
+        </div>
+        <div class="col-md-6" id="grossdiv">
+            <canvas id="grossspeedchart"></canvas>
+        </div>
+        <div class="col-md-6" id="netdiv">
+            <canvas id="netspeedChart"></canvas>
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="fb-comments" style="display:inline-block" data-href="https://localhost:44392/HomeRow/Lesson1" data-width="" data-numposts="5"></div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,155 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Lesson 1";
+}
+
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <div id="fb-root">
+
+    </div>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+}
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6">
+            <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
+            <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;Right Alt Key with All Keyboard Keys&nbsp;&nbsp;</h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Lesson 2", "Lesson2", "ShiftUpperRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <br />
+            <img src="~/LearnTypingPhotos/HomeRow/HomeRowLesson1.jpg" style="width:550px;" />
+            <br />
+            <br />
+            <table class="cont-table">
+                <tbody>
+                    <tr>
+                        <th>
+                            Key Combinations
+                        </th>
+                        <td>
+                            Alt + b
+                        </td>
+                        <td>
+                            Alt + h
+                        </td>
+                        <td>
+                            Alt + k
+                        </td>
+                        <td>
+                            Alt + i
+                        </td>
+                        <td>
+                            Alt + p
+                        </td>
+                        <td>
+                            Alt + [
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Raavi
+                        </th>
+                        <td>
+                            ੳ
+                        </td>
+                        <td>
+                            ਫ਼
+                        </td>
+                        <td>
+                            ਖ਼
+                        </td>
+                        <td>
+                            ਗ਼
+                        </td>
+                        <td>
+                            ਜ਼
+                        </td>
+                        <td>
+                            ਭ
+                        </td>
+                        <td>
+                            ੜ
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+
+            <section id="word-section"><span class="current-word">੨</span><span>ਫ਼</span><span>॥</span><span>੫</span><span>੮</span><span>ਖ਼</span><span>ਖ਼</span><span>੮</span><span>੦</span><span>ੳ</span><span>ਖ਼</span><span>ਜ਼</span><span>੬</span><span>੬</span><span>॥</span><span>॥</span><span>੯</span><span>॥</span><span>੨</span><span>ੜ</span><span>੩</span><span>੪</span><span>੭</span><span>ੳ</span><span>੯</span><span>ੜ</span><span>ੜ</span><span>੫</span><span>੫</span><span>੭</span><span>ੜ</span><span>੦</span><span>੭</span><span>੦</span><span>ਜ਼</span><span>੮</span><span>੯</span><span>ਜ਼</span><span>ਗ਼</span><span>ੳ</span><span>ੜ</span><span>ੳ</span><span>੮</span><span>॥</span><span>੧</span><span>੧</span><span>੩</span><span>੫</span><span>੬</span><span>੮</span><span>ਫ਼</span><span>੦</span><span>੮</span><span>੪</span><span>॥</span><span>੫</span><span>ੳ</span><span>ਜ਼</span><span>੩</span><span>ੜ</span><span>ਖ਼</span><span>ਜ਼</span><span>ਫ਼</span><span>ੜ</span><span>ਗ਼</span><span>੦</span><span>ੳ</span><span>॥</span><span>ਜ਼</span><span>॥</span><span>੧</span><span>ਗ਼</span><span>੨</span><span>੧</span><span>ਖ਼</span><span>॥</span><span>੮</span><span>ੳ</span><span>੬</span><span>੮</span><span>ੜ</span><span>ਖ਼</span><span>੧</span><span>੦</span><span>ਜ਼</span><span>ਜ਼</span><span>ਫ਼</span><span>੯</span><span>ੜ</span><span>੨</span><span>੬</span><span>੩</span><span>੦</span><span>॥</span><span>੨</span><span>ਗ਼</span><span>॥</span><span>੬</span><span>ਜ਼</span><span>ਜ਼</span><span>੪</span><span>॥</span><span>ਗ਼</span><span>ਜ਼</span><span>੮</span><span>॥</span><span>ਜ਼</span><span>ਜ਼</span><span>੦</span><span>ੜ</span><span>੩</span><span>ੳ</span><span>ੜ</span><span>॥</span><span>੮</span><span>੩</span><span>ਫ਼</span><span>ਜ਼</span><span>੧</span><span>ਜ਼</span><span>੩</span><span>੫</span><span>ਖ਼</span><span>॥</span><span>ਖ਼</span><span>॥</span><span>੨</span><span>੩</span><span>ਜ਼</span><span>੩</span><span>ੳ</span><span>ਜ਼</span><span>ਗ਼</span><span>੮</span><span>ਗ਼</span><span>ੳ</span><span>॥</span><span>ਖ਼</span><span>ਖ਼</span><span>੯</span><span>੭</span><span>ਫ਼</span><span>੫</span><span>ੳ</span><span>੮</span><span>ਜ਼</span><span>॥</span><span>੨</span><span>ਗ਼</span><span>ਜ਼</span><span>੬</span><span>੭</span><span>ੳ</span><span>ੜ</span><span>ਗ਼</span><span>ੳ</span><span>॥</span><span>੨</span><span>ੳ</span><span>੯</span><span>ਜ਼</span><span>੩</span><span>ੳ</span><span>੬</span><span>੮</span><span>ਜ਼</span><span>੧</span><span>ਖ਼</span><span>॥</span><span>੯</span><span>ਜ਼</span><span>ੳ</span><span>ੳ</span><span>ਜ਼</span><span>੯</span><span>ੳ</span><span>੯</span><span>ਖ਼</span><span>ੳ</span><span>੧</span><span>ੜ</span><span>ਫ਼</span><span>੧</span><span>ੜ</span><span>॥</span><span>ਫ਼</span><span>੩</span><span>੨</span><span>ੜ</span><span>੦</span><span>ੜ</span><span>੯</span><span>੬</span><span>੦</span><span>ਜ਼</span><span>ਜ਼</span><span>੧</span><span>ਜ਼</span><span>ਗ਼</span><span>੮</span><span>੫</span><span>੮</span><span>ਖ਼</span><span>ੜ</span><span>੩</span><span>੨</span><span>ਖ਼</span><span>੧</span><span>॥</span><span>੬</span><span>॥</span><span>ਜ਼</span><span>੫</span><span>ਫ਼</span><span>ਖ਼</span><span>੧</span><span>॥</span><span>੦</span><span>ੳ</span><span>੨</span><span>ਜ਼</span><span>੧</span><span>ਫ਼</span><span>॥</span><span>ਖ਼</span><span>ਜ਼</span><span>੬</span><span>੫</span><span>੦</span><span>੯</span><span>੮</span><span>ਗ਼</span><span>੬</span><span>੨</span><span>ੳ</span><span>ੳ</span><span>੩</span><span>ਜ਼</span><span>ਫ਼</span><span>ੜ</span><span>ਗ਼</span><span>੮</span><span>॥</span><span>॥</span><span>੬</span><span>੭</span><span>੪</span><span>੨</span><span>ਜ਼</span><span>੨</span><span>੧</span><span>ਜ਼</span><span>੬</span><span>੫</span><span>ੳ</span><span>ੳ</span><span>੦</span><span>ੳ</span><span>ਜ਼</span><span>੯</span><span>੩</span><span>੨</span><span>ਖ਼</span><span>੮</span><span>ੳ</span><span>੩</span><span>ਫ਼</span><span>॥</span><span>੨</span><span>॥</span><span>ੳ</span><span>੯</span><span>੩</span><span>ੳ</span><span>ੜ</span><span>੯</span><span>੫</span><span>੩</span><span>॥</span><span>੯</span><span>ਜ਼</span><span>੩</span><span>ਫ਼</span><span>੯</span><span>੮</span><span>ੳ</span><span>ਜ਼</span><span>॥</span><span>੮</span><span>੭</span><span>੯</span><span>ਖ਼</span><span>॥</span><span>ਜ਼</span><span>੬</span><span>੮</span><span>ੳ</span><span>ੳ</span><span>੫</span><span>॥</span><span>੨</span><span>ੳ</span><span>੬</span><span>॥</span><span>੯</span><span>੯</span><span>੨</span><span>੦</span><span>੭</span><span>੪</span><span>੪</span><span>ਜ਼</span><span>ਜ਼</span><span>੭</span><span>ੜ</span><span>॥</span><span>॥</span><span>੫</span><span>੫</span><span>ੜ</span><span>ੜ</span><span>੮</span><span>੨</span><span>ਜ਼</span><span>੦</span><span>ਫ਼</span><span>ੳ</span><span>੧</span><span>੭</span><span>ਫ਼</span><span>॥</span><span>ਫ਼</span><span>੫</span><span>ੜ</span><span>੧</span><span>੨</span><span>ੜ</span><span>ੜ</span><span>ਫ਼</span><span>੮</span><span>ਖ਼</span><span>ਜ਼</span><span>ਜ਼</span><span>੩</span><span>॥</span><span>੬</span><span>੯</span><span>ਜ਼</span><span>ਗ਼</span><span>ਫ਼</span></section>
+
+
+            <br />
+            <div id="errorDiv" style="text-align:center;"> <span id="errorMessage" style="text-align:center;color:red;font-weight:bold"></span></div>
+            <section id="type-section">
+                <input id="typebox" name="typebox" type="text" autofocus="" tabindex="1" onkeyup="typingTest(event)">
+            </section>
+            <div id="divtimer" style="text-align:center">
+                <p id="test"></p>
+                <button type="button" class="btn btn-success" id="clock" onclick="Clock(this);">Start</button>
+                <button type="button" class="btn btn-success" style="margin-left:6px" id="restarttype" title="Every Restart will shuffle the words to practice more" onclick="disableButton(this);" disabled>Re-Start</button>
+            </div>
+            <br />
+            <div id="banner" style="text-align:center;">
+                <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
+
+            </div>
+            <div class="col-sm-3">
+                <!--add area here -->
+            </div>
+        </div>
+    </div>
+    <div class="row" id="criteriarow">
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+        <div class="col-sm-6" id="typingcriteria">
+            <div id="banner" style="border-color:brown;border-style:groove">
+                <p style="text-align:center"><br /><b>Criteria of Typing Results</b></p>
+                <ol style="text-align:left">
+                    <li>Speed is calculated based on characters per minute.</li>
+                    <li>Space Character is not used in calculation.</li>
+                    <li>Gross(CPM) is speed = Correct Characters Typed / Time Taken in Minutes</li>
+                    <li>Net(NCM) is speed =  Gross(CPM) - (Incorrect Characters Typed / Time Taken in Minutes)</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <!--add area here -->
+        </div>
+    </div>
+    <div class="row" id="chartrow" style="display:none">
+        <div class="col-md-6" id="mcyhartdiv">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-md-6" id="accuracydiv">
+            <canvas id="accuracyChart"></canvas>
+        </div>
+        <div class="col-md-6" id="grossdiv">
+            <canvas id="grossspeedchart"></canvas>
+        </div>
+        <div class="col-md-6" id="netdiv">
+            <canvas id="netspeedChart"></canvas>
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="fb-comments" style="display:inline-block" data-href="https://localhost:44392/HomeRow/Lesson1" data-width="" data-numposts="5"></div>
+    </div>
+</div>
+
+
+
+

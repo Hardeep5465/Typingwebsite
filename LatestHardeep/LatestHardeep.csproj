@@ -188,10 +188,17 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\EnglishController.cs" />
     <Compile Include="Controllers\EnglishIdiomsController.cs" />
+    <Compile Include="Controllers\FirstRowController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeRowController.cs" />
+    <Compile Include="Controllers\LeftAltWithAllKeysController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RightAltWithAllKeysController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
+    <Compile Include="Controllers\ShiftBottomRowController.cs" />
+    <Compile Include="Controllers\ShiftHomeRowController.cs" />
+    <Compile Include="Controllers\ShiftNumberRowController.cs" />
+    <Compile Include="Controllers\ShiftUpperRowController.cs" />
     <Compile Include="Controllers\SscHistoryController.cs" />
     <Compile Include="Controllers\StartTypingController.cs" />
     <Compile Include="Controllers\BottomRowController.cs" />
@@ -602,6 +609,18 @@
     <Content Include="Views\BottomRow\Index.cshtml" />
     <Content Include="Views\BottomRow\Lesson2.cshtml" />
     <Content Include="Views\BottomRow\Lesson3.cshtml" />
+    <Content Include="Views\FirstRow\Lesson1.cshtml" />
+    <Content Include="Views\FirstRow\Lesson2.cshtml" />
+    <Content Include="Views\FirstRow\Lesson3.cshtml" />
+    <Content Include="Views\ShiftHomeRow\Lesson1.cshtml" />
+    <Content Include="Views\ShiftHomeRow\Lesson2.cshtml" />
+    <Content Include="Views\ShiftBottomRow\Lesson1.cshtml" />
+    <Content Include="Views\ShiftBottomRow\Lesson2.cshtml" />
+    <Content Include="Views\ShiftUpperRow\Lesson1.cshtml" />
+    <Content Include="Views\ShiftUpperRow\Lesson2.cshtml" />
+    <Content Include="Views\RightAltWithAllKeys\Lesson.cshtml" />
+    <Content Include="Views\ShiftNumberRow\Lesson.cshtml" />
+    <Content Include="Views\LeftAltWithAllKeys\Lesson.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
