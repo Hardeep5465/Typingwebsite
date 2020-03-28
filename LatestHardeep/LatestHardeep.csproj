@@ -496,7 +496,8 @@
     <Content Include="img\icondevices\ms-icon-70x70.png" />
     <Content Include="img\logo -original.png" />
     <Content Include="img\logo-75.png" />
-    <Content Include="img\logo.png" />
+    <Content Include="img\Logo.png" />
+    <Content Include="img\oldlogo.png" />
     <Content Include="img\logo3.png" />
     <Content Include="img\play-btn.png" />
     <Content Include="img\project-details-1.jpg" />
