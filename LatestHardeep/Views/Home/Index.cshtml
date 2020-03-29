@@ -1,7 +1,105 @@
 ﻿
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-<p>
-    Use this area to provide additional i
-   
-</p>
+
+@section Scripts
+{
+    <style type="text/css">
+
+
+       
+
+        .features-icons {
+            padding-top: 7rem;
+            padding-bottom: 7rem
+        }
+
+            /*.features-icons .features-icons-item {
+                max-width: 20rem
+            }*/
+
+                .features-icons .features-icons-item .features-icons-icon {
+                    height: 7rem
+                }
+
+                    /*.features-icons .features-icons-item .features-icons-icon i {
+                        font-size: 4.5rem
+                    }*/
+
+                /*.features-icons .features-icons-item:hover .features-icons-icon i {
+                    font-size: 5rem
+                }*/
+
+        .fa.fa-bar-chart {
+            font-size: 90px;
+            padding: 10px;
+            color: black;
+            background: #00BFFF;
+            width: 100%;
+        }
+
+        .fa.fa-cogs {
+            font-size: 90px;
+            padding: 10px;
+            color: black;
+            background: #7B68EE;
+            width: 100%;
+        }
+
+        .glyphicon.glyphicon-road {
+            font-size: 90px;
+            padding: 10px;
+            color: black;
+            background: #008B8B;
+            width: 100%;
+        }
+
+        
+    </style>
+    
+}
+
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <p>
+        Use this area to provide additional i
+
+    </p>
+<i class="icon-screen-desktop"></i>
+
+    <section class="features-icons bg-light text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3" style="border-style:solid;height:300px;">
+                        <div class="features-icons-icon d-flex">
+                            @*<i class="glyphicon glyphicon-cog"></i>*@
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <br />
+                        <br />
+                        <h3>No Software is Required</h3>
+                        <p class="lead mb-0">There is no need of downloading any software or installation of Punjabi font in the computer. Start practicing typing straight away from your browser.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3" style="border-style:solid;height:300px;">
+                        <div class="features-icons-icon d-flex">
+                            <i class="glyphicon glyphicon-road"></i>
+                        </div>
+                        <br />
+                        <h3>Step by Step Learning</h3>
+                        <p class="lead mb-0">Simple exercises to learn step by step and and exercises can be stopped at any time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3" style="border-style:solid;height:300px;">
+                        <div class="features-icons-icon d-flex">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <br />
+                        <h3>Real Time Results of Typing</h3>
+                        <p class="lead mb-0">For every exercise completion, Graphs will be displayed showing the 'words typed', 'accuracy', 'Gross Speed' and 'Net Speed' to assess performance. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
