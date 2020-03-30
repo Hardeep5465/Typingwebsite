@@ -497,6 +497,7 @@
     <Content Include="img\logo -original.png" />
     <Content Include="img\logo-75.png" />
     <Content Include="img\Logo.png" />
+    <Content Include="img\Logo_old.png" />
     <Content Include="img\oldlogo.png" />
     <Content Include="img\logo3.png" />
     <Content Include="img\play-btn.png" />

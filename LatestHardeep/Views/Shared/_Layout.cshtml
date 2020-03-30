@@ -79,14 +79,14 @@
                 border-radius: 6px 0 6px 6px;
             }
 
-
-
+       
        
     </style>
 
 </head>
 <body>
     @* section for facebook login *@
+  
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=661190120977013&autoLogAppEvents=1"></script>
 
@@ -171,10 +171,11 @@
     </div>
 
 
+
     @RenderBody()
 
 
-   
+
     @*<footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>*@
@@ -184,18 +185,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <a href="#">
-    <img src="~/img/Logo.png" alt="logo" style="margin-top:0px;" />
-</a>
+                    <a href="@Url.Action("Index", "Home", null)">
+                        <img src="~/img/Logo.png" alt="logo" style="margin-top:0px;">
+                    </a>
                 </div>
-                @*<div class="col-sm-2">
-                        <h5>Get started</h5>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sign up</a></li>
-                            <li><a href="#">Downloads</a></li>
-                        </ul>
-                    </div>*@
                 <div class="col-sm-3">
                     <h5>About us</h5>
                     <p>
@@ -204,17 +197,15 @@
                     </p>
                 </div>
                 <div class="col-sm-2">
-
-                    @*<img src="~/img/work/rocket_contact.png" alt="rocket_contact" style="margin-top:58px; margin-left:auto;margin-right:auto" />*@
                     <div class="social-networks">
-                            @*<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>*@
-                            <a href="https://www.facebook.com/hardeepsingh.negi.7" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                           @* <a href="#" class="google"><i class="fa fa-google-plus"></i></a>*@
+                        @*<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>*@
+                        <a href="https://www.facebook.com/hardeepsingh.negi.7" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        @* <a href="#" class="google"><i class="fa fa-google-plus"></i></a>*@
                         <h5>Follow Me</h5>
                     </div>
                 </div>
                 <div class="col-sm-3">
-                  
+
                     <form method="post" action="https://submit-form.com/FlVpLFjdKtuOi9L_rNvXD">
                         <input type="hidden"
                                name="_feedback.success.title"
@@ -239,7 +230,7 @@
                         <button type="submit" class="btn">Send</button>
                     </form>
 
-                   
+
 
                 </div>
             </div>
