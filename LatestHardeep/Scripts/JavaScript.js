@@ -390,7 +390,7 @@ $(".shuffle").shuffleChildren();
                     animationEnabled: true,
                     // The data for our dataset
                     data: {
-                        labels: ['Total Characters', 'Correct Characters', 'Incorrect Characters'],
+                        labels: ['Total Words', 'Correct Words', 'Incorrect Words'],
                         datasets: [{
                             label: 'Results',
                             backgroundColor: 'rgb(255, 99, 132)',
@@ -478,9 +478,9 @@ $(".shuffle").shuffleChildren();
 
                 // The data for our dataset
                 data: {
-                    labels: ['Gross Speed(CPM)'],
+                    labels: ['Gross Speed(WPM)'],
                     datasets: [{
-                        label: 'Gross Speed(CPM)',
+                        label: 'Gross Speed(WPM)',
                         backgroundColor: 'rgb(139,69,19)',
                         borderColor: 'rgb(139,69,19)',
                         data: [grossspeed],
@@ -521,9 +521,9 @@ $(".shuffle").shuffleChildren();
                 type: 'bar',
                 // The data for our dataset
                 data: {
-                    labels: ['Net Speed(CPM)'],
+                    labels: ['Net Speed(WPM)'],
                     datasets: [{
-                        label: 'Net Speed(CPM)',
+                        label: 'Net Speed(WPM)',
                         backgroundColor: 'rgb(178,34,34)',
                         borderColor: 'rgb(178,34,34)',
                         data: [netspeed],

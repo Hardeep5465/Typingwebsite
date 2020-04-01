@@ -29,7 +29,7 @@
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
             <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
             <h4 style="text-align:center;">&nbsp;&nbsp;Shift Home Row : Lesson 2&nbsp;&nbsp;</h4>
-            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Lesson 2", "Lesson2", "ShiftHomeRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Start Bottom Row with Shift Keys", "Lesson1", "ShiftBottomRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
             <br />
             <img src="~/LearnTypingPhotos/HomeRow/HomeRowLesson1.jpg" style="width:550px;" />
             <br />
@@ -148,7 +148,8 @@
             <div id="banner" style="border-color:brown;border-style:groove">
                 <p style="text-align:center"><br /><b>Criteria of Typing Results</b></p>
                 <ol style="text-align:left">
-                    <li>Speed is calculated based on characters per minute.</li>
+                    <li>Speed is calculated based on characters/Words per minute.</li>
+                    <li>After a space, each character is considered as a word irrespective of its length.</li>
                     <li>Space Character is not used in calculation.</li>
                     <li>Gross(CPM) is speed = Correct Characters Typed / Time Taken in Minutes</li>
                     <li>Net(NCM) is speed =  Gross(CPM) - (Incorrect Characters Typed / Time Taken in Minutes)</li>
