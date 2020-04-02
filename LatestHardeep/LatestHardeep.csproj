@@ -468,6 +468,9 @@
     <Content Include="img\elements\user1.png" />
     <Content Include="img\elements\user2.png" />
     <Content Include="img\fav.png" />
+    <Content Include="img\HomePage_Image1.jpg" />
+    <Content Include="img\HomePage_Image2.jpg" />
+    <Content Include="img\HomePage_Image3.jpg" />
     <Content Include="img\icondevices\android-icon-144x144.png" />
     <Content Include="img\icondevices\android-icon-192x192.png" />
     <Content Include="img\icondevices\android-icon-36x36.png" />
