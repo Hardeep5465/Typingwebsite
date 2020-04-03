@@ -28,6 +28,13 @@ namespace LatestHardeep.Controllers
             return View();
         }
 
-        
+        public ActionResult Disclaimer()
+        {
+            ViewBag.Message = "Disclaimer";
+
+            return View();
+        }
+
+
     }
 }

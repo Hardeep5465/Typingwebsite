@@ -543,7 +543,6 @@
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\JavaScript.js" />
-    <Content Include="Views\Home\Thankyou.html" />
     <Content Include="WebImage.ico" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -626,6 +625,7 @@
     <Content Include="Views\RightAltWithAllKeys\Lesson.cshtml" />
     <Content Include="Views\ShiftNumberRow\Lesson.cshtml" />
     <Content Include="Views\LeftAltWithAllKeys\Lesson.cshtml" />
+    <Content Include="Views\Home\Disclaimer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
