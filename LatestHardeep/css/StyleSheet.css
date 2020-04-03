@@ -3,12 +3,6 @@
     padding: 7px;
 }
 
-p {
-    line-height: 1.2;
-    font-size: larger;
-    font-weight: bold;
-}
-
 cont-table {
     text-align: center;
     border-collapse: collapse;
