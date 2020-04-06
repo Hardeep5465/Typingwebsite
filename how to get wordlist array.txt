@@ -1,0 +1,33 @@
+Steps to create wordlist array
+
+#1 Run the below code at https://www.onlinegdb.com/online_python_compiler
+
+quote = "ਟੋਟਰ   ਪੁਟ   ਕੋਕਰ   ਪਿਤਰ   ਕਿਟ   ਕਰਕ   ਪੁਟ   ਤ੍ਰਿਪਤ   ਤਿਤ   ਚ੍ਕਕਰ   ਪਰਕਤ   ਪਰਕਤ   ਚ੍ਕਕਰ   ਕਰਕ   ਪਿਕ   ਰੇਤ   ਚਪਟ੍   ਤੁਰਤ   ਤਿਤ   ਟੋਤ   ਤ੍ਕ   ਤਿਤ   ਤੁਰਤ   ਤ੍ਰਿਪਤ   ਪਿਤਰ   ਪੋਟ   ਕੋਕਰ   ਟੇਪ   ਕਿਰਕ੍   ਰੁਕ   ਟੇਪ   ਕੋਕ   ਪਿਕ   ਪੁਟ   ਕਰਤ   ਪੁਟ   ਕੋਕਰ   ਪਿਤਰ   ਕਿਟ   ਕਰਕ   ਪੁਟ   ਤ੍ਰਿਪਤ   ਤਿਤ   ਚ੍ਕਕਰ   ਪਰਕਤ   ਪਰਕਤ   ਚ੍ਕਕਰ   ਕਰਕ   ਪਿਕ   ਰੇਤ   ਚਪਟ੍   ਤੁਰਤ   ਤਿਤ   ਟੋਤ   ਤ੍ਕ   ਤਿਤ   ਤੁਰਤ   ਤ੍ਰਿਪਤ   ਪਿਤਰ   ਪੋਟ   ਕੋਕਰ   ਟੇਪ   ਕਿਰਕ੍   ਰੁਕ   ਟੇਪ   ਕੋਕ   ਪਿਕ   ਪੁਟ   ਕਰਤ   ਪੁਟ   ਕੋਕਰ   ਪਿਤਰ   ਕਿਟ   ਕਰਕ   ਪੁਟ   ਤ੍ਰਿਪਤ   ਤਿਤ   ਚ੍ਕਕਰ   ਪਰਕਤ   ਪਰਕਤ   ਚ੍ਕਕਰ   ਕਰਕ   ਪਿਕ   ਰੇਤ   ਚਪਟ੍   ਤੁਰਤ   ਤਿਤ   ਟੋਤ   ਤ੍ਕ   ਤਿਤ   ਤੁਰਤ   ਤ੍ਰਿਪਤ   ਪਿਤਰ   ਪੋਟ   ਕੋਕਰ   ਟੇਪ   ਕਿਰਕ੍   ਰੁਕ   ਟੇਪ   ਕੋਕ   ਪਿਕ   ਪੁਟ   ਕਰਤ  "
+first_space = 0
+last_space = quote.find(" ")
+while last_space != -1:
+    print("\"" + quote[first_space:last_space] + "\"")
+    first_space = last_space + 1
+    last_space = quote.find(" ",last_space + 1)
+	
+	
+#2 Copy the above code and paste it here : https://www.browserling.com/tools/remove-all-whitespace to remove-all-whitespace
+
+#3 Put the result of the above code in https://www.dcode.fr/values-separation and select option as 'Join the values using the delimeter'
+
+#4 Take the result of above code and paste in https://dotnetfiddle.net/ with the below code
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+		string s = "ਟੋਟਰ,ਪੁਟ,ਕੋਕਰ,ਪ,ਤਰ,ਕ,ਟ,ਕਰਕ,ਪੁਟ,ਤ੍ਰ,ਪਤ,ਤ,ਤ,ਚ੍ਕਕਰ,ਪਰਕਤ,ਪਰਕਤ,ਚ੍ਕਕਰ,ਕਰਕ,ਪ,ਕ,ਰੇਤ,ਚਪਟ੍,ਤੁਰਤ,ਤ,ਤ,ਟੋਤ,ਤ੍ਕ,ਤ,ਤ,ਤੁਰਤ,ਤ੍ਰ,ਪਤ,ਪ,ਤਰ,ਪੋਟ,ਕੋਕਰ,ਟੇਪ,ਕ,ਰਕ੍,ਰੁਕ,ਟੇਪ,ਕੋਕ,ਪ,ਕ,ਪੁਟ,ਕਰਤ,ਪੁਟ,ਕੋਕਰ,ਪ,ਤਰ,ਕ,ਟ,ਕਰਕ,ਪੁਟ,ਤ੍ਰ,ਪਤ,ਤ,ਤ,ਚ੍ਕਕਰ,ਪਰਕਤ,ਪਰਕਤ,ਚ੍ਕਕਰ,ਕਰਕ,ਪ,ਕ,ਰੇਤ,ਚਪਟ੍,ਤੁਰਤ,ਤ,ਤ,ਟੋਤ,ਤ੍ਕ,ਤ,ਤ,ਤੁਰਤ,ਤ੍ਰ,ਪਤ,ਪ,ਤਰ,ਪੋਟ,ਕੋਕਰ,ਟੇਪ,ਕ,ਰਕ੍,ਰੁਕ,ਟੇਪ,ਕੋਕ,ਪ,ਕ,ਪੁਟ,ਕਰਤ,ਪੁਟ,ਕੋਕਰ,ਪ,ਤਰ,ਕ,ਟ,ਕਰਕ,ਪੁਟ,ਤ੍ਰ,ਪਤ,ਤ,ਤ,ਚ੍ਕਕਰ,ਪਰਕਤ,ਪਰਕਤ,ਚ੍ਕਕਰ,ਕਰਕ,ਪ,ਕ,ਰੇਤ,ਚਪਟ੍,ਤੁਰਤ,ਤ,ਤ,ਟੋਤ,ਤ੍ਕ,ਤ,ਤ,ਤੁਰਤ,ਤ੍ਰ,ਪਤ,ਪ,ਤਰ,ਪੋਟ,ਕੋਕਰ,ਟੇਪ,ਕ,ਰਕ੍,ਰੁਕ,ਟੇਪ,ਕੋਕ,ਪ,ਕ,ਪੁਟ,ਕਰਤ";
+       string replaced = "\""+s.Replace(",", "\",\"")+"\"";
+			Console.WriteLine(replaced);
+	}
+}
+
+

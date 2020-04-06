@@ -83,9 +83,10 @@
             for (i = 0; i < wordList.length; i++)
                 console.log((i + 1) + ": " + wordList[i]);
 
-            for (var i = 300; i > 0; i--) {
+            for (i = 0; i < wordList.length; i++) {
                 var words = shuffle(wordList);
                 var wordSpan = "<span>" + words[i] + "</span>";
+                console.log(wordSpan);
                 wordSection.innerHTML += wordSpan;
             }
             // mark first word as current-word
