@@ -610,7 +610,6 @@
     <Content Include="Views\SscHistory\Home.cshtml" />
     <Content Include="Views\StartTyping\PracticeTyping.cshtml" />
     <Content Include="Views\English\EnglishHome.cshtml" />
-    <Content Include="Views\BottomRow\Index.cshtml" />
     <Content Include="Views\BottomRow\Lesson2.cshtml" />
     <Content Include="Views\BottomRow\Lesson3.cshtml" />
     <Content Include="Views\FirstRow\Lesson1.cshtml" />
