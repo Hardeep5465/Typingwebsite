@@ -108,60 +108,45 @@
                     <li class="menu-item dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Set Up Raavi Font<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="menu-item dropdown dropdown-submenu">
-
-                                <ul class="dropdown-menu">
-                                    <li class="menu-item ">
-
-                                        @Html.ActionLink("Windows 7", "Windows7", "SetUpRaviFont")
-                                    </li>
-                                    <li class="menu-item ">
-
-                                        @Html.ActionLink("Windows 10", "Windows10", "SetUpRaviFont")
-                                    </li>
-                                    @*<li class="menu-item dropdown dropdown-submenu">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2</a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a href="#">Link 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>*@
-                                </ul>
-                            </li>
-
                             <li class="menu-item">
                                 @Html.ActionLink("Windows 7", "Windows7", "SetUpRaviFont")
                             </li>
                             <li class="menu-item">
                                 @Html.ActionLink("Windows 10", "Windows10", "SetUpRaviFont")
                             </li>
+                            @*<li class="menu-item">
+                                @Html.ActionLink("Typing Tips", "Tips", "TypingTips")
+                            </li>*@
                         </ul>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav">
+                    <li>  @Html.ActionLink("Typing Tips", "Tips", "TypingTips")</li>
+                </ul>
+
                 <ul class="nav navbar-nav">
                     <li>  @Html.ActionLink("Learn Typing", "LearnTyping", "StartTyping")</li>
                 </ul>
 
                 @*<ul class="nav navbar-nav">
-                        <li>  @Html.ActionLink("English", "EnglishHome", "English")</li>
-                    </ul>
+            <li>  @Html.ActionLink("English", "EnglishHome", "English")</li>
+        </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li class="menu-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">History<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
+        <ul class="nav navbar-nav">
+            <li class="menu-item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">History<b class="caret"></b></a>
+                <ul class="dropdown-menu">
 
 
-                                <li class="menu-item">
-                                    @Html.ActionLink("Previous year SSC", "Home", "SscHistory")
-                                </li>
-                                <li class="menu-item">
-                                    @Html.ActionLink("Windows 10", "Index", "EnglishIdioms")
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>*@
+                    <li class="menu-item">
+                        @Html.ActionLink("Previous year SSC", "Home", "SscHistory")
+                    </li>
+                    <li class="menu-item">
+                        @Html.ActionLink("Windows 10", "Index", "EnglishIdioms")
+                    </li>
+                </ul>
+            </li>
+        </ul>*@
 
 
 

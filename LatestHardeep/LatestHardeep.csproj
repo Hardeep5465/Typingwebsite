@@ -202,6 +202,7 @@
     <Compile Include="Controllers\SscHistoryController.cs" />
     <Compile Include="Controllers\StartTypingController.cs" />
     <Compile Include="Controllers\BottomRowController.cs" />
+    <Compile Include="Controllers\TypingTipsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -501,9 +502,12 @@
     <Content Include="img\logo-75.png" />
     <Content Include="img\Logo.png" />
     <Content Include="img\Logo_old.png" />
+    <Content Include="img\main_keys.png" />
+    <Content Include="img\man.png" />
     <Content Include="img\oldlogo.png" />
     <Content Include="img\logo3.png" />
     <Content Include="img\play-btn.png" />
+    <Content Include="img\posture.png" />
     <Content Include="img\project-details-1.jpg" />
     <Content Include="img\showcase-original.jpg" />
     <Content Include="img\showcase.png" />
@@ -625,6 +629,7 @@
     <Content Include="Views\ShiftNumberRow\Lesson.cshtml" />
     <Content Include="Views\LeftAltWithAllKeys\Lesson.cshtml" />
     <Content Include="Views\Home\Disclaimer.cshtml" />
+    <Content Include="Views\TypingTips\Tips.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
