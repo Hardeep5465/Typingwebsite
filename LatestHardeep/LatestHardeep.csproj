@@ -193,6 +193,7 @@
     <Compile Include="Controllers\HomeRowController.cs" />
     <Compile Include="Controllers\LeftAltWithAllKeysController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PassageTypingController.cs" />
     <Compile Include="Controllers\RightAltWithAllKeysController.cs" />
     <Compile Include="Controllers\SetUpRaviFontController.cs" />
     <Compile Include="Controllers\ShiftBottomRowController.cs" />
@@ -628,6 +629,7 @@
     <Content Include="Views\LeftAltWithAllKeys\Lesson.cshtml" />
     <Content Include="Views\Home\Disclaimer.cshtml" />
     <Content Include="Views\TypingTips\Tips.cshtml" />
+    <Content Include="Views\PassageTyping\One.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
