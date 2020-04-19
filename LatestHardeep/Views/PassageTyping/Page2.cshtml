@@ -17,7 +17,7 @@
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
             <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
             <h4 style="text-align:center;">&nbsp;&nbsp;Passage 2:&nbsp;&nbsp;</h4>
-            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Next Passage ", "Passage", "PassageTyping", new { id = "2" }, null)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Next Passage ", "Passage", "PassageTyping", new { id = "3" }, null)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
 
             <h5 style="text-align:right">Total Words: 593</h5>
             <br />
@@ -136,7 +136,7 @@
             wordSection.innerHTML = "";
             for (i = 0; i < wordList.length; i++) {
                 var wordSpan = "<span>" + wordList[i] + "</span>";
-                console.log(i + ":" + wordSpan);
+                //console.log(i + ":" + wordSpan);
                 wordSection.innerHTML += wordSpan;
             }
             // mark first word as current-word

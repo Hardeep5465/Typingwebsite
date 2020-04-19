@@ -627,9 +627,9 @@
     <Content Include="Views\LeftAltWithAllKeys\Lesson.cshtml" />
     <Content Include="Views\Home\Disclaimer.cshtml" />
     <Content Include="Views\TypingTips\Tips.cshtml" />
-    <Content Include="Views\PassageTyping\Passage-1.cshtml" />
     <Content Include="Views\PassageTyping\Page1.cshtml" />
     <Content Include="Views\PassageTyping\Page2.cshtml" />
+    <Content Include="Views\PassageTyping\Page3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
