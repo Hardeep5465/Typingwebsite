@@ -631,6 +631,7 @@
     <Content Include="Views\PassageTyping\Page2.cshtml" />
     <Content Include="Views\PassageTyping\Page3.cshtml" />
     <Content Include="Views\HomeRow\Lesson4.cshtml" />
+    <Content Include="Views\PassageTyping\Page4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

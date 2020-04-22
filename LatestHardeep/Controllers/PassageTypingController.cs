@@ -24,7 +24,7 @@ namespace LatestHardeep.Controllers
                 case "3":
                     return View("Page3");
                 case "4":
-                    return View("4");
+                    return View("Page4");
                 case "5":
                     return View("5");
                 case "6":
