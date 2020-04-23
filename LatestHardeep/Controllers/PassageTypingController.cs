@@ -30,11 +30,11 @@ namespace LatestHardeep.Controllers
                 case "6":
                     return View("Page6");
                 case "7":
-                    return View("7");
+                    return View("Page7");
                 case "8":
-                    return View("8");
+                    return View("Page8");
                 case "9":
-                    return View("9");
+                    return View("Page9");
                 default:
                     return View("Index");
             }
