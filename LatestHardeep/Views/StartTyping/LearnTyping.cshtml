@@ -2,94 +2,6 @@
 @{
     ViewBag.Title = "Learn";
 }
-@section Scripts
-{
-    <script type="text/javascript">
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
-    <style type="text/css">
-        .accordion {
-            /*background-color: #eee;#7FDBFF;#39CCCC*/
-            /*background-color: #BDB76B;*/
-            background-color: #ADD8E6;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            /*font-size: 15px;*/
-            font-size: large;
-            font-weight:bold;
-            transition: 0.4s;
-            text-align: center;
-        }
-
-            .active, .accordion:hover {
-                background-color: #ccc;
-            }
-
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            font-size: large;
-            font-weight: bold;
-           
-        }
-
-
-        table {
-            width: 100%;
-           
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-            
-        }
-
-        table tr td {
-            color: black;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #eee;
-        }
-
-        table tr:nth-child(odd) {
-            background-color: #fff;
-        }
-
-       
-      
-
-
-
-    </style>
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
-}
 
 <div class="container">
     <div class="row">
@@ -438,20 +350,18 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "HomeRow")</td>
-
-
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "HomeRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "HomeRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "HomeRow", new { id = "2" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson3", "HomeRow")</td>
+                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "HomeRow", new { id = "3" }, null)</td>
                     </tr>
 
                     @*<tr>
-                    <td> @Html.ActionLink("Lesson 4 (ਅਭਿਆਸ ਨੰ: 4)", "Lesson4", "HomeRow")</td>
-                </tr>*@
+                            <td> @Html.ActionLink("Lesson 4 (ਅਭਿਆਸ ਨੰ: 4)", "Lesson4", "HomeRow")</td>
+                        </tr>*@
                 </table>
 
             </div>
@@ -460,15 +370,13 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "BottomRow")</td>
-
-
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "BottomRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "BottomRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "BottomRow", new { id = "2" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson3", "BottomRow")</td>
+                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "BottomRow", new { id = "3" }, null)</td>
                     </tr>
                 </table>
             </div>
@@ -477,15 +385,13 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "FirstRow")</td>
-
-
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "FirstRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "FirstRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "FirstRow", new { id = "2" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson3", "FirstRow")</td>
+                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "FirstRow", new { id = "3" }, null)</td>
                     </tr>
                 </table>
             </div>
@@ -494,10 +400,10 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "ShiftHomeRow")</td>
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftHomeRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "ShiftHomeRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftHomeRow", new { id = "2" }, null)</td>
                     </tr>
                 </table>
             </div>
@@ -506,10 +412,10 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "ShiftBottomRow")</td>
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftBottomRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "ShiftBottomRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftBottomRow", new { id = "2" }, null)</td>
                     </tr>
                 </table>
             </div>
@@ -518,10 +424,10 @@
             <div class="panel">
                 <table>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson1", "ShiftUpperRow")</td>
+                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftUpperRow", new { id = "1" }, null)</td>
                     </tr>
                     <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson2", "ShiftUpperRow")</td>
+                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftUpperRow", new { id = "2" }, null)</td>
                     </tr>
                 </table>
             </div>
@@ -601,7 +507,11 @@
                     </tr>
                     <tr>
                         <td> @Html.ActionLink("Passage 14 ", "Passage", "PassageTyping", new { id = "14" }, null)</td>
-                        <td><span>Total Words:  </span></td>
+                        <td><span>Total Words: 501  </span></td>
+                    </tr>
+                    <tr>
+                        <td> @Html.ActionLink("Passage 15 ", "Passage", "PassageTyping", new { id = "15" }, null)</td>
+                        <td><span>Total Words: 571  </span></td>
                     </tr>
                 </table>
             </div>
@@ -716,4 +626,83 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <style type="text/css">
+        .accordion {
+            /*background-color: #eee;#7FDBFF;#39CCCC*/
+            /*background-color: #BDB76B;*/
+            background-color: #ADD8E6;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            /*font-size: 15px;*/
+            font-size: large;
+            font-weight: bold;
+            transition: 0.4s;
+            text-align: center;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: large;
+            font-weight: bold;
+        }
+
+
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        table tr td {
+            color: black;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+}
 

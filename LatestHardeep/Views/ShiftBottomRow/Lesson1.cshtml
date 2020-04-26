@@ -1,30 +1,11 @@
 ﻿
 @{
-    /**/
+                /**/
 
-    ViewBag.Title = "Shift Bottom Row : Lesson 1 |";
+                ViewBag.Title = "Shift Bottom Row : Lesson 1 |";
 }
 
-@section Scripts
-{
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-    <div id="fb-root">
-
-    </div>
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
-    <script type="text/javascript">
-        var wordList = ["ਂ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਣ", "ਣ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ੲ", "ੲ", "ਣ", "ਸ਼", "ੲ", "ਣ", "ਣ", "ਲ਼", "ਂ", "ਂ", "ੲ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਂ", "ੲ", "ਂ", "ੲ", "ਂ", "ਸ਼", "ਂ", "ਣ", "ਂ", "ਂ", "ਂ", "ੲ", "ਂ", "ਲ਼", "ੲ", "ਣ", "ੲ", "ਣ", "ਸ਼", "ੲ", "ਲ਼", "ਂ", "ਂ", "ੲ", "ਲ਼", "ਂ", "ਣ", "ੲ", "ੲ", "ੲ", "ਸ਼", "ੲ", "ਲ਼", "ਲ਼", "ਣ", "ਂ", "ੲ", "ੲ", "ਂ", "ਲ਼", "ਂ", "ੲ", "ੲ", "ਣ", "ੲ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਂ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ੲ", "ੲ", "ੲ", "ਂ", "ੲ", "ਸ਼", "ਲ਼", "ੲ", "ੲ", "ਲ਼", "ਣ", "ਂ", "ੲ", "ਣ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ੲ", "ਂ", "ਣ", "ਂ", "ਂ", "ੲ", "ਂ", "ਂ", "ਂ", "ਂ", "ਲ਼", "ਣ", "ੲ", "ਸ਼", "ਣ", "ਣ", "ਣ", "ਲ਼", "ਂ", "ਣ", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਲ਼", "ਸ਼", "ਸ਼", "ਣ", "ਣ", "ੲ", "ਣ", "ਂ", "ਂ", "ਲ਼", "ਣ", "ਸ਼", "ਂ", "ਂ", "ਂ", "ੲ", "ਣ", "ਂ", "ਣ", "ਂ", "ਣ", "ਂ", "ਂ", "ੲ", "ਸ਼", "ਣ", "ਣ", "ੲ", "ਣ", "ਂ", "ਣ", "ੲ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ੲ", "ਂ", "ਂ", "ੲ", "ਣ", "ਣ", "ਂ", "ਣ", "ਣ", "ਣ", "ਲ਼", "ੲ", "ਸ਼", "ਂ", "ਲ਼", "ਸ਼", "ਣ", "ਸ਼", "ੲ", "ਂ", "ਲ਼", "ਣ", "ਲ਼", "ੲ", "ਂ", "ਂ", "ੲ", "ਲ਼", "ਣ", "ਸ਼", "ਂ", "ਲ਼", "ਣ", "ਂ", "ਣ", "ਂ", "ਣ", "ਣ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ਸ਼", "ਣ", "ਂ", "ੲ", "ੲ", "ਣ", "ਸ਼", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਣ", "ੲ", "ੲ", "ਂ", "ੲ", "ਂ", "ੲ", "ਂ", "ਲ਼", "ਣ", "ੲ", "ਸ਼", "ਲ਼", "ਣ", "ਣ", "ੲ", "ਲ਼", "ੲ", "ਲ਼", "ਸ਼", "ਸ਼", "ਂ", "ਣ", "ਂ", "ਣ", "ਂ", "ਸ਼", "ਂ", "ਂ", "ਲ਼", "ਣ", "ਲ਼", "ਸ਼", "ਸ਼", "ਂ", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਂ", "ਣ", "ੲ", "ਣ", "ੲ", "ੲ", "ਲ਼", "ਣ", "ੲ", "ਣ", "ਂ", "ੲ", "ਲ਼", "ੲ", "ਸ਼", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਲ਼", "ਸ਼", "ਂ", "ਸ਼", "ਸ਼", "ਣ", "ੲ", "ਂ", "ਂ", "ਂ", "ਂ", "ੲ", "ਂ", "ਣ", "ੲ", "ਂ", "ੲ", "ਂ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਣ"];
-        //  console.log('Value taken from Lesson1');
-        //for (i = 0; i < wordList.length; i++)
-        //    console.log((i + 1) + ": " + wordList[i]);
-    </script>
-
-    <script src="~/Scripts/JavaScript.js"></script>
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
-
-}
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="container">
@@ -36,7 +17,7 @@
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
             <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
             <h4 style="text-align:center;">&nbsp;&nbsp;Shift Bottom Row : Lesson 1&nbsp;&nbsp;</h4>
-            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Lesson 2", "Lesson2", "ShiftBottomRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Lesson 2", "Lesson", "ShiftBottomRow", new { id = "2" }, null)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
             <br />
             <table class="cont-table">
                 <tbody>
@@ -254,6 +235,25 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+    <div id="fb-root">
+
+    </div>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+    <script type="text/javascript">
+        var wordList = ["ਂ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਣ", "ਣ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ੲ", "ੲ", "ਣ", "ਸ਼", "ੲ", "ਣ", "ਣ", "ਲ਼", "ਂ", "ਂ", "ੲ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਂ", "ੲ", "ਂ", "ੲ", "ਂ", "ਸ਼", "ਂ", "ਣ", "ਂ", "ਂ", "ਂ", "ੲ", "ਂ", "ਲ਼", "ੲ", "ਣ", "ੲ", "ਣ", "ਸ਼", "ੲ", "ਲ਼", "ਂ", "ਂ", "ੲ", "ਲ਼", "ਂ", "ਣ", "ੲ", "ੲ", "ੲ", "ਸ਼", "ੲ", "ਲ਼", "ਲ਼", "ਣ", "ਂ", "ੲ", "ੲ", "ਂ", "ਲ਼", "ਂ", "ੲ", "ੲ", "ਣ", "ੲ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਂ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ੲ", "ੲ", "ੲ", "ਂ", "ੲ", "ਸ਼", "ਲ਼", "ੲ", "ੲ", "ਲ਼", "ਣ", "ਂ", "ੲ", "ਣ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ੲ", "ਂ", "ਣ", "ਂ", "ਂ", "ੲ", "ਂ", "ਂ", "ਂ", "ਂ", "ਲ਼", "ਣ", "ੲ", "ਸ਼", "ਣ", "ਣ", "ਣ", "ਲ਼", "ਂ", "ਣ", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਲ਼", "ਸ਼", "ਸ਼", "ਣ", "ਣ", "ੲ", "ਣ", "ਂ", "ਂ", "ਲ਼", "ਣ", "ਸ਼", "ਂ", "ਂ", "ਂ", "ੲ", "ਣ", "ਂ", "ਣ", "ਂ", "ਣ", "ਂ", "ਂ", "ੲ", "ਸ਼", "ਣ", "ਣ", "ੲ", "ਣ", "ਂ", "ਣ", "ੲ", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ੲ", "ਂ", "ਂ", "ੲ", "ਣ", "ਣ", "ਂ", "ਣ", "ਣ", "ਣ", "ਲ਼", "ੲ", "ਸ਼", "ਂ", "ਲ਼", "ਸ਼", "ਣ", "ਸ਼", "ੲ", "ਂ", "ਲ਼", "ਣ", "ਲ਼", "ੲ", "ਂ", "ਂ", "ੲ", "ਲ਼", "ਣ", "ਸ਼", "ਂ", "ਲ਼", "ਣ", "ਂ", "ਣ", "ਂ", "ਣ", "ਣ", "ੲ", "ਸ਼", "ੲ", "ਂ", "ਸ਼", "ਣ", "ਂ", "ੲ", "ੲ", "ਣ", "ਸ਼", "ਂ", "ੲ", "ਣ", "ੲ", "ਲ਼", "ਣ", "ਣ", "ੲ", "ੲ", "ਂ", "ੲ", "ਂ", "ੲ", "ਂ", "ਲ਼", "ਣ", "ੲ", "ਸ਼", "ਲ਼", "ਣ", "ਣ", "ੲ", "ਲ਼", "ੲ", "ਲ਼", "ਸ਼", "ਸ਼", "ਂ", "ਣ", "ਂ", "ਣ", "ਂ", "ਸ਼", "ਂ", "ਂ", "ਲ਼", "ਣ", "ਲ਼", "ਸ਼", "ਸ਼", "ਂ", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਂ", "ਣ", "ੲ", "ਣ", "ੲ", "ੲ", "ਲ਼", "ਣ", "ੲ", "ਣ", "ਂ", "ੲ", "ਲ਼", "ੲ", "ਸ਼", "ੲ", "ਸ਼", "ਣ", "ਂ", "ਲ਼", "ਸ਼", "ਂ", "ਸ਼", "ਸ਼", "ਣ", "ੲ", "ਂ", "ਂ", "ਂ", "ਂ", "ੲ", "ਂ", "ਣ", "ੲ", "ਂ", "ੲ", "ਂ", "ਸ਼", "ਣ", "ੲ", "ਲ਼", "ਣ"];
+            //  console.log('Value taken from Lesson1');
+            //for (i = 0; i < wordList.length; i++)
+            //    console.log((i + 1) + ": " + wordList[i]);
+    </script>
+
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+}
 
 

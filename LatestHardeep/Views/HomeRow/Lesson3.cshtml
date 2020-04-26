@@ -2,30 +2,10 @@
 @{
                 /**/
 
-                /**/
-
                 ViewBag.Title = "Home Row : Lesson 3 |";
 }
 
-@section Scripts
-{
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-    <div id="fb-root">
-
-    </div>
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
-    <script type="text/javascript">
-
-        var wordList = ["ਟੋਟਰ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ"];
-
-    </script>
-
-    <script src="~/Scripts/JavaScript.js"></script>
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
-
-}
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="container">
@@ -37,7 +17,7 @@
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
             <h4 style="text-align:center;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;@Html.ActionLink("Back To Learn Typing", "LearnTyping", "StartTyping")&nbsp;&nbsp;</h4>
             <h4 style="text-align:center;">&nbsp;&nbsp;Home Row : Lesson 3&nbsp;&nbsp;</h4>
-            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Start Bottom Row", "Lesson1", "BottomRow")&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
+            <h4 style="text-align:center;">&nbsp;&nbsp;@Html.ActionLink("Start Bottom Row", "Lesson", "BottomRow", new { id = "1" }, null)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></h4>
             <br />
             <table class="cont-table">
                 <tbody>
@@ -277,6 +257,24 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+    <div id="fb-root">
+
+    </div>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+    <script type="text/javascript">
+
+        var wordList = ["ਟੋਟਰ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ", "ਪੁਟ", "ਕੋਕਰ", "ਪ", "ਤਰ", "ਕ", "ਟ", "ਕਰਕ", "ਪੁਟ", "ਤ੍ਰ", "ਪਤ", "ਤ", "ਤ", "ਚ੍ਕਕਰ", "ਪਰਕਤ", "ਪਰਕਤ", "ਚ੍ਕਕਰ", "ਕਰਕ", "ਪ", "ਕ", "ਰੇਤ", "ਚਪਟ੍", "ਤੁਰਤ", "ਤ", "ਤ", "ਟੋਤ", "ਤ੍ਕ", "ਤ", "ਤ", "ਤੁਰਤ", "ਤ੍ਰ", "ਪਤ", "ਪ", "ਤਰ", "ਪੋਟ", "ਕੋਕਰ", "ਟੇਪ", "ਕ", "ਰਕ੍", "ਰੁਕ", "ਟੇਪ", "ਕੋਕ", "ਪ", "ਕ", "ਪੁਟ", "ਕਰਤ"];
+
+    </script>
+
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+}
 
 

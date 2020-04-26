@@ -13,17 +13,20 @@ namespace LatestHardeep.Controllers
         {
             return View();
         }
-        public ActionResult Lesson1()
+
+        public ActionResult Lesson(string id)
         {
-            return View("Lesson1");
-        }
-        public ActionResult Lesson2()
-        {
-            return View("Lesson2");
-        }
-        public ActionResult Lesson3()
-        {
-            return View("Lesson3");
+            switch (id)
+            {
+                case "1":
+                    return View("Lesson1");
+                case "2":
+                    return View("Lesson2");
+                case "3":
+                    return View("Lesson3");
+                default:
+                    return View("Index");
+            }
         }
     }
 }

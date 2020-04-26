@@ -630,7 +630,6 @@
     <Content Include="Views\PassageTyping\Page1.cshtml" />
     <Content Include="Views\PassageTyping\Page2.cshtml" />
     <Content Include="Views\PassageTyping\Page3.cshtml" />
-    <Content Include="Views\HomeRow\Lesson4.cshtml" />
     <Content Include="Views\PassageTyping\Page4.cshtml" />
     <Content Include="Views\PassageTyping\Page5.cshtml" />
     <Content Include="Views\PassageTyping\Page6.cshtml" />
@@ -641,6 +640,8 @@
     <Content Include="Views\PassageTyping\Page11.cshtml" />
     <Content Include="Views\PassageTyping\Page12.cshtml" />
     <Content Include="Views\PassageTyping\Page13.cshtml" />
+    <Content Include="Views\PassageTyping\Page14.cshtml" />
+    <Content Include="Views\PassageTyping\Page15.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

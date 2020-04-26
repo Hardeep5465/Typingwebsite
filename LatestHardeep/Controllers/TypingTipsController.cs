@@ -11,7 +11,7 @@ namespace LatestHardeep.Controllers
         // GET: TypingTips
 
        
-        public ActionResult Tips()
+        public ActionResult TypingTips()
         {
             return View("Tips");
         }
