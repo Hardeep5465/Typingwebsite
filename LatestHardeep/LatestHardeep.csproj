@@ -652,6 +652,8 @@
     <Content Include="Views\PassageTyping\Page23.cshtml" />
     <Content Include="Views\PassageTyping\Page24.cshtml" />
     <Content Include="Views\PassageTyping\Page25.cshtml" />
+    <Content Include="Views\PassageTyping\Page26.cshtml" />
+    <Content Include="Views\PassageTyping\Page27.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
