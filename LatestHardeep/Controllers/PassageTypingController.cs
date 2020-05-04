@@ -71,6 +71,8 @@ namespace LatestHardeep.Controllers
                     return View("Page26");
                 case "27":
                     return View("Page27");
+                case "28":
+                    return View("Page28");
                 default:
                     return View("Index");
             }

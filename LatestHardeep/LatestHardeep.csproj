@@ -241,6 +241,7 @@
     <Content Include="Content\SetUpRavi\Windows 7 steps\image8.JPG" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\image9.JPG" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.mp4" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7_old.mp4" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flaticon.css" />
@@ -544,11 +545,12 @@
     <Content Include="img\icondevices\manifest.json" />
     <Content Include="img\work\.DS_Store" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.ogg" />
-    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7_old.webm" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="WebImage.ico" />
+    <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -654,6 +656,7 @@
     <Content Include="Views\PassageTyping\Page25.cshtml" />
     <Content Include="Views\PassageTyping\Page26.cshtml" />
     <Content Include="Views\PassageTyping\Page27.cshtml" />
+    <Content Include="Views\PassageTyping\Page28.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
