@@ -135,7 +135,9 @@
         var Typeminutes; //declared to get the no of minutes spent by the user while typing
         var finaltypeminutes;
         var roundminutes;
-        var grossspeed;
+var grossspeed;
+var hms;
+
 
         function typingTest(e) {
             // Char:        Key Code:
@@ -247,7 +249,8 @@
             document.getElementById("test").innerText = format(diff / 1000);
 
             //getting minute from the momement when clock is stopped
-            var hms = format(diff / 1000);   // your input string
+        /* var hms = format(diff / 1000);  */ // your input string
+            hms = format(diff / 1000); 
             var a = hms.split(':'); // split it at the colons
             console.log("hms: " + hms);
             console.log("a: " + a);
@@ -361,6 +364,8 @@
             rendernetspeed();
             document.getElementById('chartrow').style.visibility = 'visible';
             document.getElementById('chartrow').style.display = 'block';
+            document.getElementById('typedtime').innerHTML = hms;
+           // alert("Typing Time:" + hms);
             clearvariables();
             console.log("Before" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
              document.getElementById('restarttype').removeAttribute('disabled');

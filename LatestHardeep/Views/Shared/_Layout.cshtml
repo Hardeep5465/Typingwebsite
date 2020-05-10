@@ -6,28 +6,54 @@
     <title>@ViewBag.Title Free Punjabi Ravi Font Typing</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-   
+
     <link rel="icon" href="~/WebImage.ico" />
 
     <link href="~/Content/Footer-with-button-logo.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+   
 
-  
     <script type="text/javascript">
         function submitform() {
             if (!alert('you submitted the form!')) { window.location.reload(); }
             //alert('you submitted the form');
-           // location.reload();
+            // location.reload();
         }
+        $(document).ready(function () {
+            console.log("ready!");
+            $('.counter-count').each(function () {
+                $(this).prop('counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                        duration: 5000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+            });
+        });
+
     </script>
 
     <style type="text/css">
 
-        body {
-            /*background-color:lightblue;*/
-            /*background-color:darksalmon;*/
-            /*background-color:peachpuff;*/
+        .counter-count {
+            font-size: 18px;
+            background-color: #00b3e7;
+            border-radius: 50%;
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            line-height: 92px;
+            width: 92px;
+            height: 92px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            display: inline-block;
         }
+
 
         dropdown-submenu {
             position: relative;
@@ -76,9 +102,6 @@
                 -moz-border-radius: 6px 0 6px 6px;
                 border-radius: 6px 0 6px 6px;
             }
-
-       
-       
     </style>
 
 </head>
@@ -185,6 +208,10 @@
                         @* <a href="#" class="google"><i class="fa fa-google-plus"></i></a>*@
                         <h5>Follow Us</h5>
                     </div>
+                    <div class="counter" style="text-align:center;">
+                        <p class="counter-count">@(Global.totalNumberOfUsers)</p>
+                        <p class="counter-p">Visitor No</p>
+                    </div>
                 </div>
                 <div class="col-sm-3" >
 
@@ -211,9 +238,6 @@
 
                         <button type="submit" class="btn">Send</button>
                     </form>
-
-
-
                 </div>
             </div>
         </div>
