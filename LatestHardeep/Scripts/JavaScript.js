@@ -36,14 +36,14 @@
         window.$ = document.querySelectorAll.bind(document);
 
         // Changes for  Firefox
-        if (navigator.userAgent.match(/firefox/i)) {
-            // Unicode font sizes
-            var ffBtn = "font-weight: normal; font-size: 2em; margin-left: 0.3em;";
-            $("#restart-symbol")[0].setAttribute("style", ffBtn);
+        //if (navigator.userAgent.match(/firefox/i)) {
+        //    // Unicode font sizes
+        //    var ffBtn = "font-weight: normal; font-size: 2em; margin-left: 0.3em;";
+        //    $("#restart-symbol")[0].setAttribute("style", ffBtn);
 
-            var ffwait = "line-height: 1em; font-size: 4em;";
-            $(".waiting")[0].setAttribute("style", ffwait);
-        }
+        //    var ffwait = "line-height: 1em; font-size: 4em;";
+        //    $(".waiting")[0].setAttribute("style", ffwait);
+        //}
        
         // Knuth-Fisher-Yates Shuffle
         // http://bost.ocks.org/mike/shuffle/
@@ -219,6 +219,7 @@ var hms;
                     //console.log(wordData.correct);
                     //console.log(wordData.incorrect);
                     //console.log(wordData.total);
+
                     showDiv();//show graphs after user stops typing and disable button
                     document.getElementById(clck.id).disabled = true;
                 }
@@ -384,7 +385,7 @@ var hms;
                     animationEnabled: true,
                     // The data for our dataset
                     data: {
-                        labels: ['Total Words', 'Correct Words', 'Incorrect Words'],
+                        labels: ['Total', 'Correct', 'Incorrect'],
                         datasets: [{
                             label: 'Results',
                             backgroundColor: 'rgb(255, 99, 132)',
@@ -552,20 +553,20 @@ var hms;
 
         function disableButton(btn) {
            
-            $('#myChart').remove();
+          //  $('#myChart').remove();
             $('iframe.chartjs-hidden-iframe').remove();
-            $('#accuracyChart').remove();
+           // $('#accuracyChart').remove();
             $('iframe.chartjs-hidden-iframe').remove();
-            $('#grossspeedchart').remove();
+           // $('#grossspeedchart').remove();
             $('iframe.chartjs-hidden-iframe').remove();
-            $('#netspeedChart').remove();
+           // $('#netspeedChart').remove();
             $('iframe.chartjs-hidden-iframe').remove();
+           // document.getElementById('chartrow').remove();
             document.getElementById('chartrow').style.display = 'none';
             document.getElementById(btn.id).disabled = true;
             document.getElementById('clock').removeAttribute('disabled');
             document.getElementById("errorMessage").innerText = "";
             document.getElementById("typebox").focus();
             Clock(this);
-            //  clearvariables();
-            console.log("After" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
+           console.log("After" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
         }
