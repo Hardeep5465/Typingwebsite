@@ -357,6 +357,183 @@ var hms;
             }
         }
 
+//Graph Generating code
+var accuracyresult;
+var grossspeed;
+var netspeed;
+
+
+function rendertypingresults() {
+    Chart.defaults.global.defaultFontColor = 'blue';
+    $('#mcyhartdiv').append('<canvas id="myChart"><canvas>');
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chartresult = new Chart(ctx,
+        {
+            // The type of chart we want to create
+            type: 'bar',
+            animationEnabled: true,
+            // The data for our dataset
+            data: {
+                labels: ['Total', 'Correct', 'Incorrect'],
+                datasets: [{
+                    label: 'Results',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [wordData.total, wordData.correct, wordData.incorrect],
+                    //  data: [3, 5, 6],
+                    backgroundColor: ["purple", "green", "red"]
+                }]
+            },
+            // Configuration options go here
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        // Change here
+                        barPercentage: 0.2
+                    }]
+                }
+            }
+        });
+}
+
+//To calculate this mathematically, take the number of correct characters typed divided by the total number, multiplied by 100%
+
+function renderaccuracy() {
+
+    //to create chart for accuracy
+    accuracyresult = (wordData.correct / wordData.total) * 100;
+    accuracyresult = accuracyresult.toFixed(2);
+    Chart.defaults.global.defaultFontColor = 'blue';
+    $('#accuracydiv').append('<canvas id="accuracyChart"><canvas>');
+    var ctx = document.getElementById('accuracyChart').getContext('2d');
+    accuracychart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+        // The data for our dataset
+        data: {
+            labels: ['Accuracy(%)'],
+            datasets: [{
+                label: 'Accuracy(%)',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [accuracyresult],
+                // backgroundColor: ["DarkGoldenRod"]
+            }]
+        },
+        // Configuration options go here
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    // Change here
+                    barPercentage: 0.2
+                }]
+            }
+        }
+    });
+
+}
+
+/*Formula to count gross speed:----> gross speed = (All typed entries/5)/Time(min) */
+
+function rendergrossspeed() {
+    //to create chart for Gross Speed
+    //console.log(numseconds);
+    //minutestyped = numseconds / 60;
+    console.log("Round Minutes before graph: " + roundminutes);
+    grossspeed = (wordData.total / roundminutes); //characters per minute without sace
+    grossspeed = grossspeed.toFixed(2);
+    console.log('Grossspeed=' + grossspeed);
+    Chart.defaults.global.defaultFontColor = 'blue';
+    $('#grossdiv').append('<canvas id="grossspeedchart"><canvas>');
+    var ctx2 = document.getElementById('grossspeedchart').getContext('2d');
+    grossspeedchart = new Chart(ctx2, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Gross Speed(WPM)'],
+            datasets: [{
+                label: 'Gross Speed(WPM)',
+                backgroundColor: 'rgb(139,69,19)',
+                borderColor: 'rgb(139,69,19)',
+                data: [grossspeed],
+                // backgroundColor: ["MidnightBlue "]
+            }]
+        },
+        // Configuration options go here
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    // Change here
+                    barPercentage: 0.2
+                }]
+            }
+        }
+    });
+}
+
+/*Formula to count Net speed:----> Gross speed - (Incorrect characters)/Time(min) */
+
+function rendernetspeed() {
+    //to create chart for Net speed
+    //  console.log('Grossspeed in net spteed' + grossspeed);
+
+    var incorrecttypespeed = (wordData.incorrect / roundminutes).toFixed(2);
+    netspeed = (grossspeed - incorrecttypespeed).toFixed(2);
+    console.log('Net Speed=' + netspeed);
+    Chart.defaults.global.defaultFontColor = 'blue';
+    $('#netdiv').append('<canvas id="netspeedChart"><canvas>');
+    var ctx1 = document.getElementById('netspeedChart').getContext('2d');
+    netspeedchart = new Chart(ctx1, {
+        // The type of chart we want to create
+        type: 'bar',
+        // The data for our dataset
+        data: {
+            labels: ['Net Speed(WPM)'],
+            datasets: [{
+                label: 'Net Speed(WPM)',
+                backgroundColor: 'rgb(178,34,34)',
+                borderColor: 'rgb(178,34,34)',
+                data: [netspeed],
+                //  backgroundColor: ["DarkRed"]
+            }]
+        },
+        // Configuration options go here
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    // Change here
+                    barPercentage: 0.2
+                }]
+            }
+        }
+    });
+}
+
+
+
+
         function showDiv() {
             window.scrollTo({ top: 995, behavior: 'smooth' });
             rendertypingresults();
@@ -365,183 +542,19 @@ var hms;
             rendernetspeed();
             document.getElementById('chartrow').style.visibility = 'visible';
             document.getElementById('chartrow').style.display = 'block';
+            document.getElementById('numericrow').style.visibility = 'visible';
+            document.getElementById('numericrow').style.display = 'block';
             document.getElementById('typedtime').innerHTML = hms;
+            document.getElementById('accuracynum').innerHTML = accuracyresult;
+            document.getElementById('grossnum').innerHTML = grossspeed;
+            document.getElementById('netnum').innerHTML = netspeed; 
            // alert("Typing Time:" + hms);
             clearvariables();
             console.log("Before" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
              document.getElementById('restarttype').removeAttribute('disabled');
         }
 
-        //Graph Generating code
-
-        function rendertypingresults() {
-            Chart.defaults.global.defaultFontColor = 'blue';
-            $('#mcyhartdiv').append('<canvas id="myChart"><canvas>');
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chartresult = new Chart(ctx,
-                {
-                    // The type of chart we want to create
-                    type: 'bar',
-                    animationEnabled: true,
-                    // The data for our dataset
-                    data: {
-                        labels: ['Total', 'Correct', 'Incorrect'],
-                        datasets: [{
-                            label: 'Results',
-                            backgroundColor: 'rgb(255, 99, 132)',
-                            borderColor: 'rgb(255, 99, 132)',
-                            data: [wordData.total, wordData.correct, wordData.incorrect],
-                            //  data: [3, 5, 6],
-                            backgroundColor: ["purple", "green", "red"]
-                        }]
-                    },
-                    // Configuration options go here
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }],
-                            xAxes: [{
-                                // Change here
-                                barPercentage: 0.2
-                            }]
-                        }
-                    }
-                });
-        }
-
-        //To calculate this mathematically, take the number of correct characters typed divided by the total number, multiplied by 100%
-        
-        function renderaccuracy() {
-
-            //to create chart for accuracy
-            var accuracyresult = (wordData.correct / wordData.total) * 100;
-            accuracyresult = accuracyresult.toFixed(2);
-            Chart.defaults.global.defaultFontColor = 'blue';
-            $('#accuracydiv').append('<canvas id="accuracyChart"><canvas>');
-            var ctx = document.getElementById('accuracyChart').getContext('2d');
-            accuracychart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'bar',
-                // The data for our dataset
-                data: {
-                    labels: ['Accuracy(%)'],
-                    datasets: [{
-                        label: 'Accuracy(%)',
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: [accuracyresult],
-                        // backgroundColor: ["DarkGoldenRod"]
-                    }]
-                },
-                // Configuration options go here
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        xAxes: [{
-                            // Change here
-                            barPercentage: 0.2
-                        }]
-                    }
-                }
-            });
-
-        }
-
-        /*Formula to count gross speed:----> gross speed = (All typed entries/5)/Time(min) */
-
-        function rendergrossspeed() {
-            //to create chart for Gross Speed
-            //console.log(numseconds);
-            //minutestyped = numseconds / 60;
-            console.log("Round Minutes before graph: " + roundminutes);
-            grossspeed = (wordData.total / roundminutes); //characters per minute without sace
-            grossspeed = grossspeed.toFixed(2);
-            console.log('Grossspeed=' + grossspeed);
-            Chart.defaults.global.defaultFontColor = 'blue';
-            $('#grossdiv').append('<canvas id="grossspeedchart"><canvas>');
-            var ctx2 = document.getElementById('grossspeedchart').getContext('2d');
-            grossspeedchart = new Chart(ctx2, {
-                // The type of chart we want to create
-                type: 'bar',
-
-                // The data for our dataset
-                data: {
-                    labels: ['Gross Speed(WPM)'],
-                    datasets: [{
-                        label: 'Gross Speed(WPM)',
-                        backgroundColor: 'rgb(139,69,19)',
-                        borderColor: 'rgb(139,69,19)',
-                        data: [grossspeed],
-                        // backgroundColor: ["MidnightBlue "]
-                    }]
-                },
-                // Configuration options go here
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        xAxes: [{
-                            // Change here
-                            barPercentage: 0.2
-                        }]
-                    }
-                }
-            });
-        }
-
-        /*Formula to count Net speed:----> Gross speed - (Incorrect characters)/Time(min) */
-
-        function rendernetspeed() {
-            //to create chart for Net speed
-            //  console.log('Grossspeed in net spteed' + grossspeed);
-
-            var incorrecttypespeed = (wordData.incorrect / roundminutes).toFixed(2);
-            var netspeed = (grossspeed - incorrecttypespeed).toFixed(2);
-            console.log('Net Speed=' + netspeed);
-            Chart.defaults.global.defaultFontColor = 'blue';
-            $('#netdiv').append('<canvas id="netspeedChart"><canvas>');
-            var ctx1 = document.getElementById('netspeedChart').getContext('2d');
-            netspeedchart = new Chart(ctx1, {
-                // The type of chart we want to create
-                type: 'bar',
-                // The data for our dataset
-                data: {
-                    labels: ['Net Speed(WPM)'],
-                    datasets: [{
-                        label: 'Net Speed(WPM)',
-                        backgroundColor: 'rgb(178,34,34)',
-                        borderColor: 'rgb(178,34,34)',
-                        data: [netspeed],
-                        //  backgroundColor: ["DarkRed"]
-                    }]
-                },
-                // Configuration options go here
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        xAxes: [{
-                            // Change here
-                            barPercentage: 0.2
-                        }]
-                    }
-                }
-            });
-        }
-
+       
         function clearvariables() {
             wordData.total = 0;
             wordData.correct = 0;
@@ -553,15 +566,16 @@ var hms;
 
         function disableButton(btn) {
            
-          //  $('#myChart').remove();
+            $('#myChart').remove();
+           // $('iframe.chartjs-hidden-iframe').remove();
+            $('#accuracyChart').remove();
+          //  $('iframe.chartjs-hidden-iframe').remove();
+            $('#grossspeedchart').remove();
+         //   $('iframe.chartjs-hidden-iframe').remove();
+            $('#netspeedChart').remove();
             $('iframe.chartjs-hidden-iframe').remove();
-           // $('#accuracyChart').remove();
-            $('iframe.chartjs-hidden-iframe').remove();
-           // $('#grossspeedchart').remove();
-            $('iframe.chartjs-hidden-iframe').remove();
-           // $('#netspeedChart').remove();
-            $('iframe.chartjs-hidden-iframe').remove();
-           // document.getElementById('chartrow').remove();
+            //document.getElementById('chartrow').remove();
+            document.getElementById('numericrow').style.display = 'none';
             document.getElementById('chartrow').style.display = 'none';
             document.getElementById(btn.id).disabled = true;
             document.getElementById('clock').removeAttribute('disabled');
