@@ -10,8 +10,6 @@
         </div>
         <div class="col-sm-6">
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
-
-
             <div id="hindi_keyboard">
 
                 <table id="number_key" class="bangali">
@@ -345,327 +343,419 @@
             <br />
             <br />
 
-
-            <button class="accordion">Learn Home Row&nbsp;&nbsp;(ਕੇਂਦਰੀ ਲਾਈਨ)</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "HomeRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "HomeRow", new { id = "2" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "HomeRow", new { id = "3" }, null)</td>
-                    </tr>
-                </table>
-
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Learn Home Row&nbsp;&nbsp;(ਕੇਂਦਰੀ ਲਾਈਨ)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "HomeRow", new {id = "1", }, new { @style = "color:black" })</td>
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "HomeRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "HomeRow", new { id = "3" }, new { @style = "color:black" })</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Learn Bottom Row&nbsp;&nbsp;(ਤੀਜੀ ਲਾਈਨ)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "BottomRow", new { id = "1" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "BottomRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "BottomRow", new { id = "3" }, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Learn Upper Row&nbsp;&nbsp;(ਪਹਿਲੀ ਲਾਈਨ)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "FirstRow", new { id = "1" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "FirstRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "FirstRow", new { id = "3" }, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                                Home Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੇਂਦਰੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftHomeRow", new { id = "1" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftHomeRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                Bottom Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਤੀਜੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftBottomRow", new { id = "1" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftBottomRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                Upper Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪਹਿਲੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftUpperRow", new { id = "1" }, new { @style = "color:black" })</td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftUpperRow", new { id = "2" }, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                                Right Alt Key with All Key Characters&nbsp;&nbsp;(ਸੱਜੇ Alt ਸਾਰੇ ਕੁੰਜੀ ਅੱਖਰ ਨਾਲ ਕੁੰਜੀ)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson (ਅਭਿਆਸ)", "Lesson", "RightAltWithAllKeys", null, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+                                Number line with Shift Keys&nbsp;&nbsp;(ਨੰਬਰ ਵਾਲੀ ਓਪਰਲੀ ਲਾਈਨ ਸ਼ਿਫਟ- ਕੀ )
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Lesson (ਅਭਿਆਸ) ", "Lesson", "ShiftNumberRow", null, new { @style = "color:black" })</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseTwo">
+                                Passage Typing
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 1 ", "Passage", "PassageTyping", new { id = "1" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words:476</span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 2 ", "Passage", "PassageTyping", new { id = "2" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 593</span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 3 ", "Passage", "PassageTyping", new { id = "3" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 459 </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 4 ", "Passage", "PassageTyping", new { id = "4" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 238  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 5 ", "Passage", "PassageTyping", new { id = "5" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 167  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 6 ", "Passage", "PassageTyping", new { id = "6" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 340   </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 7 ", "Passage", "PassageTyping", new { id = "7" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 204    </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 8 ", "Passage", "PassageTyping", new { id = "8" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 166</span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 9 ", "Passage", "PassageTyping", new { id = "9" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 498 </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 10 ", "Passage", "PassageTyping", new { id = "10" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 531 </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 11 ", "Passage", "PassageTyping", new { id = "11" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 427  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 12 ", "Passage", "PassageTyping", new { id = "12" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 519  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 13 ", "Passage", "PassageTyping", new { id = "13" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 554  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 14 ", "Passage", "PassageTyping", new { id = "14" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 501  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 15 ", "Passage", "PassageTyping", new { id = "15" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 571  </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 16 ", "Passage", "PassageTyping", new { id = "16" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 496   </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 17 ", "Passage", "PassageTyping", new { id = "17" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 464    </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 18 ", "Passage", "PassageTyping", new { id = "18" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 441     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 19 ", "Passage", "PassageTyping", new { id = "19" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 506      </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 20 ", "Passage", "PassageTyping", new { id = "20" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 398     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 21 ", "Passage", "PassageTyping", new { id = "21" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 505     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 22 ", "Passage", "PassageTyping", new { id = "22" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 491     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 23 ", "Passage", "PassageTyping", new { id = "23" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 446    </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 24 ", "Passage", "PassageTyping", new { id = "24" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 406     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 25 ", "Passage", "PassageTyping", new { id = "25" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 499     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 26 ", "Passage", "PassageTyping", new { id = "26" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 213     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 27 ", "Passage", "PassageTyping", new { id = "27" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 180     </span></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.ActionLink("Passage 28 ", "Passage", "PassageTyping", new { id = "28" }, new { @style = "color:black" })</td>
+                                    <td><span>Total Words: 439   </span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTwo">
+                                Unicode of Special Characters
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Unicode</th>
+                                    <th>Meaning</th>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 033</td>
+                                    <td>!</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 0145</td>
+                                    <td>'</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 0146</td>
+                                    <td>'</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 0147</td>
+                                    <td>"</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 0148</td>
+                                    <td>"</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 035</td>
+                                    <td>#</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 036</td>
+                                    <td>$</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 037</td>
+                                    <td>%</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 042</td>
+                                    <td>*</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 043</td>
+                                    <td>+</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 045</td>
+                                    <td>(-)Center</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 047</td>
+                                    <td>/</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 058</td>
+                                    <td>:</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 059</td>
+                                    <td>;</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 060</td>
+                                    <td><</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 061</td>
+                                    <td>=</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 062</td>
+                                    <td>></td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 063</td>
+                                    <td>?</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 091</td>
+                                    <td>[</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 092</td>
+                                    <td>\</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 093</td>
+                                    <td>]</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 094</td>
+                                    <td>^</td>
+                                </tr>
+                                <tr>
+                                    <td>LEFT ALT + 095</td>
+                                    <td>(_)Bottom</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <button class="accordion">Learn Bottom Row&nbsp;&nbsp;(ਤੀਜੀ ਲਾਈਨ)</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "BottomRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "BottomRow", new { id = "2" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "BottomRow", new { id = "3" }, null)</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Learn Upper Row&nbsp;&nbsp;(ਪਹਿਲੀ ਲਾਈਨ)</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "FirstRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "FirstRow", new { id = "2" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 3 (ਅਭਿਆਸ ਨੰ: 3)", "Lesson", "FirstRow", new { id = "3" }, null)</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Home Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੇਂਦਰੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftHomeRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftHomeRow", new { id = "2" }, null)</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Bottom Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਤੀਜੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftBottomRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftBottomRow", new { id = "2" }, null)</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Upper Row with Shift Keys&nbsp;&nbsp;(ਸ਼ਿਫਟ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪਹਿਲੀ ਲਾਈਨ ਦੀ ਟਾਈਪਿੰਗ )</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "ShiftUpperRow", new { id = "1" }, null)</td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "ShiftUpperRow", new { id = "2" }, null)</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Right Alt Key with All Key Characters&nbsp;&nbsp;(ਸੱਜੇ Alt ਸਾਰੇ ਕੁੰਜੀ ਅੱਖਰ ਨਾਲ ਕੁੰਜੀ)</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson (ਅਭਿਆਸ)", "Lesson", "RightAltWithAllKeys")</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Number line with Shift Keys&nbsp;&nbsp;(ਨੰਬਰ ਵਾਲੀ ਓਪਰਲੀ ਲਾਈਨ ਸ਼ਿਫਟ- ਕੀ )</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Lesson (ਅਭਿਆਸ) ", "Lesson", "ShiftNumberRow")</td>
-                    </tr>
-                </table>
-            </div>
-            <button class="accordion">Passage Typing</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 1 ", "Passage", "PassageTyping", new { id = "1" }, null)</td>
-                        <td><span>Total Words:476</span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 2 ", "Passage", "PassageTyping", new { id = "2" }, null)</td>
-                        <td><span>Total Words: 593</span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 3 ", "Passage", "PassageTyping", new { id = "3" }, null)</td>
-                        <td><span>Total Words: 459 </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 4 ", "Passage", "PassageTyping", new { id = "4" }, null)</td>
-                        <td><span>Total Words: 238  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 5 ", "Passage", "PassageTyping", new { id = "5" }, null)</td>
-                        <td><span>Total Words: 167  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 6 ", "Passage", "PassageTyping", new { id = "6" }, null)</td>
-                        <td><span>Total Words: 340   </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 7 ", "Passage", "PassageTyping", new { id = "7" }, null)</td>
-                        <td><span>Total Words: 204    </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 8 ", "Passage", "PassageTyping", new { id = "8" }, null)</td>
-                        <td><span>Total Words: 166</span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 9 ", "Passage", "PassageTyping", new { id = "9" }, null)</td>
-                        <td><span>Total Words: 498 </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 10 ", "Passage", "PassageTyping", new { id = "10" }, null)</td>
-                        <td><span>Total Words: 531 </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 11 ", "Passage", "PassageTyping", new { id = "11" }, null)</td>
-                        <td><span>Total Words: 427  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 12 ", "Passage", "PassageTyping", new { id = "12" }, null)</td>
-                        <td><span>Total Words: 519  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 13 ", "Passage", "PassageTyping", new { id = "13" }, null)</td>
-                        <td><span>Total Words: 554  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 14 ", "Passage", "PassageTyping", new { id = "14" }, null)</td>
-                        <td><span>Total Words: 501  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 15 ", "Passage", "PassageTyping", new { id = "15" }, null)</td>
-                        <td><span>Total Words: 571  </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 16 ", "Passage", "PassageTyping", new { id = "16" }, null)</td>
-                        <td><span>Total Words: 496   </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 17 ", "Passage", "PassageTyping", new { id = "17" }, null)</td>
-                        <td><span>Total Words: 464    </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 18 ", "Passage", "PassageTyping", new { id = "18" }, null)</td>
-                        <td><span>Total Words: 441     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 19 ", "Passage", "PassageTyping", new { id = "19" }, null)</td>
-                        <td><span>Total Words: 506      </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 20 ", "Passage", "PassageTyping", new { id = "20" }, null)</td>
-                        <td><span>Total Words: 398     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 21 ", "Passage", "PassageTyping", new { id = "21" }, null)</td>
-                        <td><span>Total Words: 505     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 22 ", "Passage", "PassageTyping", new { id = "22" }, null)</td>
-                        <td><span>Total Words: 491     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 23 ", "Passage", "PassageTyping", new { id = "23" }, null)</td>
-                        <td><span>Total Words: 446    </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 24 ", "Passage", "PassageTyping", new { id = "24" }, null)</td>
-                        <td><span>Total Words: 406     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 25 ", "Passage", "PassageTyping", new { id = "25" }, null)</td>
-                        <td><span>Total Words: 499     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 26 ", "Passage", "PassageTyping", new { id = "26" }, null)</td>
-                        <td><span>Total Words: 213     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 27 ", "Passage", "PassageTyping", new { id = "27" }, null)</td>
-                        <td><span>Total Words: 180     </span></td>
-                    </tr>
-                    <tr>
-                        <td> @Html.ActionLink("Passage 28 ", "Passage", "PassageTyping", new { id = "28" }, null)</td>
-                        <td><span>Total Words: 439   </span></td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="accordion">Unicode of Special Characters</button>
-            <div class="panel">
-                <table>
-                    <tr>
-                        <th>Unicode</th>
-                        <th>Meaning</th>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 033</td>
-                        <td>!</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 0145</td>
-                        <td>'</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 0146</td>
-                        <td>'</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 0147</td>
-                        <td>"</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 0148</td>
-                        <td>"</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 035</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 036</td>
-                        <td>$</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 037</td>
-                        <td>%</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 042</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 043</td>
-                        <td>+</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 045</td>
-                        <td>(-)Center</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 047</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 058</td>
-                        <td>:</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 059</td>
-                        <td>;</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 060</td>
-                        <td><</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 061</td>
-                        <td>=</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 062</td>
-                        <td>></td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 063</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 091</td>
-                        <td>[</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 092</td>
-                        <td>\</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 093</td>
-                        <td>]</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 094</td>
-                        <td>^</td>
-                    </tr>
-                    <tr>
-                        <td>LEFT ALT + 095</td>
-                        <td>(_)Bottom</td>
-                    </tr>
-                </table>
-            </div>
-
-
         </div>
         <div class="col-sm-3">
             <!--add area here -->
@@ -675,81 +765,80 @@
 
 @section Scripts
 {
-    <script type="text/javascript">
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
     <style type="text/css">
-        .accordion {
-            /*background-color: #eee;#7FDBFF;#39CCCC*/
-            /*background-color: #BDB76B;*/
-            background-color: #ADD8E6;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
+
+        a:hover, a:focus {
+            text-decoration: none;
             outline: none;
-            /*font-size: 15px;*/
-            font-size: large;
-            font-weight: bold;
-            transition: 0.4s;
-            text-align: center;
         }
 
-            .active, .accordion:hover {
-                background-color: #ccc;
+        #accordion .panel {
+            border: none;
+            border-radius: 0;
+            margin-bottom: 10px;
+        }
+
+        #accordion .panel-heading {
+            padding: 0;
+            border-radius: 0;
+        }
+
+        #accordion .panel-title a {
+            display: block;
+            padding: 15px 20px 15px 30px;
+            background: #9a031e;
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            border: none;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        #accordion .panel-body {
+            padding: 15px 0 15px 60px;
+        }
+        table tr td {
+            background: lightblue;
+            color:black;
+        }
+
+            #accordion .panel-body table {
+                padding: 15px 20px;
+                margin-bottom: 0;
+                font-size: 14px;
+                color: black;
+                text-align:center;
+                line-height: 28px;
+                border: 4px double #000;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+                position: relative;
             }
 
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            font-size: large;
-            font-weight: bold;
-        }
+                #accordion .panel-body table:before {
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 50%;
+                    position: absolute;
+                    border-left: 5px dotted #9a031e;
+                    top: 0;
+                    left: -40px;
+                }
 
-
-        table {
-            width: 100%;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-
-        table tr td {
-            color: black;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #eee;
-        }
-
-        table tr:nth-child(odd) {
-            background-color: #fff;
-        }
+                #accordion .panel-body table:after {
+                    content: "\f061";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: #9a031e;
+                    position: absolute;
+                    bottom: 40%;
+                    left: -35px;
+                }
     </style>
+
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
 }
 

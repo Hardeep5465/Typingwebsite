@@ -376,7 +376,7 @@ function rendertypingresults() {
             data: {
                 labels: ['Total', 'Correct', 'Incorrect'],
                 datasets: [{
-                    label: 'Results',
+                    label: 'Words',
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
                     data: [wordData.total, wordData.correct, wordData.incorrect],
