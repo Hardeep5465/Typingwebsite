@@ -15,6 +15,8 @@
    
 
     <script type="text/javascript">
+      
+
         function submitform() {
             if (!alert('you submitted the form!')) { window.location.reload(); }
             //alert('you submitted the form');
@@ -108,8 +110,8 @@
 <body>
     @* section for facebook login *@
   
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=661190120977013&autoLogAppEvents=1"></script>
+    @*<div id="fb-root"></div>*@
+    @*<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=661190120977013&autoLogAppEvents=1"></script>*@
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -123,16 +125,16 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString() == "HomeIndex" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="menu-item dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Set Up Raavi Font<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="menu-item">
+                            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString() == "SetUpRaviFontWindows7" ? "active" : "")">
                                 @Html.ActionLink("Windows 7", "Windows7", "SetUpRaviFont")
                             </li>
-                            <li class="menu-item">
+                            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString() == "SetUpRaviFontWindows10" ? "active" : "")">
                                 @Html.ActionLink("Windows 10", "Windows10", "SetUpRaviFont")
                             </li>
                             @*<li class="menu-item">
@@ -142,11 +144,11 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li>  @Html.ActionLink("Typing Tips", "TypingTips", "TypingTips")</li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString() == "TypingTipsTypingTips" ? "active" : "")"> @Html.ActionLink("Typing Tips", "TypingTips", "TypingTips")</li>
                 </ul>
 
                 <ul class="nav navbar-nav">
-                    <li>  @Html.ActionLink("Learn Typing", "LearnTyping", "StartTyping")</li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString() == "StartTypingLearnTyping" ? "active" : "")">  @Html.ActionLink("Learn Typing", "LearnTyping", "StartTyping")</li>
                 </ul>
 
                 @*<ul class="nav navbar-nav">

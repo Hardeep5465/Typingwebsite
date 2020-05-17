@@ -244,6 +244,7 @@
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7_old.mp4" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\devices.min.css" />
     <Content Include="css\flaticon.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\linearicons.css" />

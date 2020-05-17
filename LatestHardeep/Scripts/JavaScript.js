@@ -7,6 +7,8 @@
             console.log($ === jQuery);
         });
 
+
+
         //code to move top of the page, when user scrolls down
 
         //Get the button
