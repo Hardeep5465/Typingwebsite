@@ -1,12 +1,18 @@
 ﻿
-        const jq = document.createElement('script');
-        jq.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js";
-        document.head.appendChild(jq);
-        jq.addEventListener('load', () => {
-            console.log("hello world");
-            console.log($ === jQuery);
-        });
-
+        //const jq = document.createElement('script');
+        //jq.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js";
+        //document.head.appendChild(jq);
+        //jq.addEventListener('load', () => {
+        //    console.log("hello world");
+        //    console.log($ === jQuery);
+        //});
+var script = document.createElement('script');
+script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+script.addEventListener('load', () => {
+            console.log("loaded from latest url");
+    console.log($ === jQuery);
+    });
 
 
         //code to move top of the page, when user scrolls down
@@ -137,9 +143,9 @@
         var Typeminutes; //declared to get the no of minutes spent by the user while typing
         var finaltypeminutes;
         var roundminutes;
-var grossspeed;
-var hms;
-
+        var grossspeed;
+        var hms;
+        var timerselect;
 
         function typingTest(e) {
             // Char:        Key Code:
@@ -157,22 +163,6 @@ var hms;
             var kcode = e.keyCode;
             var word = $("#typebox")[0];
 
-            //  check if empty (starts with space)
-            if (isRunning == false) {
-                word.value = "";
-                //alert("Clock not running!")
-                if (document.getElementById("clock").hasAttributes('enabled')) {
-                    document.getElementById("errorMessage").innerText = "Please Click on Start!";
-                }
-                //if (document.getElementById("restarttype").hasAttributes('enabled')) {
-                //    document.getElementById("errorMessage").innerText = "Please Click on Re-Start!";
-                //}
-                else {
-                    document.getElementById("errorMessage").innerText = "Please Click on Re-Start!";
-                }
-            }
-            else
-            {
                 if (word.value.match(/^\s/g)) {
                     word.value = "";
                 }
@@ -189,55 +179,136 @@ var hms;
                     }
                     wordData.typed += 1; // count each valid character typed
                 }
-            }
-
         }
 
-        function Clock(clck) {
+        function Clock() {
+            //Delete previously generated graphs
+            if ($('#numericrow').is(":visible")) {
+                $('#myChart').remove();
+                // $('iframe.chartjs-hidden-iframe').remove();
+                $('#accuracyChart').remove();
+                //  $('iframe.chartjs-hidden-iframe').remove();
+                $('#grossspeedchart').remove();
+                //   $('iframe.chartjs-hidden-iframe').remove();
+                $('#netspeedChart').remove();
+                $('iframe.chartjs-hidden-iframe').remove();
+                //document.getElementById('chartrow').remove();
+                document.getElementById('numericrow').style.display = 'none';
+                document.getElementById('chartrow').style.display = 'none';
+            }
 
-            //disable span error
-            document.getElementById("errorMessage").innerText = "";
+            var check = document.getElementById("mySelect").value;
+            if (check != 'default') {
+                document.getElementById("errorMessage").innerHTML = "Remove time limit as it is a custom test!";
+            }
+            else {
+                //disable span error
+                document.getElementById("errorMessage").innerText = "";
 
-            //set autofocus to typing textbox
-            document.getElementById("typebox").focus();
+                //set autofocus to typing textbox
+                document.getElementById("typebox").focus();
 
-            //console.log("Called clock");
-            if (clock != null)
-            {
-                
-                if (Typeminutes <= 0.5 || wordData.total == 0) {
-                    alert("Please Check! Either time is less than one minute or you haven't completed the exercise");
-                }
-                else
-                {
-                    //Clock is running
-                    //console.log("Stopping clock");
+                //console.log("Called clock");
+                if (clock != null) {
                     clearInterval(clock);
                     clock = null;
-                    document.getElementById("clock").innerText = "Start";
+                    document.getElementById("clock").innerText = "Start Custom Test";
                     document.getElementById("test").innerText = "";
                     isRunning = false;
                     addWords(); //to reset word color to black once the user stops the clock
                     //console.log(wordData.correct);
                     //console.log(wordData.incorrect);
                     //console.log(wordData.total);
-
                     showDiv();//show graphs after user stops typing and disable button
-                    document.getElementById(clck.id).disabled = true;
+                    //document.getElementById(clck.id).disabled = true;
+                    document.getElementById("test").innerHTML = "00:00";
+                    $('#mySelect').prop('disabled', false);
+                    $('#timerclock').removeClass('disabled');
+                }
+                else {
+                    //Clock is not running
+                    //console.log("Starting clock");
+                    setInitialTime();
+                    clock = setInterval(updateClock, 1000); // Starts calling updateClock, which should do what your need with the clock.
+                    document.getElementById("clock").innerText = "Stop Custom Test"; //Changes the clock button text
+                    $('#mySelect').prop('disabled', true);
+                    $('#timerclock').addClass('disabled');
+                    updateClock();
+                    isRunning = true;
+                    // document.getElementById("clock").innerText = "Disable me";
                 }
             }
-            else
-            {
-                //Clock is not running
-                //console.log("Starting clock");
-                setInitialTime();
-                clock = setInterval(updateClock, 1000); // Starts calling updateClock, which should do what your need with the clock.
-                document.getElementById("clock").innerText = "Stop"; //Changes the clock button text
-                updateClock();
-                isRunning = true;
-                // document.getElementById("clock").innerText = "Disable me";
-            }
         }
+
+function timerfunction() {
+
+    //Delete previously generated graphs
+    if ($('#numericrow').is(":visible")) {
+        $('#myChart').remove();
+        $('#accuracyChart').remove();
+        $('#grossspeedchart').remove();
+        $('#netspeedChart').remove();
+        $('iframe.chartjs-hidden-iframe').remove();
+        document.getElementById('numericrow').style.display = 'none';
+        document.getElementById('chartrow').style.display = 'none';
+    }
+    timerselect = document.getElementById("mySelect").value;
+
+    if (timerselect == 'default') {
+        document.getElementById("errorMessage").innerHTML = "Please Select Test Time!";
+    }
+    else {
+        document.getElementById("errorMessage").innerHTML = "";
+        document.getElementById("typebox").focus();
+        $('#mySelect').prop('disabled', true); 
+        $('#timerclock').addClass('disabled');
+        $('#clock').addClass('disabled');
+
+        var totalAmount = parseInt(timerselect) * 60;
+        var loop, theFunction = function () {
+
+            totalAmount--;
+
+            if (totalAmount == 0) {
+
+            var timeselect = document.getElementById("mySelect").value;
+               
+                switch (timeselect) {
+                    case "1":
+                        hms = "00:01:00";
+                        break;
+                    case "3":
+                        hms = "00:03:00";
+                        break;
+                    case "5":
+                        hms = "00:05:00";
+                        break;
+                    case "10":
+                        hms = "00:10:00";
+                        break;
+                    case "15":
+                        hms = "00:15:00";
+                        break;
+                }
+                showDiv();
+                clearInterval(loop);
+                addWords();
+                // document.getElementById('test').style.display = 'none';
+                $('#mySelect').prop('disabled', false);
+                $('#timerclock').removeClass('disabled');
+                $('#clock').removeClass('disabled');
+                //write code here to enable the start custom button again
+            }
+            var minutes = parseInt(totalAmount / 60);
+            var seconds = parseInt(totalAmount % 60);
+
+            if (seconds < 10)
+                seconds = "0" + seconds;
+            $('#test').text(minutes + ":" + seconds);
+        };
+        var loop = setInterval(theFunction, 1000);
+    }
+}
 
         function setInitialTime() {
             initTime = new Date().getTime();
@@ -265,7 +336,6 @@ var hms;
             console.log(orgseconds);
             // Hours are worth 60 minutes.
             // Typeminutes = (+a[0]) * 60 + (+a[1]);
-
             //added by me to get seconds
             var typeseconds = hrstoseconds * 60 * 60 + mintoseconds * 60 + orgseconds;
             console.log(typeseconds);
@@ -336,7 +406,6 @@ var hms;
                     document.getElementById('clock').disabled = true;
                     document.getElementById("errorMessage").innerText = "Please Click on Re-Start!";
                 }
-
             }
         }
 
@@ -346,7 +415,6 @@ var hms;
             var current = $(".current-word")[0]; // second line (first word)
             var previous = current.previousSibling; // first line (last word)
             var children = $(".correct-word-c, .incorrect-word-c").length;
-
             // <span>'s on the next line have a greater offsetTop value
             // than those on the top line.
             // Remove words until the first word on the second line
@@ -363,7 +431,6 @@ var hms;
 var accuracyresult;
 var grossspeed;
 var netspeed;
-
 
 function rendertypingresults() {
     Chart.defaults.global.defaultFontColor = 'blue';
@@ -408,8 +475,15 @@ function rendertypingresults() {
 function renderaccuracy() {
 
     //to create chart for accuracy
-    accuracyresult = (wordData.correct / wordData.total) * 100;
-    accuracyresult = accuracyresult.toFixed(2);
+
+    if (wordData.total == 0) {
+        accuracyresult = 0.0;
+    }
+    else {
+        accuracyresult = (wordData.correct / wordData.total) * 100;
+        accuracyresult = accuracyresult.toFixed(2);
+    }
+   
     Chart.defaults.global.defaultFontColor = 'blue';
     $('#accuracydiv').append('<canvas id="accuracyChart"><canvas>');
     var ctx = document.getElementById('accuracyChart').getContext('2d');
@@ -451,10 +525,37 @@ function rendergrossspeed() {
     //to create chart for Gross Speed
     //console.log(numseconds);
     //minutestyped = numseconds / 60;
-    console.log("Round Minutes before graph: " + roundminutes);
-    grossspeed = (wordData.total / roundminutes); //characters per minute without sace
-    grossspeed = grossspeed.toFixed(2);
-    console.log('Grossspeed=' + grossspeed);
+    var grossselect = document.getElementById("mySelect").value;
+    if (grossselect == 'default') {
+        console.log("Round Minutes before graph: " + roundminutes);
+        grossspeed = (wordData.total / roundminutes); //characters per minute without sace
+        grossspeed = grossspeed.toFixed(2);
+        console.log('Grossspeed=' + grossspeed);
+    }
+    else {
+        switch (grossselect) {
+            case "1":
+                roundminutes = 1;
+                break;
+            case "3":
+                roundminutes = 3;
+                break;
+            case "5":
+                roundminutes = 5;
+                break;
+            case "10":
+                roundminutes = 10;
+                break;
+            case "15":
+                roundminutes = 15;
+                break;
+        }
+        grossspeed = (wordData.total / roundminutes); //characters per minute without sace
+        grossspeed = grossspeed.toFixed(2);
+        console.log('Grossspeed=' + grossspeed);
+    }
+
+   
     Chart.defaults.global.defaultFontColor = 'blue';
     $('#grossdiv').append('<canvas id="grossspeedchart"><canvas>');
     var ctx2 = document.getElementById('grossspeedchart').getContext('2d');
@@ -533,9 +634,6 @@ function rendernetspeed() {
     });
 }
 
-
-
-
         function showDiv() {
             window.scrollTo({ top: 995, behavior: 'smooth' });
             rendertypingresults();
@@ -553,10 +651,9 @@ function rendernetspeed() {
            // alert("Typing Time:" + hms);
             clearvariables();
             console.log("Before" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
-             document.getElementById('restarttype').removeAttribute('disabled');
+             //document.getElementById('restarttype').removeAttribute('disabled');
         }
 
-       
         function clearvariables() {
             wordData.total = 0;
             wordData.correct = 0;
@@ -564,25 +661,5 @@ function rendernetspeed() {
             wordData.typed = 0;
             grossspeed = 0;
             netspeed = 0;
-        }
+}
 
-        function disableButton(btn) {
-           
-            $('#myChart').remove();
-           // $('iframe.chartjs-hidden-iframe').remove();
-            $('#accuracyChart').remove();
-          //  $('iframe.chartjs-hidden-iframe').remove();
-            $('#grossspeedchart').remove();
-         //   $('iframe.chartjs-hidden-iframe').remove();
-            $('#netspeedChart').remove();
-            $('iframe.chartjs-hidden-iframe').remove();
-            //document.getElementById('chartrow').remove();
-            document.getElementById('numericrow').style.display = 'none';
-            document.getElementById('chartrow').style.display = 'none';
-            document.getElementById(btn.id).disabled = true;
-            document.getElementById('clock').removeAttribute('disabled');
-            document.getElementById("errorMessage").innerText = "";
-            document.getElementById("typebox").focus();
-            Clock(this);
-           console.log("After" + wordData.total + ":" + wordData.correct + ":" + wordData.incorrect);
-        }

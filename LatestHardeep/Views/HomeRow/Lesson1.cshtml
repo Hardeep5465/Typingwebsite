@@ -1,14 +1,16 @@
 ﻿
 @{
     ViewBag.Title = "Home Row : Lesson 1 |";
+
 }
+
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <!--add area here -->
+
         </div>
         <div class="col-sm-6">
             <h3 style="text-align:center;"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Learn Punjabi Raavi Font Typing&nbsp;&nbsp;</h3>
@@ -106,42 +108,34 @@
                                 <span class="_right_char">A</span> <br />
                                 <span class="_right_char">ੋ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">S</span> <br />
                                 <span class="_right_char">ੇ</span>
                             </td>
-
                             <td class="_key" style="">
                                 <span class="_right_char">D</span> <br />
                                 <span class="_right_char">੍</span>
                             </td>
-
                             <td class="_key" style="">
                                 <span class="_right_char">F</span> <br />
                                 <span class="_right_char">ਿ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">G</span> <br />
                                 <span class="_right_char">ੁ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">H</span> <br />
                                 <span class="_right_char">ਪ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">J</span> <br />
                                 <span class="_right_char">ਰ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">K</span> <br />
                                 <span class="_right_char">ਕ</span>
                             </td>
-
                             <td class="_key">
                                 <span class="_right_char">L</span> <br />
                                 <span class="_right_char">ਤ</span>
@@ -182,19 +176,72 @@
             @* <section id="word-section"><span class="current-word">ੋ</span><span>ੋ</span></section>*@
             <br />
             <div id="errorDiv" style="text-align:center;"> <span id="errorMessage" style="text-align:center;color:red;font-weight:bold"></span></div>
+
+            <div id="divtimer" style="font-weight:bold;font-size:large;">
+                <div class="row" style="text-align:center;">
+                    <span>Time&nbsp;</span><span class="glyphicon glyphicon-time"></span>&nbsp;<span id="test">00:00</span>
+                </div>
+            </div>
+
             <section id="type-section">
                 <input id="typebox" name="typebox" type="text" autofocus="" tabindex="1" onkeyup="typingTest(event)">
             </section>
-            <div id="divtimer" style="text-align:center">
-                <p id="test"></p>
-                <button type="button" class="btn btn-success" id="clock" onclick="Clock(this);">Start</button>
-                <button type="button" class="btn btn-success" style="margin-left:6px" id="restarttype" title="Every Restart will shuffle the words to practice more" onclick="disableButton(this);" disabled>Re-Start</button>
-            </div>
-            <br />
-            <div id="banner" style="text-align:center;">
-                <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
 
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Time Based Test</th>
+                            <th>Click below</th>
+                            <th>Custom (No Time Limit)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="mySelect">
+                                    <option selected value="default">Select Test Time</option>
+                                    <option value="1">1 Minute</option>
+                                    <option value="3">3 Minutes</option>
+                                    <option value="5">5 Minutes</option>
+                                    <option value="10">10 Minutes</option>
+                                    <option value="15">15 Minutes</option>
+                                </select>
+                            </td>
+                            <td>
+                                @*<button class="btn btn-success btn-sm" id="startbutton">Start Timer</button>*@
+                                <button type="button" class="btn btn-success btn-sm" id="timerclock" onclick="timerfunction();">Start Timer</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm" id="clock" onclick="Clock(this);">Start Custom Test</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
+            <div class="row">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;"><b>Test Instructions</b></td>
+                        </tr>
+                        <tr>
+                            <td>1. For a time based test, results will be displayed only when the time is over. Once, started one cannot stop the test</td>
+                        </tr>
+                        <tr>
+                            <td>2. For a custom type test, results will be displayed  once the exercise is over or by Stoping the test.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="banner" style="text-align:center;">
+                <p><b><u>Note:</u></b>&nbsp;If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
+            </div>
+            @*<div style="text-align:center;">
+                <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2F127.0.0.1%2FPunjabi-Ravi-Font-Typing-Home-Row%2F1&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>*@
             <div class="col-sm-3">
                 <!--add area here -->
             </div>
@@ -254,93 +301,27 @@
 </div>
 
 <div class="container" style="display:none;" id="chartrow">
-        <div class="row">
-            <div class="col-sm-3" id="mcyhartdiv"></div>
-            <div class="col-sm-3" id="accuracydiv"></div>
-            <div class="col-sm-3" id="grossdiv"></div>
-            <div class="col-sm-3" id="netdiv"></div>
-        </div>
+    <div class="row">
+        <div class="col-sm-3" id="mcyhartdiv"></div>
+        <div class="col-sm-3" id="accuracydiv"></div>
+        <div class="col-sm-3" id="grossdiv"></div>
+        <div class="col-sm-3" id="netdiv"></div>
+    </div>
 </div>
 <br />
 <br />
-@*<div class="row" style="text-align:center">
-        <div class="fb-comments" style="display:inline-block" data-href="https://localhost:44392/HomeRow/Lesson1" data-width="" data-numposts="5"></div>
-    </div>*@
 
 @section Scripts
 {
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-    @*<div id="fb-root">
-
-        </div>*@
-
-    @*<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>*@
     <script type="text/javascript">
-
         var wordList = ["ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ", "ੋ", "ੇ", "੍", "ਿ", "ੁ", "ਪ", "ਰ", "ਕ", "ਤ", "ਚ", "ਟ", "ੋ", "ੇ", "ੁ", "ਰ", "੍", "ਕ", "ਿ", "ਟ", "ਚ"];
-                                //console.log('Value taken from Lesson1');
-                                //for (i = 0; i < wordList.length; i++)
-                                //    console.log((i + 1) + ": " + wordList[i]);
-
     </script>
+
     <script src="~/Scripts/JavaScript.js"></script>
-
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
-    <style type="text/css">
-
-        #dataone, #datatwo, #datathree, #datafour {
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 0px 5px rgb(51, 51, 51);
-            box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
-            padding: 0px;
-            margin: 0px 0px 20px;
-        }
-
-        #typedtime, #accuracynum, #grossnum, #netnum {
-            display: block;
-            font-size: 50pt;
-            font-weight: 100;
-            line-height: 1;
-            text-align: center;
-            display: inline-block;
-            width: 100%;
-            padding: 5px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        #typedtime {
-            color: rgb(255, 255, 255);
-            background-color: rgb(197, 44, 102);
-        }
-
-        #accuracynum {
-            color: rgb(255, 255, 255);
-            background-color: rgb(165, 82, 167);
-        }
-
-        #grossnum {
-            color: rgb(255, 255, 255);
-            background-color: rgb(197, 44, 102);
-        }
-
-        #netnum {
-            color: rgb(255, 255, 255);
-            background-color: rgb(165, 82, 167);
-        }
-
-        .info {
-            padding-top: 5px;
-            text-align: center;
-        }
-
-            .info > .desc {
-                font-size: 13pt;
-                font-weight: 300;
-                margin: 0px;
-            }
-    </style>
 
 }
 

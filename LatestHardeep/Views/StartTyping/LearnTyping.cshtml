@@ -338,11 +338,12 @@
                     </tbody>
                 </table>
 
-
             </div>
             <br />
             <br />
-
+            <div class="notice notice-success">
+                <strong>Beginners</strong>
+            </div>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
@@ -357,7 +358,7 @@
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
-                                        <td>@Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "HomeRow", new {id = "1", }, new { @style = "color:black" })</td>
+                                        <td>@Html.ActionLink("Lesson 1 (ਅਭਿਆਸ ਨੰ: 1)", "Lesson", "HomeRow", new { id = "1", }, new { @style = "color:black" })</td>
                                     </tr>
                                     <tr>
                                         <td> @Html.ActionLink("Lesson 2 (ਅਭਿਆਸ ਨੰ: 2)", "Lesson", "HomeRow", new { id = "2" }, new { @style = "color:black" })</td>
@@ -517,6 +518,12 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div class="notice notice-success">
+                <strong>Advanced</strong>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
@@ -761,11 +768,31 @@
             <!--add area here -->
         </div>
     </div>
-</div>
+ </div>>
 
 @section Scripts
 {
     <style type="text/css">
+
+        .notice {
+            padding: 15px;
+            background-color: #F0E68C;
+            border-left: 6px solid #7f7f84;
+            border-right: 6px solid #7f7f84;
+            margin-bottom: 10px;
+            -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            text-align: center;
+        }
+        .notice-success {
+            border-color: #80D651;
+           
+        }
+            .notice-success > strong {
+                color: black;
+                
+            }
 
         a:hover, a:focus {
             text-decoration: none;
