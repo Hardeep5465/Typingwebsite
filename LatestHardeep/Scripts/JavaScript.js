@@ -162,9 +162,13 @@ script.addEventListener('load', () => {
             e = e || window.event;
             var kcode = e.keyCode;
             var word = $("#typebox")[0];
+            var withoutTime = document.getElementById("test");
 
                 if (word.value.match(/^\s/g)) {
                     word.value = "";
+                }
+                else if (withoutTime == "00:00") {
+                    alert("Please start any test type");
                 }
                 else
                 {

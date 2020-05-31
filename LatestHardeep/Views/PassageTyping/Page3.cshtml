@@ -27,20 +27,72 @@
             </section>
             <br />
             <div id="errorDiv" style="text-align:center;"> <span id="errorMessage" style="text-align:center;color:red;font-weight:bold"></span></div>
+            <div id="divtimer" style="font-weight:bold;font-size:large;">
+                <div class="row" style="text-align:center;">
+                    <span>Time&nbsp;</span><span class="glyphicon glyphicon-time"></span>&nbsp;<span id="test">00:00</span>
+                </div>
+            </div>
             <section id="type-section">
                 <input id="typebox" name="typebox" type="text" autofocus="" tabindex="1" onkeyup="typingTest(event)">
             </section>
-            <div id="divtimer" style="text-align:center">
-                <p id="test"></p>
-                <button type="button" class="btn btn-success" id="clock" onclick="Clock(this);">Start</button>
-                <button type="button" class="btn btn-success" style="margin-left:6px" id="restarttype" title="Every Restart will shuffle the words to practice more" onclick="disableButton(this);" disabled>Re-Start</button>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--add area here -->
             </div>
-            <br />
-            <div id="banner" style="text-align:center;">
-                <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
+            <div class="row col-sm-6">
+                <table class="table">
+                    <thead style="text-align:center;">
+                        <tr>
+                            <th>Time Based Test</th>
+                            <th>Click below</th>
+                            <th>Custom (No Time Limit)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="mySelect">
+                                    <option selected value="default">Select Test Time</option>
+                                    <option value="1">1 Minute</option>
+                                    <option value="3">3 Minutes</option>
+                                    <option value="5">5 Minutes</option>
+                                    <option value="10">10 Minutes</option>
+                                    <option value="15">15 Minutes</option>
+                                </select>
+                            </td>
+                            <td>
+                                @*<button class="btn btn-success btn-sm" id="startbutton">Start Timer</button>*@
+                                <button type="button" class="btn btn-success btn-sm" id="timerclock" onclick="timerfunction();">Start Timer</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm" id="clock" onclick="Clock(this);">Start Custom Test</button>
+                            </td>
+                        </tr>
 
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;"><b>Test Instructions</b></td>
+                        </tr>
+                        <tr>
+                            <td>1. For a time based test, results will be displayed only when the time is over. Once, started one cannot stop the test</td>
+                        </tr>
+                        <tr>
+                            <td>2. For a custom type test, results will be displayed  once the exercise is over or by Stoping the test.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="banner" style="text-align:center;">
+                    <p><b><u>Note:</u></b>If you see typed characters in English, Please Navigate to Set Up Raavi Font tab</p>
+
+                </div>
             </div>
-
+            <div class="col-sm-3">
+                <!--add area here -->
+            </div>
         </div>
         <div class="col-sm-2">
             <!--add area here -->
@@ -68,70 +120,51 @@
         </div>
     </div>
     <br />
-    <div class="row" id="chartrow" style="display:none;">
+</div>
 
-        <div class="col-sm-2">
-            <!--add area here -->
-        </div>
-
-        <div class="col-sm-8" style="height:510px;">
-            <div class="row">
-                <div class="col-md-6" id="mcyhartdiv" style="text-align:center;">
-                    <canvas id="myChart"></canvas>
-                </div>
-                <div class="col-md-6" id="accuracydiv" style="text-align:center;">
-                    <canvas id="accuracyChart"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6" id="grossdiv" style="text-align:center;">
-                    <canvas id="grossspeedchart"></canvas>
-                </div>
-                <div class="col-md-6" id="netdiv" style="text-align:center;">
-                    <canvas id="netspeedChart"></canvas>
-                </div>
+<div class="container">
+    <div class="row" id="numericrow" style="display:none;">
+        <div class="col-md-3 col-sm-6" id="dataone">
+            <span id="typedtime"></span>
+            <div class="info">
+                <p class="desc">Time Taken(HH:MM:SS)</p>
             </div>
         </div>
-
-        <div class="col-sm-2">
-            <!--add area here -->
+        <div class="col-md-3 col-sm-6" id="datatwo">
+            <span id="accuracynum"></span>
+            <div class="info">
+                <p class="desc">Accuracy(%)</p>
+            </div>
         </div>
-
-    </div>
-    <br />
-
-    <div class="row" style="text-align:center">
-        <div class="fb-comments" style="display:inline-block" data-href="https://localhost:44392/HomeRow/Lesson1" data-width="" data-numposts="5"></div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-3 col-sm-6" id="datathree">
+            <span id="grossnum"></span>
+            <div class="info">
+                <p class="desc">Gross Speed(WPM)</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6" id="datafour">
+            <span id="netnum"></span>
+            <div class="info">
+                <p class="desc">Net Speed(WPM)</p>
+            </div>
+        </div>
     </div>
 </div>
 
+<div class="container" style="display:none;" id="chartrow">
+    <div class="row">
+        <div class="col-sm-3" id="mcyhartdiv"></div>
+        <div class="col-sm-3" id="accuracydiv"></div>
+        <div class="col-sm-3" id="grossdiv"></div>
+        <div class="col-sm-3" id="netdiv"></div>
+    </div>
+</div>
+<br />
+<br />
+
 @section Scripts
 {
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-    <div id="fb-root">
-
-    </div>
-    <script src="~/Scripts/JavaScript.js"></script>
-    <script type="text/javascript">
-
-        function addWords() {
-             var wordList = ["ਧਰਤੀ", "ਹੀ", "ਇਕ", "ਅਜਿਹਾ", "ਗ੍ਰਹਿ", "ਹੈ", "ਜਿਸ", "'ਤੇ", "ਜੀਵਨ", "ਹੈ", "।", "ਜੀਵਨ", "ਲਈ", "ਆਲਾ-ਦੁਆਲਾ," , "ਤਾਪ,", "ਪਾਣੀ", "ਅਤੇ", "ਭੋਜਨ", "ਦੀ", "ਜ਼ਰੂਰਤ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਜੀਵਾਂ", "ਲਈ", "ਸੂਰਜੀ", "ਊਰਜਾ", "ਅਤੇ", "ਧਰਤੀ", "ਤੇ", "ਮੌਜੂਦ", "ਸੰਸਾਧਨ", "ਜ਼ਰੂਰੀ", "ਹਨ", "|", "ਧਰਤੀ", "ਦੇ", "ਸਾਧਨ", "ਹਨ", "ਭੂਮੀ,", "ਜਨ", "ਅਤੇ", "ਹਵਾ", "।", "ਧਰਤੀ", "ਦਾ", "ਸਭੁ", "ਤੋਂ", "ਬਾਹਰੀ", "ਭਾਗ", "ਸਥਲ", "ਮੰਡਲ", "ਹੈ", "ਅਤੇ", "ਲਗਭਗ", "75%", "ਭਾਗ", "ਪਾਣੀ", "ਹੈ", "|", "ਸਜੀਵ", "ਜੀਵ", "ਮੰਡਲ", "ਦੇ", "ਜੈਵਿਕ", "ਘਟਕ", "ਹਨ", "ਅਤੇ", "ਹਵਾ,", "ਪਾਣੀ", "ਅਤੇ", "ਮਿੱਟੀ", "ਅਜੈਵਿਕ(ਨਿਰਜੀਵ)", "ਘਟਕ", "ਹਨ", "|", "ਧਰਤੀ", "ਸੂਰਜ", "ਦੇ", "ਆਲੇ-ਦੁਆਲੇ", "ਘੁੰਮਦੀ", "ਹੈ", "|", "ਜਦੋਂ", "ਧਰਤੀ", "ਸੂਰਜ", "ਦੇ", "ਆਲੇ-ਦੁਆਲੇ", "ਘੁੰਮਦੀ", "ਹੈ", "ਉਸ", "ਨਾਲ", "ਹੀ", "ਦਿਨ", "ਅਤੇ", "ਰਾਤ", "ਬਣਦੇ", "ਹਨ", "|", "ਧਰਤੀ", "ਸਭ", "ਤੋਂ", "ਜ਼ਿਆਦਾ", "ਗਰਮ", "ਦਿਨ", "ਵੇਲੇ", "ਤੇ", "ਠੰਡੀ", "ਰਾਤ", "ਵੇਲੇ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਸਾਡਾ", "ਜੀਵਨ", "ਹਵਾ", "ਦੇ", "ਘਟਕਾਂ", "ਦਾ", "ਪਰਿਣਾਮ", "ਹੈ", "|", "ਚੰਦਰਮਾ", "ਦੀ", "ਸਤ੍ਹਾ", "ਤੇ", "ਵਾਯੂਮੰਡਲ", "ਨਹੀਂ", "ਹੈ", "ਅਤੇ", "ਉਸਦਾ", "ਤਾਪਮਾਨ-", "190", "ਤੋਂ", "-110", "ਦੇ", "ਵਿਚਕਾਰ", "ਹੁੰਦਾ", "ਹੈ", "|", "ਪਾਣੀ", "ਦੀ", "ਤੁਲਨਾ", "ਵਿਚ", "ਧਰਤੀ", "ਜਲਦੀ", "ਗਰਮ", "ਹੁੰਦੀ", "ਹੈ,", "ਇਸ", "ਲਈ", "ਧਰਤੀ", "ਉਪਰ", "ਹਵਾ", "ਵੀ", "ਤੇਜ਼ੀ", "ਨਾਲ", "ਗਰਮ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਦਿਨ", "ਦੇ", "ਸਮੇਂ", "ਹਵਾ", "ਦੀ", "ਦਿਸ਼ਾ", "ਸਮੁੰਦਰ", "ਤੋਂ", "ਧਰਤੀ", "ਵੱਲ", "ਅਤੇ", "ਰਾਤ", "ਸਮੇਂ", "ਧਰਤੀ", "ਤੋਂ", "ਸਮੁੰਦਰ", "ਵੱਲ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਹਵਾ", "ਨੂੰ", "ਧਰਤੀ", "ਦੀ", "ਘੁੰਮਣ", "ਗਤੀ", "ਅਤੇ", "ਪਰਬਤ", "ਲੜੀਆਂ", "ਵੀ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦਿਆਂ", "ਹਨ", "|", "ਵਰਖਾ", "ਦੀ", "ਕਿਸਮ", "ਪਵਨਾਂ", "ਦੇ", "ਪੈਟਰਨ", "ਤੇ", "ਨਿਰਭਰ", "ਕਰਦੀ", "ਹੈ", "|", "ਭਾਰਤ", "ਵਿਚ", "ਵਰਖਾ", "ਦੱਖਣ-ਪੱਛਮ", "ਜਾਂ", "ਉੱਤਰ-ਪੂਰਬੀ", "ਮਾਨਸੂਨ", "ਦੇ", "ਕਰਨ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਹਵਾ", "ਦੇ", "ਗੁਣ", "ਸਾਰੇ", "ਜੀਵਾਂ", "ਨੂੰ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦੇ", "ਹਨ", "|", "ਬਾਲਣ", "ਦੇ", "ਜਲਣ", "ਤੇ", "ਦੂਸ਼ਿਤ", "ਗੈਸਾਂ", "ਪੈਦਾ", "ਹੁੰਦੀਆਂ", "ਹਨ", "ਜੋ", "ਵਰਖਾ", "ਦੇ", "ਪਾਣੀ", "ਵਿਚ", "ਮਿਲ", "ਕੇ", "ਅਮਲੀ", "ਵਰਖਾ", "ਪੈਦਾ", "ਕਰਦਿਆਂ", "ਹਨ", "|", "ਨਿਲੰਬਤ", "ਕਣ", "ਅਣਜਲੇ", "ਕਾਬਲ", "ਕਣ", "ਜਾਂ", "ਪ੍ਰਦਾਰਥ", "ਹੋ", "ਸਕਦੇ", "ਹਨ", "ਜਿਸ", "ਨੂੰ", "ਹਾਈਡਰੋਕਾਰਬਨ", "ਕਹਿੰਦੇ", "ਹਨ", "|", "ਦੂਸ਼ਿਤ", "ਹਵਾ", "ਵਿਚ", "ਸਾਹ", "ਲੈਣ", "ਨਾਲ", "ਕੈਂਸਰ,", "ਦਿਲ", "ਦੇ", "ਰੋਗ", "ਜਾਂ", "ਅਲਰਜੀ", "ਵਰਗੀਆਂ", "ਬਿਮਾਰੀਆਂ", "ਦੀ", "ਸੰਭਾਵਨਾ", "ਵੱਧ", "ਜਾਂਦੀ", "ਹੈ", "|", "ਧਰਤੀ", "ਦੀ", "ਸਤ੍ਹਾ", "ਤੇ", "ਮਿਲਣ", "ਵਾਲਾ", "ਵਧੇਰੇ", "ਪਾਣੀ", "ਸਮੁੰਦਰਾਂ", "ਅਤੇ", "ਮਹਾਂਸਾਗਰਾਂ", "ਵਿਚ", "ਹੈ", "|", "ਸ਼ੁੱਧ", "ਪਾਣੀ", "ਬਰਫ", "ਦੇ", "ਰੂਪ", "ਵਿਚ", "ਦੋਨਾਂ", "ਧਰੁਵਾਂ", "ਅਤੇ", "ਬਰਫ", "ਦੇ", "ਪਹਾੜਾਂ", "ਤੇ", "ਮਿਲਦਾ", "ਹੈ", "|", "ਭੂਮੀਗਤ", "ਜਲ,", "ਨਦੀਆਂ-ਝੀਲਾਂ,", "ਤਲਾਬਾਂ", "ਦਾ", "ਪਾਣੀ", "ਵੀ", "ਅਲੂਣਾ", "ਹੁੰਦਾ", "ਹੈ", "|", "ਜੀਵਨ", "ਦੀ", "ਵਿਵਿਧਤਾ", "ਨੂੰ", "ਮਿੱਟੀ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦੀ", "ਹੈ", "|", "ਮਿੱਟੀ", "ਵਿਚ", "ਮਿਲਣ", "ਵਾਲੇ", "ਖਣਿਜ", "", "ਜੀਵਾਂ", "ਨੂੰ", "ਵੱਖ-ਵੱਖ", "ਪ੍ਰਕਾਰ", "ਨਾਲ", "ਸਹਾਇਤਾ", "ਪ੍ਰਦਾਨ", "ਕਰਦੇ", "ਹਨ", "|", "ਸੂਰਜ,", "ਪਾਣੀ,", "ਹਵਾ", "ਅਤੇ", "ਜੀਵ-ਜੰਤੂ", "ਮਿੱਟੀ", "ਦੀ", "ਰਚਨਾ", "ਵਿਚ", "ਸਹਾਇਕ", "ਹਨ", "|", "ਮਿੱਟੀ", "ਦੇ", "ਪ੍ਰਕਾਰ", "ਦਾ", "ਨਿਰਣਾ", "ਉਸ", "ਵਿਚ", "ਮਿਲਣ", "ਵਾਲੇ", "ਕਣਾਂ", "ਦੇ", "ਔਸਤ", "ਦੁਆਰਾ", "ਨਿਰਧਾਰਿਤ", "ਕੀਤਾ", "ਜਾਂਦਾ", "ਹੈ", "|", "ਮਿੱਟੀ", "ਦੇ", "ਗੁਣ", "ਮਲਤ", "ਦੀ", "ਮਾਤਰਾ", "ਅਤ", "ਉਸ", "ਵਿਚ", "ਸੂਖਮ", "ਜੀਵਾਂ", "ਦੇ", "ਆਧਾਰ", "ਤੇ", "ਜਾਂਚੇ", "ਜਾਂਦੇ", "ਹਨ", "|", "ਵਿਸ਼ੇਸ਼", "ਪੱਥਰਾਂ", "ਤੋਂ", "ਬਣੀ", "ਮਿੱਟੀ", "ਉਸ", "ਵਿਚ", "ਮੌਜੂਦ", "ਖਣਿਜ", "ਪੋਸ਼ਕ", "ਤੱਤਾਂ", "ਨੂੰ", "ਪ੍ਰਗਟ", "ਕਰਦੇ", "ਹਨ", "|", "ਆਧੁਨਿਕ", "ਕੀਟ", "ਨਾਸ਼ਕਾਂ", "ਅਤੇ", "ਰਾਸਾਇਨਿਕ", "ਖਾਦਾਂ", "ਨੇ", "ਮਿੱਟੀ", "ਦੀ", "ਸਰੰਚਨਾ", "ਵਿਗਾੜ", "ਦਿੱਤੀ", "ਹੈ", "|", "ਕਾਰਬਨ", "ਦਾ", "ਵੱਖ-ਵੱਖ", "ਭੌਤਿਕ", "ਅਤੇ", "ਜੈਵਿਕ", "ਕਿਰਿਆਵਾਂ", "ਦੁਆਰਾ", "ਚਕਰ", "ਲੱਗਦਾ", "ਹੈ", "|", "ਧਰਤੀ", "ਉੱਤੇ", "ਰੁੱਖਾਂ", "ਦੀ", "ਘਾਟ", "ਕਰਨ", "ਹੀ", "ਗਲੇਸ਼ੀਅਰ", "ਪਿਘਲ", "ਰਹੇ", "ਹਨ", "ਅਤੇ", "ਗਰਮੀ", "ਵੱਧ", "ਰਹੀ", "ਹੈ", "|"];
-
-            // clear existing word-section
-            var wordSection = $("#word-section")[0];
-            wordSection.innerHTML = "";
-            for (i = 0; i < wordList.length; i++) {
-                var wordSpan = "<span>" + wordList[i] + "</span>";
-                wordSection.innerHTML += wordSpan;
-            }
-            // mark first word as current-word
-            wordSection.firstChild.classList.add("current-word");
-        }
-    </script>
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
     <style type="text/css">
         #word-section {
@@ -146,6 +179,28 @@
             border: 4px solid black;
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="~/Scripts/JavaScript.js"></script>
+    <script type="text/javascript">
+
+        function addWords() {
+            var wordList = ["ਧਰਤੀ", "ਹੀ", "ਇਕ", "ਅਜਿਹਾ", "ਗ੍ਰਹਿ", "ਹੈ", "ਜਿਸ", "'ਤੇ", "ਜੀਵਨ", "ਹੈ", "।", "ਜੀਵਨ", "ਲਈ", "ਆਲਾ-ਦੁਆਲਾ,", "ਤਾਪ,", "ਪਾਣੀ", "ਅਤੇ", "ਭੋਜਨ", "ਦੀ", "ਜ਼ਰੂਰਤ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਜੀਵਾਂ", "ਲਈ", "ਸੂਰਜੀ", "ਊਰਜਾ", "ਅਤੇ", "ਧਰਤੀ", "ਤੇ", "ਮੌਜੂਦ", "ਸੰਸਾਧਨ", "ਜ਼ਰੂਰੀ", "ਹਨ", "|", "ਧਰਤੀ", "ਦੇ", "ਸਾਧਨ", "ਹਨ", "ਭੂਮੀ,", "ਜਨ", "ਅਤੇ", "ਹਵਾ", "।", "ਧਰਤੀ", "ਦਾ", "ਸਭੁ", "ਤੋਂ", "ਬਾਹਰੀ", "ਭਾਗ", "ਸਥਲ", "ਮੰਡਲ", "ਹੈ", "ਅਤੇ", "ਲਗਭਗ", "75%", "ਭਾਗ", "ਪਾਣੀ", "ਹੈ", "|", "ਸਜੀਵ", "ਜੀਵ", "ਮੰਡਲ", "ਦੇ", "ਜੈਵਿਕ", "ਘਟਕ", "ਹਨ", "ਅਤੇ", "ਹਵਾ,", "ਪਾਣੀ", "ਅਤੇ", "ਮਿੱਟੀ", "ਅਜੈਵਿਕ(ਨਿਰਜੀਵ)", "ਘਟਕ", "ਹਨ", "|", "ਧਰਤੀ", "ਸੂਰਜ", "ਦੇ", "ਆਲੇ-ਦੁਆਲੇ", "ਘੁੰਮਦੀ", "ਹੈ", "|", "ਜਦੋਂ", "ਧਰਤੀ", "ਸੂਰਜ", "ਦੇ", "ਆਲੇ-ਦੁਆਲੇ", "ਘੁੰਮਦੀ", "ਹੈ", "ਉਸ", "ਨਾਲ", "ਹੀ", "ਦਿਨ", "ਅਤੇ", "ਰਾਤ", "ਬਣਦੇ", "ਹਨ", "|", "ਧਰਤੀ", "ਸਭ", "ਤੋਂ", "ਜ਼ਿਆਦਾ", "ਗਰਮ", "ਦਿਨ", "ਵੇਲੇ", "ਤੇ", "ਠੰਡੀ", "ਰਾਤ", "ਵੇਲੇ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਸਾਡਾ", "ਜੀਵਨ", "ਹਵਾ", "ਦੇ", "ਘਟਕਾਂ", "ਦਾ", "ਪਰਿਣਾਮ", "ਹੈ", "|", "ਚੰਦਰਮਾ", "ਦੀ", "ਸਤ੍ਹਾ", "ਤੇ", "ਵਾਯੂਮੰਡਲ", "ਨਹੀਂ", "ਹੈ", "ਅਤੇ", "ਉਸਦਾ", "ਤਾਪਮਾਨ-", "190", "ਤੋਂ", "-110", "ਦੇ", "ਵਿਚਕਾਰ", "ਹੁੰਦਾ", "ਹੈ", "|", "ਪਾਣੀ", "ਦੀ", "ਤੁਲਨਾ", "ਵਿਚ", "ਧਰਤੀ", "ਜਲਦੀ", "ਗਰਮ", "ਹੁੰਦੀ", "ਹੈ,", "ਇਸ", "ਲਈ", "ਧਰਤੀ", "ਉਪਰ", "ਹਵਾ", "ਵੀ", "ਤੇਜ਼ੀ", "ਨਾਲ", "ਗਰਮ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਦਿਨ", "ਦੇ", "ਸਮੇਂ", "ਹਵਾ", "ਦੀ", "ਦਿਸ਼ਾ", "ਸਮੁੰਦਰ", "ਤੋਂ", "ਧਰਤੀ", "ਵੱਲ", "ਅਤੇ", "ਰਾਤ", "ਸਮੇਂ", "ਧਰਤੀ", "ਤੋਂ", "ਸਮੁੰਦਰ", "ਵੱਲ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਹਵਾ", "ਨੂੰ", "ਧਰਤੀ", "ਦੀ", "ਘੁੰਮਣ", "ਗਤੀ", "ਅਤੇ", "ਪਰਬਤ", "ਲੜੀਆਂ", "ਵੀ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦਿਆਂ", "ਹਨ", "|", "ਵਰਖਾ", "ਦੀ", "ਕਿਸਮ", "ਪਵਨਾਂ", "ਦੇ", "ਪੈਟਰਨ", "ਤੇ", "ਨਿਰਭਰ", "ਕਰਦੀ", "ਹੈ", "|", "ਭਾਰਤ", "ਵਿਚ", "ਵਰਖਾ", "ਦੱਖਣ-ਪੱਛਮ", "ਜਾਂ", "ਉੱਤਰ-ਪੂਰਬੀ", "ਮਾਨਸੂਨ", "ਦੇ", "ਕਰਨ", "ਹੁੰਦੀ", "ਹੈ", "|", "ਹਵਾ", "ਦੇ", "ਗੁਣ", "ਸਾਰੇ", "ਜੀਵਾਂ", "ਨੂੰ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦੇ", "ਹਨ", "|", "ਬਾਲਣ", "ਦੇ", "ਜਲਣ", "ਤੇ", "ਦੂਸ਼ਿਤ", "ਗੈਸਾਂ", "ਪੈਦਾ", "ਹੁੰਦੀਆਂ", "ਹਨ", "ਜੋ", "ਵਰਖਾ", "ਦੇ", "ਪਾਣੀ", "ਵਿਚ", "ਮਿਲ", "ਕੇ", "ਅਮਲੀ", "ਵਰਖਾ", "ਪੈਦਾ", "ਕਰਦਿਆਂ", "ਹਨ", "|", "ਨਿਲੰਬਤ", "ਕਣ", "ਅਣਜਲੇ", "ਕਾਬਲ", "ਕਣ", "ਜਾਂ", "ਪ੍ਰਦਾਰਥ", "ਹੋ", "ਸਕਦੇ", "ਹਨ", "ਜਿਸ", "ਨੂੰ", "ਹਾਈਡਰੋਕਾਰਬਨ", "ਕਹਿੰਦੇ", "ਹਨ", "|", "ਦੂਸ਼ਿਤ", "ਹਵਾ", "ਵਿਚ", "ਸਾਹ", "ਲੈਣ", "ਨਾਲ", "ਕੈਂਸਰ,", "ਦਿਲ", "ਦੇ", "ਰੋਗ", "ਜਾਂ", "ਅਲਰਜੀ", "ਵਰਗੀਆਂ", "ਬਿਮਾਰੀਆਂ", "ਦੀ", "ਸੰਭਾਵਨਾ", "ਵੱਧ", "ਜਾਂਦੀ", "ਹੈ", "|", "ਧਰਤੀ", "ਦੀ", "ਸਤ੍ਹਾ", "ਤੇ", "ਮਿਲਣ", "ਵਾਲਾ", "ਵਧੇਰੇ", "ਪਾਣੀ", "ਸਮੁੰਦਰਾਂ", "ਅਤੇ", "ਮਹਾਂਸਾਗਰਾਂ", "ਵਿਚ", "ਹੈ", "|", "ਸ਼ੁੱਧ", "ਪਾਣੀ", "ਬਰਫ", "ਦੇ", "ਰੂਪ", "ਵਿਚ", "ਦੋਨਾਂ", "ਧਰੁਵਾਂ", "ਅਤੇ", "ਬਰਫ", "ਦੇ", "ਪਹਾੜਾਂ", "ਤੇ", "ਮਿਲਦਾ", "ਹੈ", "|", "ਭੂਮੀਗਤ", "ਜਲ,", "ਨਦੀਆਂ-ਝੀਲਾਂ,", "ਤਲਾਬਾਂ", "ਦਾ", "ਪਾਣੀ", "ਵੀ", "ਅਲੂਣਾ", "ਹੁੰਦਾ", "ਹੈ", "|", "ਜੀਵਨ", "ਦੀ", "ਵਿਵਿਧਤਾ", "ਨੂੰ", "ਮਿੱਟੀ", "ਪ੍ਰਭਾਵਿਤ", "ਕਰਦੀ", "ਹੈ", "|", "ਮਿੱਟੀ", "ਵਿਚ", "ਮਿਲਣ", "ਵਾਲੇ", "ਖਣਿਜ", "", "ਜੀਵਾਂ", "ਨੂੰ", "ਵੱਖ-ਵੱਖ", "ਪ੍ਰਕਾਰ", "ਨਾਲ", "ਸਹਾਇਤਾ", "ਪ੍ਰਦਾਨ", "ਕਰਦੇ", "ਹਨ", "|", "ਸੂਰਜ,", "ਪਾਣੀ,", "ਹਵਾ", "ਅਤੇ", "ਜੀਵ-ਜੰਤੂ", "ਮਿੱਟੀ", "ਦੀ", "ਰਚਨਾ", "ਵਿਚ", "ਸਹਾਇਕ", "ਹਨ", "|", "ਮਿੱਟੀ", "ਦੇ", "ਪ੍ਰਕਾਰ", "ਦਾ", "ਨਿਰਣਾ", "ਉਸ", "ਵਿਚ", "ਮਿਲਣ", "ਵਾਲੇ", "ਕਣਾਂ", "ਦੇ", "ਔਸਤ", "ਦੁਆਰਾ", "ਨਿਰਧਾਰਿਤ", "ਕੀਤਾ", "ਜਾਂਦਾ", "ਹੈ", "|", "ਮਿੱਟੀ", "ਦੇ", "ਗੁਣ", "ਮਲਤ", "ਦੀ", "ਮਾਤਰਾ", "ਅਤ", "ਉਸ", "ਵਿਚ", "ਸੂਖਮ", "ਜੀਵਾਂ", "ਦੇ", "ਆਧਾਰ", "ਤੇ", "ਜਾਂਚੇ", "ਜਾਂਦੇ", "ਹਨ", "|", "ਵਿਸ਼ੇਸ਼", "ਪੱਥਰਾਂ", "ਤੋਂ", "ਬਣੀ", "ਮਿੱਟੀ", "ਉਸ", "ਵਿਚ", "ਮੌਜੂਦ", "ਖਣਿਜ", "ਪੋਸ਼ਕ", "ਤੱਤਾਂ", "ਨੂੰ", "ਪ੍ਰਗਟ", "ਕਰਦੇ", "ਹਨ", "|", "ਆਧੁਨਿਕ", "ਕੀਟ", "ਨਾਸ਼ਕਾਂ", "ਅਤੇ", "ਰਾਸਾਇਨਿਕ", "ਖਾਦਾਂ", "ਨੇ", "ਮਿੱਟੀ", "ਦੀ", "ਸਰੰਚਨਾ", "ਵਿਗਾੜ", "ਦਿੱਤੀ", "ਹੈ", "|", "ਕਾਰਬਨ", "ਦਾ", "ਵੱਖ-ਵੱਖ", "ਭੌਤਿਕ", "ਅਤੇ", "ਜੈਵਿਕ", "ਕਿਰਿਆਵਾਂ", "ਦੁਆਰਾ", "ਚਕਰ", "ਲੱਗਦਾ", "ਹੈ", "|", "ਧਰਤੀ", "ਉੱਤੇ", "ਰੁੱਖਾਂ", "ਦੀ", "ਘਾਟ", "ਕਰਨ", "ਹੀ", "ਗਲੇਸ਼ੀਅਰ", "ਪਿਘਲ", "ਰਹੇ", "ਹਨ", "ਅਤੇ", "ਗਰਮੀ", "ਵੱਧ", "ਰਹੀ", "ਹੈ", "|"];
+
+            // clear existing word-section
+            var wordSection = $("#word-section")[0];
+            wordSection.innerHTML = "";
+            for (i = 0; i < wordList.length; i++) {
+                var wordSpan = "<span>" + wordList[i] + "</span>";
+                wordSection.innerHTML += wordSpan;
+            }
+            // mark first word as current-word
+            wordSection.firstChild.classList.add("current-word");
+        }
+    </script>
+
 }
 
 
