@@ -414,7 +414,7 @@ function typingTest(e) {
                 $("#typebox")[0].value = "";
                 clearInterval(clock);
                 clock = null;
-                document.getElementById("clock").innerText = "Start";
+                document.getElementById("clock").innerText = "Start Custom Test";
                 document.getElementById("test").innerText = "";
                 isRunning = false;
                 addWords(); //to reset word color to black once the user stops the clock
@@ -424,7 +424,10 @@ function typingTest(e) {
                 showDiv();//show graphs after user stops typing and disable button
                 clearvariables();
                 // redraw();
-                document.getElementById('clock').disabled = true;
+                document.getElementById('clock').disabled = false;
+                $('#mySelect').prop('disabled', false);
+                $('#timerclock').removeClass('disabled');
+                document.getElementById("test").innerHTML = "00:00";
                 document.getElementById("typebox").focus();
             }
         }
