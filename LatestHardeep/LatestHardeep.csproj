@@ -188,6 +188,7 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\EnglishController.cs" />
     <Compile Include="Controllers\EnglishIdiomsController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FirstRowController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeRowController.cs" />
@@ -564,7 +565,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -658,6 +661,8 @@
     <Content Include="Views\PassageTyping\Page26.cshtml" />
     <Content Include="Views\PassageTyping\Page27.cshtml" />
     <Content Include="Views\PassageTyping\Page28.cshtml" />
+    <Content Include="Views\Error\Testview.cshtml" />
+    <Content Include="Views\Error\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

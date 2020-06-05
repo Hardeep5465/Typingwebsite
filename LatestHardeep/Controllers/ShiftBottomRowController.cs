@@ -9,10 +9,6 @@ namespace LatestHardeep.Controllers
     public class ShiftBottomRowController : Controller
     {
         // GET: ShiftBottomRow
-        public ActionResult Index()
-        {
-            return View();
-        }
         public ActionResult Lesson(string id)
         {
             switch (id)
@@ -22,7 +18,7 @@ namespace LatestHardeep.Controllers
                 case "2":
                     return View("Lesson2");
                 default:
-                    return View("Index");
+                    return RedirectToAction("PageNotFound", "Error");
             }
         }
     }

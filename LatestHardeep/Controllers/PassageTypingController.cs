@@ -8,11 +8,7 @@ namespace LatestHardeep.Controllers
 {
     public class PassageTypingController : Controller
     {
-        // GET: PassageTyping
-        public ActionResult Index()
-        {
-            return View();
-        }
+       
         public ActionResult Passage(string id)
         {
             switch (id)
@@ -74,7 +70,7 @@ namespace LatestHardeep.Controllers
                 case "28":
                     return View("Page28");
                 default:
-                    return View("Index");
+                    return RedirectToAction("PageNotFound", "Error");
             }
         }
 

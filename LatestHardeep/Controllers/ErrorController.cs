@@ -6,12 +6,14 @@ using System.Web.Mvc;
 
 namespace LatestHardeep.Controllers
 {
-    public class RightAltWithAllKeysController : Controller
+    public class ErrorController : Controller
     {
-        // GET: RightAltWithAllKeys
-        public ActionResult Lesson()
+        // GET: Error
+       
+        public ViewResult PageNotFound()
         {
-            return View("Lesson");
+            return View();
         }
+       
     }
 }

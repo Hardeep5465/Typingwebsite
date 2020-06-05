@@ -8,11 +8,6 @@ namespace LatestHardeep.Controllers
 {
     public class BottomRowController : Controller
     {
-        // GET: ThirdRow
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         public ActionResult Lesson(string id)
         {
@@ -25,7 +20,7 @@ namespace LatestHardeep.Controllers
                 case "3":
                     return View("Lesson3");
                 default:
-                    return View("Index");
+                    return RedirectToAction("PageNotFound", "Error");
             }
 
         }

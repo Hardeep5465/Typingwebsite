@@ -9,10 +9,6 @@ namespace LatestHardeep.Controllers
     public class ShiftNumberRowController : Controller
     {
         // GET: ShiftNumberRow
-        public ActionResult Index()
-        {
-            return View();
-        }
         public ActionResult Lesson()
         {
             return View("Lesson");

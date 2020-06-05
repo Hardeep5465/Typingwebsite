@@ -7,7 +7,8 @@ namespace LatestHardeep
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //Commented this line because we are handling errors by ourselves
+           filters.Add(new HandleErrorAttribute());
         }
     }
 }

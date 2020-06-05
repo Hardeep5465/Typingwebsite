@@ -9,10 +9,7 @@ namespace LatestHardeep.Controllers
     public class LeftAltWithAllKeysController : Controller
     {
         // GET: LeftAltWithAllKeys
-        public ActionResult Index()
-        {
-            return View();
-        }
+       
         public ActionResult Lesson()
         {
             return View("Lesson");
