@@ -21,6 +21,7 @@ namespace LatestHardeep
     {
         protected void Application_Start()
         {
+           
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -29,24 +30,29 @@ namespace LatestHardeep
             //Connecting to db and Reading the hit count from table in the database as soon as session starts
             string connectionString = ConfigurationManager.ConnectionStrings["counterconnection"].ConnectionString;
             string queryString = "SELECT Hits from Counters WHERE TypeOfCounter = @TypeOfCounter";
+            
+            //no try catch block; assuming db will always be up
             using (var connection = new SqlConnection(connectionString))
-            {
-                var cmd = new SqlCommand(queryString, connection);
-                var typeofcounter = new SqlParameter("TypeOfCounter", System.Data.SqlDbType.NChar);
-                typeofcounter.Value = "HomePage";
-                cmd.Parameters.Add(typeofcounter);
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
                 {
-                    Global.totalNumberOfUsers = reader.GetInt32(0);
+                    var cmd = new SqlCommand(queryString, connection);
+                    var typeofcounter = new SqlParameter("TypeOfCounter", System.Data.SqlDbType.NChar);
+                    typeofcounter.Value = "HomePage";
+                    cmd.Parameters.Add(typeofcounter);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        Global.totalNumberOfUsers = reader.GetInt32(0);
+                    }
+                    else
+                    {
+                        Global.totalNumberOfUsers = 0;
+                    }
                 }
-                else
-                {
-                    Global.totalNumberOfUsers = 0;
-                }
-            }
+            
         }
+
+       
 
         protected void Session_Start(Object sender, EventArgs e)
         {

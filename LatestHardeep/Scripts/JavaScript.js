@@ -195,6 +195,16 @@ function typingTest(e) {
 
 }
 
+function addChildsToWordSection() {
+    for (i = 0; i < wordList.length; i++) {
+        for (i = 0; i < wordList.length; i++) {
+            var node = document.createElement("span");                 // Create a <span> node
+            var textnode = document.createTextNode(wordList[i]);         // Create a text node
+            node.appendChild(textnode);                              // Append the text to <span>
+            document.getElementById('word-section').appendChild(node);     // Append <span> to <wordsection> 
+        }
+    }
+}
 
     function Clock() {
 
@@ -259,6 +269,7 @@ function typingTest(e) {
 
     function timerfunction() {
 
+        var wordSection = $("#word-section")[0];
         //Delete previously generated graphs
         if ($('#numericrow').is(":visible")) {
             $('#myChart').remove();
@@ -270,14 +281,40 @@ function typingTest(e) {
             document.getElementById('chartrow').style.display = 'none';
         }
         timerselect = document.getElementById("mySelect").value;
-
         if (timerselect == 'default') {
             document.getElementById("errorMessage").innerHTML = "Please Select Test Time!";
         }
         else {
-            //write code here to show the content until the user time out
-            console.log("addwords should be called until the time is stopped");
-
+            switch (timerselect) {
+                case "1":
+                    console.log("1 selected");
+                    break;
+                case "3":
+                    //console.log("Old elements only");
+                    //console.log(wordSection.innerHTML);
+                    addChildsToWordSection();
+                    //console.log("Old + appended elements");
+                    //console.log(wordSection.innerHTML);
+                    break;
+                case "5":
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                    //var count = $("#word-section span").length;
+                    break;
+                case "10":
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                    break;
+                case "15":
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                    addChildsToWordSection();
+                   //console.log(wordSection.innerHTML)
+                    break;
+            }
+            
             isRunning = true;
             document.getElementById("errorMessage").innerHTML = "";
             document.getElementById("typebox").focus();

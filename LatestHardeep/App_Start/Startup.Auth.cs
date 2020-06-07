@@ -54,15 +54,15 @@ namespace LatestHardeep
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-               appId: "661190120977013",
-               appSecret: "95e574f0df1a8da076b9fe6ae34e6220");
+            //app.UseFacebookAuthentication(
+            //   appId: "661190120977013",
+            //   appSecret: "95e574f0df1a8da076b9fe6ae34e6220");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = "935148199062-tahbr0ajj2fjoaqtdsqv6aeo23sphuao.apps.googleusercontent.com",
-                ClientSecret = "7cT62U7XoTcyoFi5u3W2kjqu"
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "935148199062-tahbr0ajj2fjoaqtdsqv6aeo23sphuao.apps.googleusercontent.com",
+            //    ClientSecret = "7cT62U7XoTcyoFi5u3W2kjqu"
+            //});
         }
     }
 }

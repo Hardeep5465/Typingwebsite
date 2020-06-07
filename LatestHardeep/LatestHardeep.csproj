@@ -661,8 +661,8 @@
     <Content Include="Views\PassageTyping\Page26.cshtml" />
     <Content Include="Views\PassageTyping\Page27.cshtml" />
     <Content Include="Views\PassageTyping\Page28.cshtml" />
-    <Content Include="Views\Error\Testview.cshtml" />
     <Content Include="Views\Error\PageNotFound.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
