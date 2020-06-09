@@ -664,3 +664,30 @@ section {
         font-weight: 300;
         margin: 0px;
     }
+
+/*Code for services section*/
+.service-area .section-padding {
+    padding: 100px 0;
+}
+    .service-area .section-padding .single-service {
+        padding: 20px;
+        transition: all 0.5s ease 0s;
+        border: 2px solid #fff;
+        height: 300px;
+        margin: 20px;
+    }
+        .service-area .section-padding .single-service .symbol {
+            position: relative;
+            text-align: center;
+            top: 50px;
+            transition: all 0.4s ease 0s;
+            width: 60px;
+            background: #fff;
+            border-radius: 50px;
+            color: #333;
+            display: inline-block;
+            font-size: 24px;
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 0;
+        }

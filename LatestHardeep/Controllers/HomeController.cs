@@ -14,6 +14,10 @@ namespace LatestHardeep.Controllers
         {
             return View();
         }
+        public ActionResult Disclaimer()
+        {
+            return View();
+        }
 
     }
 }

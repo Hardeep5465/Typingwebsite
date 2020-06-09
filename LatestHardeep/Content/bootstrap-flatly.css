@@ -1290,7 +1290,7 @@ p {
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 22.5px;
+    /*font-size: 22.5px;*/
   }
 }
 small,
@@ -4112,7 +4112,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 60px;
-  margin-bottom: 21px;
+  /*margin-bottom: 21px;*/
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4297,7 +4297,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 0;
+    margin: 2px;
   }
   .navbar-nav > li {
     float: left;

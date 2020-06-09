@@ -415,6 +415,7 @@
     <Content Include="img\banner-img-old.png" />
     <Content Include="img\banner-img.jpg" />
     <Content Include="img\banner\common-banner.jpg" />
+    <Content Include="img\bg-masthead.jpg" />
     <Content Include="img\blog\ads-banner.jpg" />
     <Content Include="img\blog\blog-home-banner.jpg" />
     <Content Include="img\blog\c1.jpg" />
