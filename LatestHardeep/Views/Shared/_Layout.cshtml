@@ -15,47 +15,54 @@
    
 
     <script type="text/javascript">
-      
 
         function submitform() {
             if (!alert('you submitted the form!')) { window.location.reload(); }
-            //alert('you submitted the form');
-            // location.reload();
         }
-        //$(document).ready(function () {
-        //    console.log("ready!");
-        //    $('.counter-count').each(function () {
-        //        $(this).prop('counter', 0).animate({
-        //            Counter: $(this).text()
-        //        }, {
-        //                duration: 5000,
-        //                easing: 'swing',
-        //                step: function (now) {
-        //                    $(this).text(Math.ceil(now));
-        //                }
-        //            });
-        //    });
-        //});
 
-    </script>
+        //loader symbol code
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                    "#loader").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        };
+
+     </script>
 
     <style type="text/css">
 
-        /*.counter-count {
-            font-size: 18px;
-            background-color: #00b3e7;
+        /*loader css*/
+        #loader {
+            border: 12px solid #f3f3f3;
             border-radius: 50%;
-            position: relative;
-            color: #ffffff;
-            text-align: center;
-            line-height: 92px;
-            width: 92px;
-            height: 92px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            display: inline-block;
-        }*/
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
 
+        @@keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
 
         dropdown-submenu {
             position: relative;
@@ -108,8 +115,10 @@
 
 </head>
 <body>
+    <div id="loader" class="center"></div>  
+
     @* section for facebook login *@
-  
+
     @*<div id="fb-root"></div>*@
     @*<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=661190120977013&autoLogAppEvents=1"></script>*@
 
@@ -138,8 +147,8 @@
                                 @Html.ActionLink("Windows 10", "Windows10", "SetUpRaviFont")
                             </li>
                             @*<li class="menu-item">
-                                @Html.ActionLink("Typing Tips", "Tips", "TypingTips")
-                            </li>*@
+                                    @Html.ActionLink("Typing Tips", "Tips", "TypingTips")
+                                </li>*@
                         </ul>
                     </li>
                 </ul>
@@ -152,24 +161,24 @@
                 </ul>
 
                 @*<ul class="nav navbar-nav">
-            <li>  @Html.ActionLink("English", "EnglishHome", "English")</li>
-        </ul>
+                        <li>  @Html.ActionLink("English", "EnglishHome", "English")</li>
+                    </ul>
 
-        <ul class="nav navbar-nav">
-            <li class="menu-item dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">History<b class="caret"></b></a>
-                <ul class="dropdown-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="menu-item dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">History<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
 
 
-                    <li class="menu-item">
-                        @Html.ActionLink("Previous year SSC", "Home", "SscHistory")
-                    </li>
-                    <li class="menu-item">
-                        @Html.ActionLink("Windows 10", "Index", "EnglishIdioms")
-                    </li>
-                </ul>
-            </li>
-        </ul>*@
+                                <li class="menu-item">
+                                    @Html.ActionLink("Previous year SSC", "Home", "SscHistory")
+                                </li>
+                                <li class="menu-item">
+                                    @Html.ActionLink("Windows 10", "Index", "EnglishIdioms")
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>*@
 
 
 
@@ -191,7 +200,7 @@
                 <div class="col-sm-3">
                     <h5>About Us</h5>
                     <p>
-                       Our team is helping the students of Punjab to learn and prepare for your Punjabi Ravi Font typing exam. Almost all clerical jobs of Punjab govt like PSSB, PSEB etc and many more requires efficient Punjabi typing. With this one can take a step ahead in his preparation journey to become a Punjab government employee.
+                        Our team is helping the students of Punjab to learn and prepare for your Punjabi Ravi Font typing exam. Almost all clerical jobs of Punjab govt like PSSB, PSEB etc and many more requires efficient Punjabi typing. With this one can take a step ahead in his preparation journey to become a Punjab government employee.
                     </p>
                 </div>
                 <div class="col-sm-3">
@@ -206,7 +215,7 @@
                         <p class="counter-p">Visitor No</p>
                     </div>
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-sm-3">
 
                     <form method="post" action="https://submit-form.com/FlVpLFjdKtuOi9L_rNvXD">
                         <input type="hidden"
