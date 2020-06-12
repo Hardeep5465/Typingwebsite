@@ -17,6 +17,10 @@ namespace LatestHardeep.Controllers
         {
             return View();
         }
+        public ActionResult Win10video()
+        {
+            return View();
+        }
         public ActionResult Windows10()
         {
             return View();

@@ -699,7 +699,7 @@ function addChildsToWordSection() {
     }
 
     function showDiv() {
-        window.scrollTo({ top: 995, behavior: 'smooth' });
+        window.scrollTo({ top: 1100, behavior: 'smooth' });
         rendertypingresults();
         renderaccuracy();
         rendergrossspeed();

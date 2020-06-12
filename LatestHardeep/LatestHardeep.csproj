@@ -229,6 +229,13 @@
     <Content Include="Content\bootstrap-oldest.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Footer-with-button-logo.css" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win10video.mp4" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_1.png" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_2.png" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_3.png" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_4.png" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_5.png" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win_10_6.png" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Image1.JPG" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\image10.JPG" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\image10_old.JPG" />
@@ -554,6 +561,8 @@
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="WebImage.ico" />
     <Content Include="Content\SetUpRavi\Windows 7 steps\Win7.webm" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win10video.ogg" />
+    <Content Include="Content\SetUpRavi\Windows 10 steps\Win10video.webm" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -664,6 +673,7 @@
     <Content Include="Views\PassageTyping\Page28.cshtml" />
     <Content Include="Views\Error\PageNotFound.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
+    <Content Include="Views\SetUpRaviFont\Win10video.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
