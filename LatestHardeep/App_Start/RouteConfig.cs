@@ -55,6 +55,13 @@ namespace LatestHardeep
                 defaults: new { controller = "SetUpRaviFont", action = "Windows10"}
             );
 
+            //To remove controller name from Setup Ravifont for Windows 7 Video URL
+            routes.MapRoute(
+                name: "Set up Ravi Font Windows 10 Video",
+                url: "Set-up-Punjabi-Ravi-Font-in-Windows-10-Video",
+                defaults: new { controller = "SetUpRaviFont", action = "Win10video" }
+            );
+
             //To remove controller name Home Row Lessons 
             routes.MapRoute(
                 name: "Home Row Lesson",
