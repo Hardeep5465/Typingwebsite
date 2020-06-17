@@ -411,6 +411,7 @@
     <Content Include="Content\SetUpRavi\Windows 10 steps\Win10video.ogg" />
     <Content Include="Content\SetUpRavi\Windows 10 steps\Win10video.webm" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\typeinpunjabi.com - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\typeinpunjabi.com - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\typeinpunjabi.com - Web Deploy2.pubxml" />
